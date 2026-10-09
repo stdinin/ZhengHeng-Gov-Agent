@@ -109,6 +109,14 @@ class ReverseTestReranker:
         return list(reversed(candidates))[:limit]
 
 
+@dataclass
+class ClosableStub:
+    close_calls: int = 0
+
+    async def close(self) -> None:
+        self.close_calls += 1
+
+
 @pytest.mark.asyncio
 async def test_hybrid_retriever_orders_rrf_rerank_then_canonical_recheck_with_independent_caps(
 ) -> None:
@@ -171,3 +179,22 @@ async def test_disabled_reranker_bypasses_scoring_and_records_the_explicit_trace
     assert result.trace.reranked_candidate_count == 0
     assert store.events == ["rerank-input", "canonical"]
     assert [item.chunk_id for item in result.evidence] == ["active-a"]
+
+
+@pytest.mark.asyncio
+async def test_hybrid_retriever_closes_owned_network_resources() -> None:
+    bm25 = ClosableStub()
+    dense = ClosableStub()
+    embedder = ClosableStub()
+    reranker = ClosableStub()
+    retriever = HybridEvidenceRetriever(
+        bm25=bm25,  # type: ignore[arg-type]
+        dense=dense,  # type: ignore[arg-type]
+        embedder=embedder,  # type: ignore[arg-type]
+        canonical_store=RecordingEvidenceStore(),
+        reranker=reranker,  # type: ignore[arg-type]
+    )
+
+    await retriever.close()
+
+    assert [item.close_calls for item in (bm25, dense, embedder, reranker)] == [1, 1, 1, 1]

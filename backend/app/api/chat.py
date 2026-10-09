@@ -12,7 +12,7 @@ from backend.app.api.errors import ApiError
 from backend.app.harness.chat_service import ChatService, ChatServiceUnavailable
 from backend.app.harness.citations import Citation
 from backend.app.harness.state import AnswerStatus
-from backend.app.observability.metrics import MetricsRegistry
+from backend.app.observability.metrics import MetricsRegistry, is_fixed_dag_node
 from backend.app.security.auth import decode_access_token
 from backend.app.storage.trace_repository import TraceStore
 from backend.app.storage.users import UserStore
@@ -152,7 +152,8 @@ async def _run_chat(payload: ChatRequest, request: Request) -> ChatResponse:
     _metrics(request).record_chat(status=result.status.value, latency_seconds=elapsed)
     _metrics(request).record_verification(passed=verification.passed)
     for node, latency_ms in result.state.timings_ms.items():
-        _metrics(request).record_node(node=node, latency_seconds=latency_ms / 1_000)
+        if is_fixed_dag_node(node):
+            _metrics(request).record_node(node=node, latency_seconds=latency_ms / 1_000)
     return ChatResponse(
         trace_id=request.state.trace_id,
         session_id=session_id,

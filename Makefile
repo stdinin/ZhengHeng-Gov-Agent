@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := help
 
-.PHONY: help setup infra-up infra-down seed backend frontend dev test lint run-eval clean
+.PHONY: help setup infra-up infra-down seed backend frontend dev test lint integration run-eval clean
 
 help:
-	@echo "Targets: setup infra-up infra-down seed backend frontend dev test lint run-eval clean"
+	@echo "Targets: setup infra-up infra-down seed backend frontend dev test lint integration run-eval clean"
 
 setup:
 	uv sync --all-groups
@@ -35,6 +35,9 @@ lint:
 	uv run ruff check backend scripts
 	uv run mypy backend/app
 	npm --prefix frontend run lint
+
+integration:
+	uv run python scripts/run_integration_container.py
 
 run-eval:
 	uv run python scripts/run_eval.py --evalset evalsets/policy_eval_v1.jsonl

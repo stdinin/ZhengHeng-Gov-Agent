@@ -15,11 +15,13 @@
 
 ## Current Status
 
-`v0.9.0-rc1`
+`v1.0.0`
 
-Phase 1–7 的核心实现和真实基础设施验收已经完成。Phase 8 的
-observability/performance 最终验收仍在进行，不能视为 PASS。逐项状态与实际命令见
-[DEFERRED_VALIDATION.md](DEFERRED_VALIDATION.md)。
+Phase 1–8 的 P0 实现与真实基础设施验收已经完成。Phase 8 使用 FakeLLM 测试
+Harness/Retrieval Infrastructure Performance；它不代表真实在线 LLM 的端到端性能。
+10 VU 和 50 VU 的原始 k6 artifacts 已生成并重算；200 VU 因本机资源保护未执行。逐项
+状态、命令与保留项见 [DEFERRED_VALIDATION.md](DEFERRED_VALIDATION.md) 和
+[FINAL_VALIDATION_REPORT.md](FINAL_VALIDATION_REPORT.md)。
 
 公开评测 `public_eval_v1_100docs` 使用 100 篇公开政策文档、167 个 chunk 和 40 个冻结
 eval case。核心指标来自真实生成的 run artifact；Citation Correctness 为 `0.125`、
@@ -57,8 +59,10 @@ uv run mypy backend/app
 npm --prefix frontend run lint
 npm --prefix frontend run test -- --run
 npm --prefix frontend run build
-uv run python scripts/run_integration.py
+make integration
 ```
 
 真实评测与性能结果必须由生成的 artifacts 计算。FakeLLM 可用于确定性 Harness 测试，
-但不得被描述为真实在线 LLM 端到端性能。
+但不得被描述为真实在线 LLM 端到端性能。`make integration` 在本机以 Docker Linux
+子进程加载 CrossEncoder，继续连接同一组真实 MongoDB、Redis、OpenSearch、Milvus；
+这是为规避 Windows 原生 PyTorch 的 transient pagefile mapping failure，而不是 mock 路径。

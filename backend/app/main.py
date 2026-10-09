@@ -1,4 +1,6 @@
-from collections.abc import Awaitable, Callable
+from collections.abc import AsyncIterator, Awaitable, Callable
+from contextlib import asynccontextmanager
+from inspect import isawaitable
 from typing import Any
 from uuid import uuid4
 
@@ -34,6 +36,46 @@ from backend.app.storage.trace_repository import MongoTraceStore, TraceStore
 from backend.app.storage.users import MongoUserStore, UserStore
 
 ReadinessChecker = Callable[[Settings], Awaitable[dict[str, DependencyStatus]]]
+
+
+@asynccontextmanager
+async def _application_lifespan(app: FastAPI) -> AsyncIterator[None]:
+    try:
+        yield
+    finally:
+        await _close_runtime_resources(app)
+
+
+async def _close_runtime_resources(app: FastAPI) -> None:
+    """Close every app-owned resource that exposes an explicit shutdown method."""
+
+    names = (
+        "user_store",
+        "document_repository",
+        "document_indexer",
+        "chat_service",
+        "memory_repository",
+        "trace_store",
+        "evolution_repository",
+    )
+    seen: set[int] = set()
+    failures: list[Exception] = []
+    for name in names:
+        resource = getattr(app.state, name, None)
+        if resource is None or id(resource) in seen:
+            continue
+        seen.add(id(resource))
+        close = getattr(resource, "close", None)
+        if not callable(close):
+            continue
+        try:
+            result = close()
+            if isawaitable(result):
+                await result
+        except Exception as error:  # Shutdown must attempt every independent resource.
+            failures.append(error)
+    if failures:
+        raise RuntimeError("One or more application resources failed to close.") from failures[0]
 
 
 def _error_response(
@@ -72,7 +114,11 @@ def create_app(
     evolution_service: EvolutionService | None = None,
     feedback_service: FeedbackService | None = None,
 ) -> FastAPI:
-    app = FastAPI(title="政衡 Agent API", version="0.1.0")
+    app = FastAPI(
+        title="政衡 Agent API",
+        version="0.1.0",
+        lifespan=_application_lifespan,
+    )
     app.state.settings = settings or Settings()
     app.state.readiness_checker = readiness_checker
     app.state.user_store = user_store or MongoUserStore(app.state.settings)

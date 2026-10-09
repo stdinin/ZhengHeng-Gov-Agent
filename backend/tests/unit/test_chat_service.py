@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from datetime import datetime
 
 import pytest
@@ -19,6 +20,14 @@ class FailingHarness:
         raise ConnectionError("OpenSearch is unavailable")
 
 
+@dataclass
+class ClosableResource:
+    close_calls: int = 0
+
+    async def close(self) -> None:
+        self.close_calls += 1
+
+
 async def test_harness_chat_service_surfaces_real_backend_failure_as_unavailable() -> None:
     service = HarnessChatService(FailingHarness())  # type: ignore[arg-type]
 
@@ -29,3 +38,15 @@ async def test_harness_chat_service_surfaces_real_backend_failure_as_unavailable
             session_id="session_1",
             user_id="user_1",
         )
+
+
+@pytest.mark.asyncio
+async def test_harness_chat_service_closes_each_owned_resource_once() -> None:
+    resource = ClosableResource()
+    service = HarnessChatService(  # type: ignore[arg-type]
+        FailingHarness(), resources=(resource, resource)
+    )
+
+    await service.close()
+
+    assert resource.close_calls == 1

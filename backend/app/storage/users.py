@@ -37,8 +37,13 @@ class InMemoryUserStore:
 
 class MongoUserStore:
     def __init__(self, settings: Settings) -> None:
-        client: AsyncMongoClient[dict[str, Any]] = AsyncMongoClient(settings.mongo_uri)
-        self._collection: AsyncCollection[dict[str, Any]] = client[settings.mongo_db]["users"]
+        self._client: AsyncMongoClient[dict[str, Any]] = AsyncMongoClient(settings.mongo_uri)
+        self._collection: AsyncCollection[dict[str, Any]] = self._client[settings.mongo_db]["users"]
+
+    async def close(self) -> None:
+        """Release Mongo monitoring tasks when an API process or script exits."""
+
+        await self._client.close()
 
     @staticmethod
     def _from_document(document: dict[str, Any]) -> User:

@@ -3,6 +3,12 @@ from collections import defaultdict
 _DAG_NODE_LABELS = frozenset({"Intent", "Rewrite", "Route", "Retrieve", "Answer", "Verify"})
 
 
+def is_fixed_dag_node(node: str) -> bool:
+    """Return whether a trace timing is safe to expose as a Prometheus label."""
+
+    return node in _DAG_NODE_LABELS
+
+
 class MetricsRegistry:
     """Small in-process Prometheus exposition registry fed only by observed application events."""
 
@@ -28,7 +34,7 @@ class MetricsRegistry:
 
     def record_node(self, *, node: str, latency_seconds: float) -> None:
         self._validate_latency(latency_seconds)
-        if node not in _DAG_NODE_LABELS:
+        if not is_fixed_dag_node(node):
             raise ValueError("Prometheus node labels must use a fixed DAG node.")
         self._latencies[f'zh_node_latency_seconds{{node="{node}"}}'].append(latency_seconds)
 

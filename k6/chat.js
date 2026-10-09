@@ -12,6 +12,10 @@ export const options = {
       duration: __ENV.DURATION ?? '5m',
     },
   },
+  thresholds: {
+    checks: ['rate==1'],
+    http_req_failed: ['rate==0'],
+  },
 }
 
 export default function chat() {
@@ -23,6 +27,6 @@ export default function chat() {
     JSON.stringify({ query: '请说明政策办理条件。' }),
     { headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } },
   )
-  check(response, { 'chat returns an explicit result': (reply) => [200, 503].includes(reply.status) })
+  check(response, { 'chat returns HTTP 200': (reply) => reply.status === 200 })
   sleep(1)
 }

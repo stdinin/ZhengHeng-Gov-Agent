@@ -70,6 +70,7 @@ class StaticChatService:
                 raw_query=query,
                 status=AnswerStatus.SUCCESS,
                 verification=VerificationResult(passed=True),
+                timings_ms={"Intent": 1.5, "total": 1.5},
             ),
         )
 
@@ -109,6 +110,9 @@ async def test_chat_returns_answer_citations_and_request_trace_id() -> None:
         "retryable": False,
         "warnings": [],
     }
+    metrics = app.state.metrics_registry.render_prometheus()
+    assert 'zh_node_latency_seconds_count{node="Intent"} 1' in metrics
+    assert 'node="total"' not in metrics
 
 
 async def test_chat_requires_a_bearer_token() -> None:

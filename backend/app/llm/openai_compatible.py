@@ -1,11 +1,12 @@
 import json
+from collections.abc import Callable
 from typing import Any
 
 import httpx
 from pydantic import ValidationError
 
 from backend.app.config import Settings
-from backend.app.llm.base import StructuredModel
+from backend.app.llm.base import LLMTokenUsage, StructuredModel
 
 
 class RemoteLLMError(RuntimeError):
@@ -15,7 +16,13 @@ class RemoteLLMError(RuntimeError):
 class OpenAICompatibleLLM:
     """OpenAI-compatible client restricted to temperature-zero text and JSON-schema candidates."""
 
-    def __init__(self, settings: Settings, *, client: httpx.AsyncClient | None = None) -> None:
+    def __init__(
+        self,
+        settings: Settings,
+        *,
+        client: httpx.AsyncClient | None = None,
+        usage_sink: Callable[[LLMTokenUsage], None] | None = None,
+    ) -> None:
         if settings.llm_mode != "remote":
             raise ValueError("OpenAICompatibleLLM requires LLM_MODE=remote.")
         self._base_url = (settings.llm_base_url or "").rstrip("/")
@@ -24,6 +31,7 @@ class OpenAICompatibleLLM:
         self._timeout = settings.llm_timeout_seconds
         self._client = client or httpx.AsyncClient(timeout=self._timeout)
         self._owns_client = client is None
+        self._usage_sink = usage_sink
 
     async def close(self) -> None:
         if self._owns_client:
@@ -81,9 +89,32 @@ class OpenAICompatibleLLM:
                 timeout=self._timeout,
             )
             response.raise_for_status()
-            content = response.json()["choices"][0]["message"]["content"]
+            payload = response.json()
+            self._report_usage(payload.get("usage"))
+            content = payload["choices"][0]["message"]["content"]
         except (httpx.HTTPError, KeyError, IndexError, TypeError, ValueError) as error:
             raise RemoteLLMError("OpenAI-compatible provider request failed.") from error
         if not isinstance(content, str):
             raise RemoteLLMError("OpenAI-compatible provider returned non-text content.")
         return content
+
+    def _report_usage(self, usage: object) -> None:
+        if self._usage_sink is None:
+            return
+        values = usage if isinstance(usage, dict) else {}
+        self._usage_sink(
+            LLMTokenUsage(
+                input_tokens=self._usage_value(values, "prompt_tokens"),
+                output_tokens=self._usage_value(values, "completion_tokens"),
+                total_tokens=self._usage_value(values, "total_tokens"),
+                cached_input_tokens=self._usage_value(values, "prompt_cache_hit_tokens"),
+                uncached_input_tokens=self._usage_value(values, "prompt_cache_miss_tokens"),
+            )
+        )
+
+    @staticmethod
+    def _usage_value(values: dict[str, Any], name: str) -> int | None:
+        value = values.get(name)
+        if isinstance(value, bool) or not isinstance(value, int | float) or value < 0:
+            return None
+        return int(value)

@@ -1,4 +1,6 @@
+from collections.abc import Awaitable
 from datetime import UTC, datetime
+from inspect import isawaitable
 from typing import Protocol
 
 from backend.app.harness.policy import PolicyHarness, PolicyHarnessResult
@@ -22,8 +24,9 @@ class ChatServiceUnavailable(RuntimeError):
 class HarnessChatService:
     """Thin API-facing adapter around the fixed, trace-persisting policy harness."""
 
-    def __init__(self, harness: PolicyHarness) -> None:
+    def __init__(self, harness: PolicyHarness, *, resources: tuple[object, ...] = ()) -> None:
         self._harness = harness
+        self._resources = resources
 
     @property
     def harness(self) -> PolicyHarness:
@@ -51,6 +54,29 @@ class HarnessChatService:
             raise ChatServiceUnavailable(
                 "The real retrieval-backed chat harness is unavailable in this deployment."
             ) from error
+
+    async def close(self) -> None:
+        """Close application-owned remote clients without touching canonical storage."""
+
+        seen: set[int] = set()
+        failures: list[Exception] = []
+        for resource in self._resources:
+            if id(resource) in seen:
+                continue
+            seen.add(id(resource))
+            close = getattr(resource, "close", None)
+            if not callable(close):
+                continue
+            try:
+                outcome: object | Awaitable[object] = close()
+                if isawaitable(outcome):
+                    await outcome
+            except Exception as error:
+                failures.append(error)
+        if failures:
+            raise RuntimeError(
+                "One or more chat-service resources failed to close."
+            ) from failures[0]
 
 
 class UnavailableChatService:

@@ -3,6 +3,7 @@
 import asyncio
 from collections.abc import Sequence
 from dataclasses import dataclass
+from inspect import isawaitable
 from typing import Protocol
 
 from backend.app.config import Settings
@@ -144,6 +145,23 @@ class HybridEvidenceRetriever:
             queries=queries, department_ids=department_ids, limit=limit
         )
         return result.evidence
+
+    async def close(self) -> None:
+        """Release network-backed retrieval clients owned by this composition."""
+
+        failures: list[Exception] = []
+        for resource in (self._bm25, self._dense, self._embedder, self._reranker):
+            close = getattr(resource, "close", None)
+            if not callable(close):
+                continue
+            try:
+                outcome = close()
+                if isawaitable(outcome):
+                    await outcome
+            except Exception as error:
+                failures.append(error)
+        if failures:
+            raise RuntimeError("One or more retrieval resources failed to close.") from failures[0]
 
     async def retrieve_with_trace(
         self, *, queries: list[str], department_ids: list[str], limit: int

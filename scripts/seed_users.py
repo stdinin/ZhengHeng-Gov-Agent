@@ -37,9 +37,12 @@ def demo_users() -> list[User]:
 
 async def seed() -> None:
     store = MongoUserStore(Settings())
-    for user in demo_users():
-        await store.upsert(user)
-        print(f"Seeded local demo user: {user.email} ({user.role.value})")
+    try:
+        for user in demo_users():
+            await store.upsert(user)
+            print(f"Seeded local demo user: {user.email} ({user.role.value})")
+    finally:
+        await store.close()
 
 
 if __name__ == "__main__":

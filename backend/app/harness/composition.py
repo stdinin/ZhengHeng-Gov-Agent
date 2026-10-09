@@ -1,5 +1,7 @@
 """Runtime composition for the only supported retrieval-backed chat path."""
 
+from collections.abc import Callable
+
 from backend.app.config import Settings
 from backend.app.harness.chat_service import HarnessChatService
 from backend.app.harness.nodes import (
@@ -13,7 +15,7 @@ from backend.app.harness.nodes import (
     VerifyNode,
 )
 from backend.app.harness.policy import PolicyHarness
-from backend.app.llm.base import LLMClient
+from backend.app.llm.base import LLMClient, LLMTokenUsage
 from backend.app.llm.fake import FakeLLM
 from backend.app.llm.openai_compatible import OpenAICompatibleLLM
 from backend.app.retrieval.bm25 import OpenSearchBM25
@@ -34,12 +36,16 @@ def build_chat_service(
     *,
     document_store: DocumentStore,
     trace_store: TraceStore,
+    usage_sink: Callable[[LLMTokenUsage], None] | None = None,
+    llm_client: LLMClient | None = None,
 ) -> HarnessChatService:
     """Compose real Mongo/OpenSearch/Milvus gateways without an in-memory fallback."""
 
     llm: LLMClient
-    if settings.llm_mode == "remote":
-        llm = OpenAICompatibleLLM(settings)
+    if llm_client is not None:
+        llm = llm_client
+    elif settings.llm_mode == "remote":
+        llm = OpenAICompatibleLLM(settings, usage_sink=usage_sink)
     else:
         llm = FakeLLM()
     retriever = HybridEvidenceRetriever.from_settings(
@@ -56,4 +62,7 @@ def build_chat_service(
         answer=AnswerNode(llm),
         verify=VerifyNode(llm),
     )
-    return HarnessChatService(PolicyHarness(nodes, trace_store=trace_store))
+    return HarnessChatService(
+        PolicyHarness(nodes, trace_store=trace_store),
+        resources=(llm, retriever),
+    )
