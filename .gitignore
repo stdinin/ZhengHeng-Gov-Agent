@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+dist/
+build/
+*.egg-info/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Node and frontend
+node_modules/
+frontend/node_modules/
+.npm/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+
+# Model and package caches
+.cache/
+cache/
+hf_cache/
+huggingface/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Runtime data. The compact public manifest is versioned for reproducibility.
+data/*
+!data/manifests/
+!data/manifests/*.json
+datasets/
+uploads/
+tmp/
+temp/
+logs/
+*.log
+
+# Raw evaluation and performance artifacts
+runs/
+artifacts/
+
+# Docker/local volumes
+docker-data/
+volumes/
+mongo-data/
+redis-data/
+opensearch-data/
+milvus-data/
+minio-data/
+etcd-data/
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local execution and planning files
+*.pid
+*.lock.local
+docs/superpowers/

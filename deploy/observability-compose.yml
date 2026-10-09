@@ -1,0 +1,59 @@
+name: zhengheng-observability
+
+services:
+  zhengheng-api:
+    image: zhengheng-eval-runner:cpu
+    working_dir: /workspace
+    entrypoint: ["uvicorn"]
+    command: ["backend.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      APP_SECRET: ${APP_SECRET:-local-development-secret-change-me}
+      LLM_MODE: fake
+      EMBEDDING_MODE: local
+      MONGO_URI: mongodb://host.docker.internal:27017/?directConnection=true
+      MONGO_DB: zhengheng_public_eval_v1
+      REDIS_URL: redis://host.docker.internal:6379/0
+      OPENSEARCH_URL: http://host.docker.internal:9201
+      OPENSEARCH_INDEX: policy_chunks_public_eval_v1
+      MILVUS_HOST: host.docker.internal
+      MILVUS_PORT: "19530"
+      MILVUS_COLLECTION: policy_chunks_public_eval_v1
+      HF_HUB_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      OMP_NUM_THREADS: "8"
+      MKL_NUM_THREADS: "8"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ..:/workspace
+      - ${HF_CACHE_DIR:?set HF_CACHE_DIR to the host Hugging Face cache}:/root/.cache/huggingface:ro
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/live')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+    depends_on:
+      zhengheng-api:
+        condition: service_healthy
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+
+volumes:
+  prometheus_data:

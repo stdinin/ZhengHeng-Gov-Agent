@@ -1,0 +1,19 @@
+{
+  "run_id": "public_eval_v1_100docs",
+  "dataset_id": "salpt/chinatax-policy-corpus",
+  "dataset_revision": "db52ff69471dab17eef664fa7814d62798745720",
+  "document_count": 100,
+  "chunk_count": 167,
+  "eval_case_count": 40,
+  "factual_case_count": 30,
+  "knowledge_gap_case_count": 10,
+  "recall_at_1": 0.9333333333333333,
+  "recall_at_5": 0.9666666666666667,
+  "recall_at_10": 1.0,
+  "mrr": 0.9555555555555556,
+  "citation_correctness": 0.125,
+  "citation_coverage": 1.0,
+  "abstain_knowledge_gap_accuracy": 0.0,
+  "answer_correctness": "NOT_AVAILABLE_FROM_DATASET",
+  "routing_accuracy": "NOT_AVAILABLE_FROM_DATASET"
+}

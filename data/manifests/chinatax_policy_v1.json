@@ -1,0 +1,1192 @@
+{
+  "dataset_id": "salpt/chinatax-policy-corpus",
+  "dataset_revision": "db52ff69471dab17eef664fa7814d62798745720",
+  "license": "cc-by-nc-4.0",
+  "seed": 20261009,
+  "selection": {
+    "required_aging": "全文有效",
+    "max_content_chars": 6000,
+    "limit": 100
+  },
+  "mongo_db": "zhengheng_public_eval_v1",
+  "opensearch_index": "policy_chunks_public_eval_v1",
+  "milvus_collection": "policy_chunks_public_eval_v1",
+  "embedding_model": "BAAI/bge-m3",
+  "documents": [
+    {
+      "ordinal": 1,
+      "document_id": "doc_ct_dc678bb376a99d0fd832c65a",
+      "version_id": "ver_ct_dc678bb376a99d0fd832c65a_v1",
+      "sha256": "dc678bb376a99d0fd832c65a77f194c21af23e6e467881f5844111845216b61c",
+      "source_url": "/zcfgk/c100012/c5194699/content.html",
+      "title": "国家税务总局关于《中华人民共和国政府和智利共和国政府对所得避免双重征税和防止逃避税的协定》及议定书生效执行的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_dc678bb376a99d0fd832c65a_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "document_id": "doc_ct_cfb34d0b9cfc726e3f0be518",
+      "version_id": "ver_ct_cfb34d0b9cfc726e3f0be518_v1",
+      "sha256": "cfb34d0b9cfc726e3f0be5181557f9844ee2a5af0af34259f95c889758b6abe1",
+      "source_url": "/zcfgk/c100012/c5194073/content.html",
+      "title": "国家税务总局关于氨化硝酸钙免征增值税问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_cfb34d0b9cfc726e3f0be518_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "document_id": "doc_ct_534ebce74825ade48df30782",
+      "version_id": "ver_ct_534ebce74825ade48df30782_v1",
+      "sha256": "534ebce74825ade48df30782052e34c5acfa67c1eae7130219bdffe6fd421df9",
+      "source_url": "/zcfgk/c100012/c5193442/content.html",
+      "title": "国家税务总局关于增值税一般纳税人期货交易进项税额抵扣问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_534ebce74825ade48df30782_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "document_id": "doc_ct_b6659f2d2c88e95511362b7c",
+      "version_id": "ver_ct_b6659f2d2c88e95511362b7c_v1",
+      "sha256": "b6659f2d2c88e95511362b7c177254cb1b7c897a6a6eb9e7ff389a73eca05284",
+      "source_url": "/zcfgk/c100012/c5195093/content.html",
+      "title": "国家税务总局关于外国企业的董事在中国境内兼任职务有关税收问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_b6659f2d2c88e95511362b7c_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "document_id": "doc_ct_1184f48fa9ee314d53c2716f",
+      "version_id": "ver_ct_1184f48fa9ee314d53c2716f_v1",
+      "sha256": "1184f48fa9ee314d53c2716f9b3a2b53e37552360f76d70a2ce103ab2c0c26c1",
+      "source_url": "/zcfgk/c100009/c5193016/content.html",
+      "title": "中华人民共和国海域使用管理法",
+      "chunk_ids": [
+        "chunk_ver_ct_1184f48fa9ee314d53c2716f_v1_0001",
+        "chunk_ver_ct_1184f48fa9ee314d53c2716f_v1_0002",
+        "chunk_ver_ct_1184f48fa9ee314d53c2716f_v1_0003",
+        "chunk_ver_ct_1184f48fa9ee314d53c2716f_v1_0004",
+        "chunk_ver_ct_1184f48fa9ee314d53c2716f_v1_0005",
+        "chunk_ver_ct_1184f48fa9ee314d53c2716f_v1_0006"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "document_id": "doc_ct_251b98c806c7206a69df7112",
+      "version_id": "ver_ct_251b98c806c7206a69df7112_v1",
+      "sha256": "251b98c806c7206a69df7112d49b2493c9a601bdc11524bea717ade53d03b619",
+      "source_url": "/zcfgk/c100012/c5193736/content.html",
+      "title": "国家税务总局关于增值税一般纳税人期货交易有关增值税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_251b98c806c7206a69df7112_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "document_id": "doc_ct_92fd7e6c7fe225b2bdb8b710",
+      "version_id": "ver_ct_92fd7e6c7fe225b2bdb8b710_v1",
+      "sha256": "92fd7e6c7fe225b2bdb8b7109b73c97441f7b17f333bef770d015390114e1268",
+      "source_url": "/zcfgk/c100012/c5193210/content.html",
+      "title": "国家税务总局关于个人举办各类学习班取得的收入征收个人所得税问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_92fd7e6c7fe225b2bdb8b710_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "document_id": "doc_ct_b0e616f2e9f3067ce9ed9675",
+      "version_id": "ver_ct_b0e616f2e9f3067ce9ed9675_v1",
+      "sha256": "b0e616f2e9f3067ce9ed9675124bb5789affacfe37263033f4c6a3a5aff208c6",
+      "source_url": "/zcfgk/c100010/c5195083/content.html",
+      "title": "废弃电器电子产品回收处理管理条例",
+      "chunk_ids": [
+        "chunk_ver_ct_b0e616f2e9f3067ce9ed9675_v1_0001",
+        "chunk_ver_ct_b0e616f2e9f3067ce9ed9675_v1_0002",
+        "chunk_ver_ct_b0e616f2e9f3067ce9ed9675_v1_0003",
+        "chunk_ver_ct_b0e616f2e9f3067ce9ed9675_v1_0004"
+      ]
+    },
+    {
+      "ordinal": 9,
+      "document_id": "doc_ct_b32456aea3102dfee94ea34b",
+      "version_id": "ver_ct_b32456aea3102dfee94ea34b_v1",
+      "sha256": "b32456aea3102dfee94ea34b910bddceb11e40e1c1bdd3f3e0dc5ac59a08d604",
+      "source_url": "/zcfgk/c100012/c5193216/content.html",
+      "title": "国家税务总局关于淀粉的增值税适用税率问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_b32456aea3102dfee94ea34b_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 10,
+      "document_id": "doc_ct_afa98d08f849effa73fe47b2",
+      "version_id": "ver_ct_afa98d08f849effa73fe47b2_v1",
+      "sha256": "afa98d08f849effa73fe47b2d0798a43ac0f90097862b2f3b0d3dcb231d44b1e",
+      "source_url": "/zcfgk/c100010/c5192949/content.html",
+      "title": "矿产资源开采登记管理办法",
+      "chunk_ids": [
+        "chunk_ver_ct_afa98d08f849effa73fe47b2_v1_0001",
+        "chunk_ver_ct_afa98d08f849effa73fe47b2_v1_0002",
+        "chunk_ver_ct_afa98d08f849effa73fe47b2_v1_0003",
+        "chunk_ver_ct_afa98d08f849effa73fe47b2_v1_0004",
+        "chunk_ver_ct_afa98d08f849effa73fe47b2_v1_0005"
+      ]
+    },
+    {
+      "ordinal": 11,
+      "document_id": "doc_ct_0e389fd818cfeb8fd09b2845",
+      "version_id": "ver_ct_0e389fd818cfeb8fd09b2845_v1",
+      "sha256": "0e389fd818cfeb8fd09b2845ae4128ea856dd4d09e73e6b3c61e729b60badc6d",
+      "source_url": "/zcfgk/c100012/c5193066/content.html",
+      "title": "国家税务局关于电力行业征免土地使用税问题的规定",
+      "chunk_ids": [
+        "chunk_ver_ct_0e389fd818cfeb8fd09b2845_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 12,
+      "document_id": "doc_ct_05407c2c1388dec059bcf739",
+      "version_id": "ver_ct_05407c2c1388dec059bcf739_v1",
+      "sha256": "05407c2c1388dec059bcf73929daced313550780e16d8103084e34a83a1f2928",
+      "source_url": "/zcfgk/c100012/c5193733/content.html",
+      "title": "国家税务总局关于金融机构开展个人实物黄金交易业务增值税有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_05407c2c1388dec059bcf739_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 13,
+      "document_id": "doc_ct_7874530b524873cf69d53a8c",
+      "version_id": "ver_ct_7874530b524873cf69d53a8c_v1",
+      "sha256": "7874530b524873cf69d53a8cd13da88d1edc5b2ad4ba1c9b9769c2019aaea742",
+      "source_url": "/zcfgk/c100012/c5194557/content.html",
+      "title": "国家税务总局关于建筑安装业跨省异地工程作业人员个人所得税征收管理问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_7874530b524873cf69d53a8c_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 14,
+      "document_id": "doc_ct_dcf87e8b2cc60b738cf3b583",
+      "version_id": "ver_ct_dcf87e8b2cc60b738cf3b583_v1",
+      "sha256": "dcf87e8b2cc60b738cf3b583c741658a39d29f5624f42fa1279907666aca106c",
+      "source_url": "/zcfgk/c100012/c5194551/content.html",
+      "title": "国家税务总局关于境内机构向我国银行的境外分行支付利息扣缴企业所得税有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_dcf87e8b2cc60b738cf3b583_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 15,
+      "document_id": "doc_ct_74eca764d3159f8ab962b813",
+      "version_id": "ver_ct_74eca764d3159f8ab962b813_v1",
+      "sha256": "74eca764d3159f8ab962b813040788d59bb6f94cea956b11b78ddfeb78f47e47",
+      "source_url": "/zcfgk/c100012/c5211586/content.html",
+      "title": "国家税务总局关于中国联通有限公司及所属分公司和中国联合通信有限公司贵州分公司业务销售附带赠送行为有关流转税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_74eca764d3159f8ab962b813_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 16,
+      "document_id": "doc_ct_8838593e47b10730317687dc",
+      "version_id": "ver_ct_8838593e47b10730317687dc_v1",
+      "sha256": "8838593e47b10730317687dc4712ae221e09b0efc4ac9eebf7ac537eb9e1c3a1",
+      "source_url": "/zcfgk/c100012/c5193891/content.html",
+      "title": "国家税务总局关于外商投资企业和外国企业征收城镇土地使用税问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_8838593e47b10730317687dc_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 17,
+      "document_id": "doc_ct_d2eaeb0c8b4f663884419964",
+      "version_id": "ver_ct_d2eaeb0c8b4f663884419964_v1",
+      "sha256": "d2eaeb0c8b4f663884419964d892151ba8786c62b8f789a97ffcc977ef1d065d",
+      "source_url": "/zcfgk/c100012/c5193239/content.html",
+      "title": "国家税务总局 国家土地管理局关于契税征收管理有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_d2eaeb0c8b4f663884419964_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 18,
+      "document_id": "doc_ct_3e737768d3f8347602219ff5",
+      "version_id": "ver_ct_3e737768d3f8347602219ff5_v1",
+      "sha256": "3e737768d3f8347602219ff581cc6657c773e61af955dcf6c1caba3c2f1b39d4",
+      "source_url": "/zcfgk/c100012/c5194494/content.html",
+      "title": "国家税务总局关于《中华人民共和国政府和奥地利共和国政府关于对所得和财产避免双重征税和防止偷漏税的协定》谅解备忘录生效执行的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_3e737768d3f8347602219ff5_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 19,
+      "document_id": "doc_ct_962e361714346c24e2e72a79",
+      "version_id": "ver_ct_962e361714346c24e2e72a79_v1",
+      "sha256": "962e361714346c24e2e72a79c493b62f34f54f5ba2e2e547a7ce62a2bf9cdf46",
+      "source_url": "/zcfgk/c100012/c5193156/content.html",
+      "title": "国家税务总局关于明确流转税、资源税法规中“主管税务机关、征收机关”名称问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_962e361714346c24e2e72a79_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 20,
+      "document_id": "doc_ct_27ed97a3f1c12763472c0841",
+      "version_id": "ver_ct_27ed97a3f1c12763472c0841_v1",
+      "sha256": "27ed97a3f1c12763472c0841661621038d022f3f689f81d24b9149dfc443bce8",
+      "source_url": "/zcfgk/c100012/c5194464/content.html",
+      "title": "国家税务总局关于个体工商户、个人独资企业和合伙企业个人所得税问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_27ed97a3f1c12763472c0841_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 21,
+      "document_id": "doc_ct_78ffdaffe6af7b264fd2de4f",
+      "version_id": "ver_ct_78ffdaffe6af7b264fd2de4f_v1",
+      "sha256": "78ffdaffe6af7b264fd2de4ff514e890b27e7882877dc02afb74cf45cff38685",
+      "source_url": "/zcfgk/c100012/c5194377/content.html",
+      "title": "国家税务总局关于企业混合性投资业务企业所得税处理问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_78ffdaffe6af7b264fd2de4f_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 22,
+      "document_id": "doc_ct_c18cc58ab8d0bd9201b1bcce",
+      "version_id": "ver_ct_c18cc58ab8d0bd9201b1bcce_v1",
+      "sha256": "c18cc58ab8d0bd9201b1bcce3c9b78bd265997d94c03dc00a336e50f8290b882",
+      "source_url": "/zcfgk/c100012/c5193307/content.html",
+      "title": "国家税务总局关于国有粮食购销企业开具粮食销售发票有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_c18cc58ab8d0bd9201b1bcce_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 23,
+      "document_id": "doc_ct_33559659c5ea37188e0490af",
+      "version_id": "ver_ct_33559659c5ea37188e0490af_v1",
+      "sha256": "33559659c5ea37188e0490af5e7edacb0c6b9b114106376db1a423ffe393ff10",
+      "source_url": "/zcfgk/c100012/c5193269/content.html",
+      "title": "国家税务总局关于外国企业出租卫星通讯线路所取得的收入征税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_33559659c5ea37188e0490af_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 24,
+      "document_id": "doc_ct_e73b4bbfdb0a417ada0aac38",
+      "version_id": "ver_ct_e73b4bbfdb0a417ada0aac38_v1",
+      "sha256": "e73b4bbfdb0a417ada0aac38ec085518b785413c203e7d5f3305ea95684ed432",
+      "source_url": "/zcfgk/c100012/c5214030/content.html",
+      "title": "国家税务总局关于资源综合利用有关企业所得税优惠问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_e73b4bbfdb0a417ada0aac38_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 25,
+      "document_id": "doc_ct_3614e68554350278aef51745",
+      "version_id": "ver_ct_3614e68554350278aef51745_v1",
+      "sha256": "3614e68554350278aef51745e159c68dd91ca040ebbc53ce9907659833579579",
+      "source_url": "/zcfgk/c100012/c5195148/content.html",
+      "title": "国家税务总局关于普通发票行政审批取消和调整后有关税收管理问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_3614e68554350278aef51745_v1_0001",
+        "chunk_ver_ct_3614e68554350278aef51745_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 26,
+      "document_id": "doc_ct_d4c5b764b73b9d56a1c4ab39",
+      "version_id": "ver_ct_d4c5b764b73b9d56a1c4ab39_v1",
+      "sha256": "d4c5b764b73b9d56a1c4ab39d88c92e674cb48f8e098f1328180038a90f623f5",
+      "source_url": "/zcfgk/c102440/c5209849/content.html",
+      "title": "国务院关于设立3岁以下婴幼儿照护个人所得税专项附加扣除的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_d4c5b764b73b9d56a1c4ab39_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 27,
+      "document_id": "doc_ct_c76fd7fc5f843d42e7809ae9",
+      "version_id": "ver_ct_c76fd7fc5f843d42e7809ae9_v1",
+      "sha256": "c76fd7fc5f843d42e7809ae94005be423f77d0a7a3c1703c27fddd8b245ea324",
+      "source_url": "/zcfgk/c100012/c5193304/content.html",
+      "title": "国家税务总局关于促进科技成果转化有关个人所得税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_c76fd7fc5f843d42e7809ae9_v1_0001",
+        "chunk_ver_ct_c76fd7fc5f843d42e7809ae9_v1_0002",
+        "chunk_ver_ct_c76fd7fc5f843d42e7809ae9_v1_0003",
+        "chunk_ver_ct_c76fd7fc5f843d42e7809ae9_v1_0004",
+        "chunk_ver_ct_c76fd7fc5f843d42e7809ae9_v1_0005",
+        "chunk_ver_ct_c76fd7fc5f843d42e7809ae9_v1_0006"
+      ]
+    },
+    {
+      "ordinal": 28,
+      "document_id": "doc_ct_d4b69bb0d4e3d8154a59b715",
+      "version_id": "ver_ct_d4b69bb0d4e3d8154a59b715_v1",
+      "sha256": "d4b69bb0d4e3d8154a59b715629758a8f5e6c6f21b249ba809d6435c80b171c0",
+      "source_url": "/zcfgk/c100012/c5193486/content.html",
+      "title": "国家税务总局关于德国汉莎航空公司有关税收问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_d4b69bb0d4e3d8154a59b715_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 29,
+      "document_id": "doc_ct_13fc892a019e131c34087312",
+      "version_id": "ver_ct_13fc892a019e131c34087312_v1",
+      "sha256": "13fc892a019e131c340873121b06331c2b2ba5bf1c2936ae05f5c33bb7dc824e",
+      "source_url": "/zcfgk/c100012/c5194468/content.html",
+      "title": "国家税务总局关于发布第三批取消进户执法项目清单的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_13fc892a019e131c34087312_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 30,
+      "document_id": "doc_ct_99154b04222d4204ca10bc4e",
+      "version_id": "ver_ct_99154b04222d4204ca10bc4e_v1",
+      "sha256": "99154b04222d4204ca10bc4e27089b55359a6beb5ceae2048fad107a0d6ffc4d",
+      "source_url": "/zcfgk/c100012/c5193260/content.html",
+      "title": "国家税务总局关于生活补助费范围确定问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_99154b04222d4204ca10bc4e_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 31,
+      "document_id": "doc_ct_f8dd9b7f7702d9e242155a41",
+      "version_id": "ver_ct_f8dd9b7f7702d9e242155a41_v1",
+      "sha256": "f8dd9b7f7702d9e242155a41b0bbe437a828adde5c9eff2b278c129cac62072f",
+      "source_url": "/zcfgk/c102440/c5195009/content.html",
+      "title": "国务院办公厅关于推动个人养老金发展的意见",
+      "chunk_ids": [
+        "chunk_ver_ct_f8dd9b7f7702d9e242155a41_v1_0001",
+        "chunk_ver_ct_f8dd9b7f7702d9e242155a41_v1_0002",
+        "chunk_ver_ct_f8dd9b7f7702d9e242155a41_v1_0003"
+      ]
+    },
+    {
+      "ordinal": 32,
+      "document_id": "doc_ct_51e5409727ab1d6c4446bce5",
+      "version_id": "ver_ct_51e5409727ab1d6c4446bce5_v1",
+      "sha256": "51e5409727ab1d6c4446bce5e461672ef3ed9d33ea61758b33075a3c483b3b4f",
+      "source_url": "/zcfgk/c100012/c5194822/content.html",
+      "title": "国家税务总局关于公布一批全文废止的税收规范性文件目录的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_51e5409727ab1d6c4446bce5_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 33,
+      "document_id": "doc_ct_204bb59dfa7eac384a0c6e09",
+      "version_id": "ver_ct_204bb59dfa7eac384a0c6e09_v1",
+      "sha256": "204bb59dfa7eac384a0c6e09857dcdd42a697563c42b2da3d4f14c37e12da89b",
+      "source_url": "/zcfgk/c100012/c5197519/content.html",
+      "title": "国家税务总局 国家海洋局关于发布《海洋工程环境保护税申报征收办法》的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_204bb59dfa7eac384a0c6e09_v1_0001",
+        "chunk_ver_ct_204bb59dfa7eac384a0c6e09_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 34,
+      "document_id": "doc_ct_d429774f2f87efbf22c31da5",
+      "version_id": "ver_ct_d429774f2f87efbf22c31da5_v1",
+      "sha256": "d429774f2f87efbf22c31da55b3f3319cfa337316770ebde29554d8467ab767c",
+      "source_url": "/zcfgk/c100012/c5194608/content.html",
+      "title": "国家税务总局关于停止使用货物运输业增值税专用发票有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_d429774f2f87efbf22c31da5_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 35,
+      "document_id": "doc_ct_e20e1b0b91f077b2b1eb3808",
+      "version_id": "ver_ct_e20e1b0b91f077b2b1eb3808_v1",
+      "sha256": "e20e1b0b91f077b2b1eb38083b8f4751a3c3d7f45efec33c047d41a6c9a45fda",
+      "source_url": "/zcfgk/c100012/c5194602/content.html",
+      "title": "国家税务总局关于取消销货退回消费税退税等两项消费税审批事项后有关管理问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_e20e1b0b91f077b2b1eb3808_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 36,
+      "document_id": "doc_ct_3eefde08dddf485f336b2500",
+      "version_id": "ver_ct_3eefde08dddf485f336b2500_v1",
+      "sha256": "3eefde08dddf485f336b2500d5677a632bbc6f043732d3b8b6fea980a3ca9ca2",
+      "source_url": "/zcfgk/c100012/c5193894/content.html",
+      "title": "国家税务总局关于取消部分地方税行政审批项目的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_3eefde08dddf485f336b2500_v1_0001",
+        "chunk_ver_ct_3eefde08dddf485f336b2500_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 37,
+      "document_id": "doc_ct_4deb1636e502dfcbd1c9fc5e",
+      "version_id": "ver_ct_4deb1636e502dfcbd1c9fc5e_v1",
+      "sha256": "4deb1636e502dfcbd1c9fc5e9c45b989d920d16e9f822922f7c1e2dfb026facd",
+      "source_url": "/zcfgk/c100010/c5194425/content.html",
+      "title": "中华人民共和国国务院令第546号",
+      "chunk_ids": [
+        "chunk_ver_ct_4deb1636e502dfcbd1c9fc5e_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 38,
+      "document_id": "doc_ct_9eeb1c80140959498e7e207d",
+      "version_id": "ver_ct_9eeb1c80140959498e7e207d_v1",
+      "sha256": "9eeb1c80140959498e7e207d920ea8c8a93c4acf85e2ef9239c336774c2b770d",
+      "source_url": "/zcfgk/c100012/c5194301/content.html",
+      "title": "国家税务总局关于执行内地与港澳间税收安排涉及个人受雇所得有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_9eeb1c80140959498e7e207d_v1_0001",
+        "chunk_ver_ct_9eeb1c80140959498e7e207d_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 39,
+      "document_id": "doc_ct_7cfb2e0f505ac22bb4ff070f",
+      "version_id": "ver_ct_7cfb2e0f505ac22bb4ff070f_v1",
+      "sha256": "7cfb2e0f505ac22bb4ff070ff52e2f365ddd8399ce4b0e566fa256ebe2ad1419",
+      "source_url": "/zcfgk/c100012/c5194617/content.html",
+      "title": "国家税务总局关于合理简并纳税人申报缴税次数的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_7cfb2e0f505ac22bb4ff070f_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 40,
+      "document_id": "doc_ct_4ba97142dbc11923b2f40503",
+      "version_id": "ver_ct_4ba97142dbc11923b2f40503_v1",
+      "sha256": "4ba97142dbc11923b2f40503cfe534da9f1849119940cd399cb05748db593610",
+      "source_url": "/zcfgk/c100012/c5194727/content.html",
+      "title": "国家税务总局关于为纳税人提供企业所得税税收政策风险提示服务有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_4ba97142dbc11923b2f40503_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 41,
+      "document_id": "doc_ct_5238b206c50a06a09847991f",
+      "version_id": "ver_ct_5238b206c50a06a09847991f_v1",
+      "sha256": "5238b206c50a06a09847991f7631cd7b986e5bde87ab6cc5664766b1986f457c",
+      "source_url": "/zcfgk/c100012/c5210371/content.html",
+      "title": "国家税务总局关于高尔夫球俱乐部税收问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_5238b206c50a06a09847991f_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 42,
+      "document_id": "doc_ct_bf659ac2dee3555269c8ddbe",
+      "version_id": "ver_ct_bf659ac2dee3555269c8ddbe_v1",
+      "sha256": "bf659ac2dee3555269c8ddbe05c4b38dc1e8e174792a1dd3c6b400c9dcb73a10",
+      "source_url": "/zcfgk/c100012/c5193072/content.html",
+      "title": "国家税务局关于中国海洋石油总公司及其所属公司缴纳土地使用税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_bf659ac2dee3555269c8ddbe_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 43,
+      "document_id": "doc_ct_a481fb4de411fbd482061192",
+      "version_id": "ver_ct_a481fb4de411fbd482061192_v1",
+      "sha256": "a481fb4de411fbd48206119286aa192ab1f2d5a5d5662af34965e95f1d539416",
+      "source_url": "/zcfgk/c100012/c5193412/content.html",
+      "title": "国家税务总局关于增值税一般纳税人平销行为征收增值税问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_a481fb4de411fbd482061192_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 44,
+      "document_id": "doc_ct_e0e06a413ddcfa28964e981c",
+      "version_id": "ver_ct_e0e06a413ddcfa28964e981c_v1",
+      "sha256": "e0e06a413ddcfa28964e981c37ca14282e3d90017deb0aaefa2c40d7ce3ed055",
+      "source_url": "/zcfgk/c102440/c5194194/content.html",
+      "title": "国务院关于统一内外资企业和个人城市维护建设税和教育费附加制度的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_e0e06a413ddcfa28964e981c_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 45,
+      "document_id": "doc_ct_9c66fa194228e1d9c6c890b8",
+      "version_id": "ver_ct_9c66fa194228e1d9c6c890b8_v1",
+      "sha256": "9c66fa194228e1d9c6c890b81cd7adde7303c414ef5f7dd4395a07eb02aaaa78",
+      "source_url": "/zcfgk/c102440/c5193477/content.html",
+      "title": "国务院办公厅转发卫生部等部门关于建立新型农村合作医疗制度意见的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_9c66fa194228e1d9c6c890b8_v1_0001",
+        "chunk_ver_ct_9c66fa194228e1d9c6c890b8_v1_0002",
+        "chunk_ver_ct_9c66fa194228e1d9c6c890b8_v1_0003",
+        "chunk_ver_ct_9c66fa194228e1d9c6c890b8_v1_0004"
+      ]
+    },
+    {
+      "ordinal": 46,
+      "document_id": "doc_ct_40fb99c6ea38a42d2093578d",
+      "version_id": "ver_ct_40fb99c6ea38a42d2093578d_v1",
+      "sha256": "40fb99c6ea38a42d2093578d1f0bdd7cf480fab4d441342ccf41a6b0455d21c1",
+      "source_url": "/zcfgk/c100012/c5194228/content.html",
+      "title": "国家税务总局关于个人所得税有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_40fb99c6ea38a42d2093578d_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 47,
+      "document_id": "doc_ct_d84773f4d3164b941d6966c6",
+      "version_id": "ver_ct_d84773f4d3164b941d6966c6_v1",
+      "sha256": "d84773f4d3164b941d6966c6d6edc0895095b548eb9602c7d6978947b08fca52",
+      "source_url": "/zcfgk/c100012/c5194698/content.html",
+      "title": "国家税务总局关于企业所得税有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_d84773f4d3164b941d6966c6_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 48,
+      "document_id": "doc_ct_eef173d23f28501b10a6654d",
+      "version_id": "ver_ct_eef173d23f28501b10a6654d_v1",
+      "sha256": "eef173d23f28501b10a6654d6e91c470956c8b79119b2c78ecf496ec4aaf4dc4",
+      "source_url": "/zcfgk/c100012/c5194751/content.html",
+      "title": "国家税务总局关于卷烟消费税计税价格核定管理有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_eef173d23f28501b10a6654d_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 49,
+      "document_id": "doc_ct_817b83e42c727eb1209713e4",
+      "version_id": "ver_ct_817b83e42c727eb1209713e4_v1",
+      "sha256": "817b83e42c727eb1209713e406ccf805b33dd8caf63c71b3a208d3b968a610ea",
+      "source_url": "/zcfgk/c102440/c5193770/content.html",
+      "title": "国务院关于开征石油特别收益金的决定",
+      "chunk_ids": [
+        "chunk_ver_ct_817b83e42c727eb1209713e4_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 50,
+      "document_id": "doc_ct_0f9d3cc822ff2f5297ab0de3",
+      "version_id": "ver_ct_0f9d3cc822ff2f5297ab0de3_v1",
+      "sha256": "0f9d3cc822ff2f5297ab0de3f319fc90d9c323ad90d6accbc23ac03414888b59",
+      "source_url": "/zcfgk/c100012/c5194550/content.html",
+      "title": "国家税务总局关于规范成本分摊协议管理的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_0f9d3cc822ff2f5297ab0de3_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 51,
+      "document_id": "doc_ct_cbf187998fd9adff59d31a80",
+      "version_id": "ver_ct_cbf187998fd9adff59d31a80_v1",
+      "sha256": "cbf187998fd9adff59d31a800760b55ec44012fb5cb27c227bb72d4d83c78bc8",
+      "source_url": "/zcfgk/c100012/c5194898/content.html",
+      "title": "国家税务总局关于发行2019年印花税票的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_cbf187998fd9adff59d31a80_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 52,
+      "document_id": "doc_ct_5382e1f3fd9239f26aefc8cc",
+      "version_id": "ver_ct_5382e1f3fd9239f26aefc8cc_v1",
+      "sha256": "5382e1f3fd9239f26aefc8cc3adf3c5c398451a20eedb9a4b82573b26085b6b7",
+      "source_url": "/zcfgk/c100012/c5193555/content.html",
+      "title": "国家税务总局关于加强外籍人员个人所得税征管工作的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_5382e1f3fd9239f26aefc8cc_v1_0001",
+        "chunk_ver_ct_5382e1f3fd9239f26aefc8cc_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 53,
+      "document_id": "doc_ct_6babbf951db41dd9c588e28a",
+      "version_id": "ver_ct_6babbf951db41dd9c588e28a_v1",
+      "sha256": "6babbf951db41dd9c588e28a781e9fbcf2935aa4d2c499b4ea8833b0864b4782",
+      "source_url": "/zcfgk/c100012/c5194435/content.html",
+      "title": "国家税务总局关于《中华人民共和国政府和大不列颠及北爱尔兰联合王国政府对所得和财产收益避免双重征税和防止偷漏税的协定》及议定书生效执行的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_6babbf951db41dd9c588e28a_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 54,
+      "document_id": "doc_ct_3c023cf88acf0421b5c6aa29",
+      "version_id": "ver_ct_3c023cf88acf0421b5c6aa29_v1",
+      "sha256": "3c023cf88acf0421b5c6aa29599e4298adc41a0d91da89efa6d3df6c5fa65129",
+      "source_url": "/zcfgk/c100012/c5194917/content.html",
+      "title": "国家税务总局关于公布一批全文失效废止的税务规范性文件目录的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_3c023cf88acf0421b5c6aa29_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 55,
+      "document_id": "doc_ct_f54a33fd9a28f8e5e44461cb",
+      "version_id": "ver_ct_f54a33fd9a28f8e5e44461cb_v1",
+      "sha256": "f54a33fd9a28f8e5e44461cb43749c902cfa5b328919edce678270c1d7e41ff2",
+      "source_url": "/zcfgk/c100010/c5194439/content.html",
+      "title": "矿产资源勘查区块登记管理办法",
+      "chunk_ids": [
+        "chunk_ver_ct_f54a33fd9a28f8e5e44461cb_v1_0001",
+        "chunk_ver_ct_f54a33fd9a28f8e5e44461cb_v1_0002",
+        "chunk_ver_ct_f54a33fd9a28f8e5e44461cb_v1_0003",
+        "chunk_ver_ct_f54a33fd9a28f8e5e44461cb_v1_0004",
+        "chunk_ver_ct_f54a33fd9a28f8e5e44461cb_v1_0005",
+        "chunk_ver_ct_f54a33fd9a28f8e5e44461cb_v1_0006"
+      ]
+    },
+    {
+      "ordinal": 56,
+      "document_id": "doc_ct_c0c80801df844d7fd1a15edc",
+      "version_id": "ver_ct_c0c80801df844d7fd1a15edc_v1",
+      "sha256": "c0c80801df844d7fd1a15edc91e2c76074fea9e955c6b8f038dcfad4ae181ede",
+      "source_url": "/zcfgk/c100012/c5193365/content.html",
+      "title": "国家税务总局关于中科避免双重征税协定第十一条第三款第（四）项解释的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_c0c80801df844d7fd1a15edc_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 57,
+      "document_id": "doc_ct_280118c8acffa61e90b39f61",
+      "version_id": "ver_ct_280118c8acffa61e90b39f61_v1",
+      "sha256": "280118c8acffa61e90b39f61dee31cd33c9a4381c5dc798661eaab880983e750",
+      "source_url": "/zcfgk/c100012/c5193196/content.html",
+      "title": "国家税务总局关于世界银行、联合国直接派遣来华工作的专家享受免征个人所得税有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_280118c8acffa61e90b39f61_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 58,
+      "document_id": "doc_ct_8c15058d019399a7addee862",
+      "version_id": "ver_ct_8c15058d019399a7addee862_v1",
+      "sha256": "8c15058d019399a7addee862666cf1aaa8b5317b6819a9107609b1423f5e8748",
+      "source_url": "/zcfgk/c100012/c5194166/content.html",
+      "title": "国家税务总局关于土地增值税清算有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_8c15058d019399a7addee862_v1_0001",
+        "chunk_ver_ct_8c15058d019399a7addee862_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 59,
+      "document_id": "doc_ct_8dd9ee07a7168ffab7f7d2bd",
+      "version_id": "ver_ct_8dd9ee07a7168ffab7f7d2bd_v1",
+      "sha256": "8dd9ee07a7168ffab7f7d2bde225b7c05b6b9a0f05ba82e5c074316d080a2982",
+      "source_url": "/zcfgk/c100012/c5217074/content.html",
+      "title": "国家税务总局 工业和信息化部关于发布《免征车辆购置税的设有固定装置的非运输专用作业车辆目录》（第十二批）的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_8dd9ee07a7168ffab7f7d2bd_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 60,
+      "document_id": "doc_ct_a022a83c4c0a2baf71234e63",
+      "version_id": "ver_ct_a022a83c4c0a2baf71234e63_v1",
+      "sha256": "a022a83c4c0a2baf71234e635fa8316ae599bbf7727b68182b5c3cc7d5890239",
+      "source_url": "/zcfgk/c100012/c5194757/content.html",
+      "title": "国家税务总局 外交部关于外国驻华使（领）馆及其馆员在华购买货物和服务增值税退税管理有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_a022a83c4c0a2baf71234e63_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 61,
+      "document_id": "doc_ct_a796d74b1f699eb8930d6f57",
+      "version_id": "ver_ct_a796d74b1f699eb8930d6f57_v1",
+      "sha256": "a796d74b1f699eb8930d6f5762b86420a3eb879b63bf0d08c53e65ea09205980",
+      "source_url": "/zcfgk/c100012/c5194456/content.html",
+      "title": "国家税务总局关于《中华人民共和国政府和厄瓜多尔共和国政府对所得避免双重征税和防止偷漏税的协定》及议定书生效执行的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_a796d74b1f699eb8930d6f57_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 62,
+      "document_id": "doc_ct_d48c6fee00d5aada1813a474",
+      "version_id": "ver_ct_d48c6fee00d5aada1813a474_v1",
+      "sha256": "d48c6fee00d5aada1813a47481a9dda7a9444ce5510c659dfa9da384d47bde46",
+      "source_url": "/zcfgk/c100012/c5193105/content.html",
+      "title": "国家税务局关于军火武器合同免征印花税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_d48c6fee00d5aada1813a474_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 63,
+      "document_id": "doc_ct_edc6abca601e83a49d933296",
+      "version_id": "ver_ct_edc6abca601e83a49d933296_v1",
+      "sha256": "edc6abca601e83a49d933296de331093f40c2a6a7c414053152e9b8ec6bf33df",
+      "source_url": "/zcfgk/c100012/c5193669/content.html",
+      "title": "国家税务总局关于停止执行《金银首饰购货（加工）管理证明单》使用规定的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_edc6abca601e83a49d933296_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 64,
+      "document_id": "doc_ct_be8d78257b9795a27fb2b437",
+      "version_id": "ver_ct_be8d78257b9795a27fb2b437_v1",
+      "sha256": "be8d78257b9795a27fb2b43761773a3815ad3a5cafce231f3aec053f6a157736",
+      "source_url": "/zcfgk/c100012/c5193195/content.html",
+      "title": "国家税务总局关于原油管理费征收增值税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_be8d78257b9795a27fb2b437_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 65,
+      "document_id": "doc_ct_7d735b8e85d69de41e3aa40e",
+      "version_id": "ver_ct_7d735b8e85d69de41e3aa40e_v1",
+      "sha256": "7d735b8e85d69de41e3aa40ec9cb732b2df6cc8f96906aedcb46d961c571db80",
+      "source_url": "/zcfgk/c100012/c5194142/content.html",
+      "title": "国家税务总局关于粕类产品征免增值税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_7d735b8e85d69de41e3aa40e_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 66,
+      "document_id": "doc_ct_6acc569dae04099dc616fafd",
+      "version_id": "ver_ct_6acc569dae04099dc616fafd_v1",
+      "sha256": "6acc569dae04099dc616fafdfe258f98c36f5c79150ce5934c3ddc0f90f6ab21",
+      "source_url": "/zcfgk/c102440/c5193781/content.html",
+      "title": "国务院关于完善大中型水库移民后期扶持政策的意见",
+      "chunk_ids": [
+        "chunk_ver_ct_6acc569dae04099dc616fafd_v1_0001",
+        "chunk_ver_ct_6acc569dae04099dc616fafd_v1_0002",
+        "chunk_ver_ct_6acc569dae04099dc616fafd_v1_0003",
+        "chunk_ver_ct_6acc569dae04099dc616fafd_v1_0004",
+        "chunk_ver_ct_6acc569dae04099dc616fafd_v1_0005"
+      ]
+    },
+    {
+      "ordinal": 67,
+      "document_id": "doc_ct_b251ce7c986d3da358ffb2de",
+      "version_id": "ver_ct_b251ce7c986d3da358ffb2de_v1",
+      "sha256": "b251ce7c986d3da358ffb2ded3960690f263998b13c605e2eb5de705929394ac",
+      "source_url": "/zcfgk/c100010/c5209866/content.html",
+      "title": "国务院关于修改《对储蓄存款利息所得征收个人所得税的实施办法》的决定",
+      "chunk_ids": [
+        "chunk_ver_ct_b251ce7c986d3da358ffb2de_v1_0001",
+        "chunk_ver_ct_b251ce7c986d3da358ffb2de_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 68,
+      "document_id": "doc_ct_f8269b2cb56a1d4451eb11f4",
+      "version_id": "ver_ct_f8269b2cb56a1d4451eb11f4_v1",
+      "sha256": "f8269b2cb56a1d4451eb11f4aef2308074038576eba1f34125b75f7d9897d90a",
+      "source_url": "/zcfgk/c100009/c5193058/content.html",
+      "title": "中华人民共和国印花税法",
+      "chunk_ids": [
+        "chunk_ver_ct_f8269b2cb56a1d4451eb11f4_v1_0001",
+        "chunk_ver_ct_f8269b2cb56a1d4451eb11f4_v1_0002",
+        "chunk_ver_ct_f8269b2cb56a1d4451eb11f4_v1_0003"
+      ]
+    },
+    {
+      "ordinal": 69,
+      "document_id": "doc_ct_08cb47d4dcb25cf48f9fd292",
+      "version_id": "ver_ct_08cb47d4dcb25cf48f9fd292_v1",
+      "sha256": "08cb47d4dcb25cf48f9fd29271539bbf251442def9cbcdd741db6154dcfda203",
+      "source_url": "/zcfgk/c100012/c5193089/content.html",
+      "title": "国家税务局关于图书、报刊等征订凭证征免印花税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_08cb47d4dcb25cf48f9fd292_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 70,
+      "document_id": "doc_ct_bb01751baa426e229f09d798",
+      "version_id": "ver_ct_bb01751baa426e229f09d798_v1",
+      "sha256": "bb01751baa426e229f09d798e518aa45699587264147e1c70f87b5f1af6d107b",
+      "source_url": "/zcfgk/c100012/c5194791/content.html",
+      "title": "国家税务总局关于大连商品交易所铁矿石期货保税交割业务增值税管理问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_bb01751baa426e229f09d798_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 71,
+      "document_id": "doc_ct_7db720d8cf22730964c12e15",
+      "version_id": "ver_ct_7db720d8cf22730964c12e15_v1",
+      "sha256": "7db720d8cf22730964c12e1548d6f02ba078169a60086aa1b882a6244c1280e1",
+      "source_url": "/zcfgk/c100010/c5194443/content.html",
+      "title": "中华人民共和国环境保护税法实施条例",
+      "chunk_ids": [
+        "chunk_ver_ct_7db720d8cf22730964c12e15_v1_0001",
+        "chunk_ver_ct_7db720d8cf22730964c12e15_v1_0002",
+        "chunk_ver_ct_7db720d8cf22730964c12e15_v1_0003"
+      ]
+    },
+    {
+      "ordinal": 72,
+      "document_id": "doc_ct_ef57229a1167bbd391627f58",
+      "version_id": "ver_ct_ef57229a1167bbd391627f58_v1",
+      "sha256": "ef57229a1167bbd391627f584527e4ca74347d69decabaf3455dcefdb296fb71",
+      "source_url": "/zcfgk/c100012/c5193155/content.html",
+      "title": "国家税务总局关于我国政府和马耳他政府避免双重征税协定若干条文解释与执行的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_ef57229a1167bbd391627f58_v1_0001",
+        "chunk_ver_ct_ef57229a1167bbd391627f58_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 73,
+      "document_id": "doc_ct_efa0c3fe2d350ff7b3c2e55a",
+      "version_id": "ver_ct_efa0c3fe2d350ff7b3c2e55a_v1",
+      "sha256": "efa0c3fe2d350ff7b3c2e55ad69ed6fffa56fddf264d98f05f7055ff677a74b0",
+      "source_url": "/zcfgk/c100012/c5194874/content.html",
+      "title": "国家税务总局关于城镇土地使用税等“六税一费”优惠事项资料留存备查的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_efa0c3fe2d350ff7b3c2e55a_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 74,
+      "document_id": "doc_ct_fa3d24765c075215ebd6166a",
+      "version_id": "ver_ct_fa3d24765c075215ebd6166a_v1",
+      "sha256": "fa3d24765c075215ebd6166a5ca742ace8675564a5dc9f7e973d3a0c16cce257",
+      "source_url": "/zcfgk/c100012/c5237400/content.html",
+      "title": "国家税务总局 财政部 中国证监会关于进一步完善个人转让上市公司限售股所得个人所得税有关征管服务事项的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_fa3d24765c075215ebd6166a_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 75,
+      "document_id": "doc_ct_bcae39e48261fab7c89bab76",
+      "version_id": "ver_ct_bcae39e48261fab7c89bab76_v1",
+      "sha256": "bcae39e48261fab7c89bab76efcc292a9d8960ff99ed9874e262931a547d0422",
+      "source_url": "/zcfgk/c100012/c5195125/content.html",
+      "title": "国家税务总局关于税控发票印制使用管理有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_bcae39e48261fab7c89bab76_v1_0001",
+        "chunk_ver_ct_bcae39e48261fab7c89bab76_v1_0002",
+        "chunk_ver_ct_bcae39e48261fab7c89bab76_v1_0003",
+        "chunk_ver_ct_bcae39e48261fab7c89bab76_v1_0004",
+        "chunk_ver_ct_bcae39e48261fab7c89bab76_v1_0005"
+      ]
+    },
+    {
+      "ordinal": 76,
+      "document_id": "doc_ct_74ab232e877a82d08936217b",
+      "version_id": "ver_ct_74ab232e877a82d08936217b_v1",
+      "sha256": "74ab232e877a82d08936217b9eb4707807c46333d5d7679036d8cfa863094543",
+      "source_url": "/zcfgk/c100012/c5193406/content.html",
+      "title": "国家税务总局关于《关于个人独资企业和合伙企业投资者征收个人所得税的规定》执行口径的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_74ab232e877a82d08936217b_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 77,
+      "document_id": "doc_ct_0be29bb7d2e4a11f75aed732",
+      "version_id": "ver_ct_0be29bb7d2e4a11f75aed732_v1",
+      "sha256": "0be29bb7d2e4a11f75aed7323a5279a25c017d8f0da845b45d22ab0704fa519b",
+      "source_url": "/zcfgk/c100012/c5193118/content.html",
+      "title": "国家税务局关于捷克共和国和斯洛伐克共和国继承原捷克斯洛伐克同我国签署的税收协定的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_0be29bb7d2e4a11f75aed732_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 78,
+      "document_id": "doc_ct_2cbc51b3925231e9ca2c857c",
+      "version_id": "ver_ct_2cbc51b3925231e9ca2c857c_v1",
+      "sha256": "2cbc51b3925231e9ca2c857c3a70cb71b7132f2d3528a4d01077cfa431f73f73",
+      "source_url": "/zcfgk/c100012/c5194365/content.html",
+      "title": "国家税务总局关于油气田企业开发煤层气 页岩气增值税有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_2cbc51b3925231e9ca2c857c_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 79,
+      "document_id": "doc_ct_0b95e3686e68d7e6a36bf169",
+      "version_id": "ver_ct_0b95e3686e68d7e6a36bf169_v1",
+      "sha256": "0b95e3686e68d7e6a36bf169cc6b701bb5ceb261f00d7c39be67f8008e8d39ed",
+      "source_url": "/zcfgk/c100012/c5194171/content.html",
+      "title": "国家税务总局关于环境保护节能节水安全生产等专用设备投资抵免企业所得税有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_0b95e3686e68d7e6a36bf169_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 80,
+      "document_id": "doc_ct_ab1be767e18cdfb3f6f99ef8",
+      "version_id": "ver_ct_ab1be767e18cdfb3f6f99ef8_v1",
+      "sha256": "ab1be767e18cdfb3f6f99ef807c1f110b647f755b78dbbe30ba7b2c4ef98df17",
+      "source_url": "/zcfgk/c100012/c5237968/content.html",
+      "title": "国家税务总局关于优化企业所得税年度纳税申报表的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_ab1be767e18cdfb3f6f99ef8_v1_0001",
+        "chunk_ver_ct_ab1be767e18cdfb3f6f99ef8_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 81,
+      "document_id": "doc_ct_4bf67a9dae9d02a51d6c7449",
+      "version_id": "ver_ct_4bf67a9dae9d02a51d6c7449_v1",
+      "sha256": "4bf67a9dae9d02a51d6c74497b9eba467477f907f6fbcf762d689a8225a6c762",
+      "source_url": "/zcfgk/c100012/c5193069/content.html",
+      "title": "国家税务局关于对法国阿尔斯通、日本三菱重工、三菱商事、英国XX工程公司向重庆珞璜电厂、江北电厂销售成套设备有关征税和适用税收协定问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_4bf67a9dae9d02a51d6c7449_v1_0001",
+        "chunk_ver_ct_4bf67a9dae9d02a51d6c7449_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 82,
+      "document_id": "doc_ct_cca19c1ed28668122a2261fb",
+      "version_id": "ver_ct_cca19c1ed28668122a2261fb_v1",
+      "sha256": "cca19c1ed28668122a2261fba7ffede34565c7f695922fb6001b27ad2e295264",
+      "source_url": "/zcfgk/c100012/c5194005/content.html",
+      "title": "国家税务总局关于废旧物资发票抵扣增值税有关事项的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_cca19c1ed28668122a2261fb_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 83,
+      "document_id": "doc_ct_dee47d37475672f6e5da19ae",
+      "version_id": "ver_ct_dee47d37475672f6e5da19ae_v1",
+      "sha256": "dee47d37475672f6e5da19ae5dfbe20ff36a7ca4f553f3db10ecaeebd3bb0854",
+      "source_url": "/zcfgk/c100012/c5211617/content.html",
+      "title": "国家税务总局关于做好已取消涉及出口退税行政审批项目的后续管理工作的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_dee47d37475672f6e5da19ae_v1_0001",
+        "chunk_ver_ct_dee47d37475672f6e5da19ae_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 84,
+      "document_id": "doc_ct_348d00ac8979404242cb7797",
+      "version_id": "ver_ct_348d00ac8979404242cb7797_v1",
+      "sha256": "348d00ac8979404242cb7797d911e473649a72c934a8d80d7c1b1028cc1e8aaf",
+      "source_url": "/zcfgk/c100010/c5211554/content.html",
+      "title": "中华人民共和国对外合作开采陆上石油资源条例",
+      "chunk_ids": [
+        "chunk_ver_ct_348d00ac8979404242cb7797_v1_0001",
+        "chunk_ver_ct_348d00ac8979404242cb7797_v1_0002",
+        "chunk_ver_ct_348d00ac8979404242cb7797_v1_0003",
+        "chunk_ver_ct_348d00ac8979404242cb7797_v1_0004"
+      ]
+    },
+    {
+      "ordinal": 85,
+      "document_id": "doc_ct_e7b08fe4c742171aa6dd36e8",
+      "version_id": "ver_ct_e7b08fe4c742171aa6dd36e8_v1",
+      "sha256": "e7b08fe4c742171aa6dd36e8ba0598a7302828020adaf78b6d21552d3d30956d",
+      "source_url": "/zcfgk/c100012/c5196761/content.html",
+      "title": "国家税务总局关于实施《中华人民共和国印花税法》等有关事项的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_e7b08fe4c742171aa6dd36e8_v1_0001",
+        "chunk_ver_ct_e7b08fe4c742171aa6dd36e8_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 86,
+      "document_id": "doc_ct_b0088ce1923a808a93f595c2",
+      "version_id": "ver_ct_b0088ce1923a808a93f595c2_v1",
+      "sha256": "b0088ce1923a808a93f595c2ae10a7eca00c597e947ab76e9990ffbcc6317ef5",
+      "source_url": "/zcfgk/c100012/c5194251/content.html",
+      "title": "国家税务总局关于废止逾期增值税扣税凭证一律不得抵扣规定的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_b0088ce1923a808a93f595c2_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 87,
+      "document_id": "doc_ct_a471ae6100c9b75c2519901f",
+      "version_id": "ver_ct_a471ae6100c9b75c2519901f_v1",
+      "sha256": "a471ae6100c9b75c2519901f4c45546169df26242a84febce91e2eee0b3034c8",
+      "source_url": "/zcfgk/c100012/c5194235/content.html",
+      "title": "国家税务总局关于企业所得税若干问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_a471ae6100c9b75c2519901f_v1_0001",
+        "chunk_ver_ct_a471ae6100c9b75c2519901f_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 88,
+      "document_id": "doc_ct_6a0f0ecb7e6ec70211074ec7",
+      "version_id": "ver_ct_6a0f0ecb7e6ec70211074ec7_v1",
+      "sha256": "6a0f0ecb7e6ec70211074ec79148fe887326d3845f24babd2a578c5305bcf46a",
+      "source_url": "/zcfgk/c100011/c5196266/content.html",
+      "title": "非居民承包工程作业和提供劳务税收管理暂行办法",
+      "chunk_ids": [
+        "chunk_ver_ct_6a0f0ecb7e6ec70211074ec7_v1_0001",
+        "chunk_ver_ct_6a0f0ecb7e6ec70211074ec7_v1_0002",
+        "chunk_ver_ct_6a0f0ecb7e6ec70211074ec7_v1_0003",
+        "chunk_ver_ct_6a0f0ecb7e6ec70211074ec7_v1_0004",
+        "chunk_ver_ct_6a0f0ecb7e6ec70211074ec7_v1_0005",
+        "chunk_ver_ct_6a0f0ecb7e6ec70211074ec7_v1_0006"
+      ]
+    },
+    {
+      "ordinal": 89,
+      "document_id": "doc_ct_5c7f8232b90f564bacb460f9",
+      "version_id": "ver_ct_5c7f8232b90f564bacb460f9_v1",
+      "sha256": "5c7f8232b90f564bacb460f9d43fa08753b8e059f6cf120a98e018b643e95f8e",
+      "source_url": "/zcfgk/c100012/c5193531/content.html",
+      "title": "国家税务总局关于发行2003年版印花税票的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_5c7f8232b90f564bacb460f9_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 90,
+      "document_id": "doc_ct_fc93d55868ee8250d4ffb257",
+      "version_id": "ver_ct_fc93d55868ee8250d4ffb257_v1",
+      "sha256": "fc93d55868ee8250d4ffb257d0507cd2da7854bccb281bd22e7595eaab7d6d2b",
+      "source_url": "/zcfgk/c100012/c5194471/content.html",
+      "title": "国家税务总局关于房地产开发企业成本对象管理问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_fc93d55868ee8250d4ffb257_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 91,
+      "document_id": "doc_ct_b1bfab345216f8349a47e3a8",
+      "version_id": "ver_ct_b1bfab345216f8349a47e3a8_v1",
+      "sha256": "b1bfab345216f8349a47e3a8e04777a68b9e914d9549302648fc4728412c3e43",
+      "source_url": "/zcfgk/c100012/c5194247/content.html",
+      "title": "国家税务总局关于贯彻执行修改后的个人所得税法有关问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_b1bfab345216f8349a47e3a8_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 92,
+      "document_id": "doc_ct_241032921a31ee4bae7a2838",
+      "version_id": "ver_ct_241032921a31ee4bae7a2838_v1",
+      "sha256": "241032921a31ee4bae7a2838b749cf66fb1c3b625a527c49a0761ce5b2db266b",
+      "source_url": "/zcfgk/c100012/c5194149/content.html",
+      "title": "国家税务总局关于人工合成牛胚胎适用增值税税率问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_241032921a31ee4bae7a2838_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 93,
+      "document_id": "doc_ct_8e4a0ccbf7776ab27d5c6438",
+      "version_id": "ver_ct_8e4a0ccbf7776ab27d5c6438_v1",
+      "sha256": "8e4a0ccbf7776ab27d5c643820a58c81a194d20d88bd0e38ec3cd66b5b2a6d82",
+      "source_url": "/zcfgk/c100012/c5193645/content.html",
+      "title": "国家税务总局关于商业企业向货物供应方收取的部分费用征收流转税问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_8e4a0ccbf7776ab27d5c6438_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 94,
+      "document_id": "doc_ct_0a1576a68519776d5ed0abb4",
+      "version_id": "ver_ct_0a1576a68519776d5ed0abb4_v1",
+      "sha256": "0a1576a68519776d5ed0abb43768a2660108e37eb5dc53ff0103affe4036224a",
+      "source_url": "/zcfgk/c100010/c5211958/content.html",
+      "title": "规章制定程序条例",
+      "chunk_ids": [
+        "chunk_ver_ct_0a1576a68519776d5ed0abb4_v1_0001",
+        "chunk_ver_ct_0a1576a68519776d5ed0abb4_v1_0002",
+        "chunk_ver_ct_0a1576a68519776d5ed0abb4_v1_0003",
+        "chunk_ver_ct_0a1576a68519776d5ed0abb4_v1_0004",
+        "chunk_ver_ct_0a1576a68519776d5ed0abb4_v1_0005",
+        "chunk_ver_ct_0a1576a68519776d5ed0abb4_v1_0006"
+      ]
+    },
+    {
+      "ordinal": 95,
+      "document_id": "doc_ct_58e7ad967fe0f4898a2dada6",
+      "version_id": "ver_ct_58e7ad967fe0f4898a2dada6_v1",
+      "sha256": "58e7ad967fe0f4898a2dada6558a1936b6477e3c4e774b191fc213138d0561ea",
+      "source_url": "/zcfgk/c100012/c5194150/content.html",
+      "title": "国家税务总局关于新认定增值税一般纳税人使用增值税防伪税控系统有关问题的通知",
+      "chunk_ids": [
+        "chunk_ver_ct_58e7ad967fe0f4898a2dada6_v1_0001",
+        "chunk_ver_ct_58e7ad967fe0f4898a2dada6_v1_0002"
+      ]
+    },
+    {
+      "ordinal": 96,
+      "document_id": "doc_ct_089e5e82ea25587e6158e713",
+      "version_id": "ver_ct_089e5e82ea25587e6158e713_v1",
+      "sha256": "089e5e82ea25587e6158e713ca5efd2bf83f638874ecbd1262644fe8d20a5af2",
+      "source_url": "/zcfgk/c100012/c5195167/content.html",
+      "title": "国家税务总局关于发布《网上纳税申报软件业务标准》的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_089e5e82ea25587e6158e713_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 97,
+      "document_id": "doc_ct_0b3796265d8e561e05b210f3",
+      "version_id": "ver_ct_0b3796265d8e561e05b210f3_v1",
+      "sha256": "0b3796265d8e561e05b210f31688f9a5f3a44b25c6dcff7deaa904ad07d2605f",
+      "source_url": "/zcfgk/c100012/c5193813/content.html",
+      "title": "国家税务总局关于购进整车改装汽车征收消费税问题的批复",
+      "chunk_ids": [
+        "chunk_ver_ct_0b3796265d8e561e05b210f3_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 98,
+      "document_id": "doc_ct_a437f4048d42d7316ffca22f",
+      "version_id": "ver_ct_a437f4048d42d7316ffca22f_v1",
+      "sha256": "a437f4048d42d7316ffca22f15e1535ca05d349bdc2b019a6799bf7ad08d77e4",
+      "source_url": "/zcfgk/c100012/c5194214/content.html",
+      "title": "国家税务总局关于纳税人销售伴生金有关增值税问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_a437f4048d42d7316ffca22f_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 99,
+      "document_id": "doc_ct_6aa05ecb2203784965290f99",
+      "version_id": "ver_ct_6aa05ecb2203784965290f99_v1",
+      "sha256": "6aa05ecb2203784965290f992e32d543113c551e541bf2849e51c3352702680f",
+      "source_url": "/zcfgk/c100012/c5194256/content.html",
+      "title": "国家税务总局关于纳税人为其他单位和个人开采矿产资源提供劳务有关货物和劳务税问题的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_6aa05ecb2203784965290f99_v1_0001"
+      ]
+    },
+    {
+      "ordinal": 100,
+      "document_id": "doc_ct_18ad16e209f9f0243fef9078",
+      "version_id": "ver_ct_18ad16e209f9f0243fef9078_v1",
+      "sha256": "18ad16e209f9f0243fef9078deb3b5fcc4400fd782da68485c49e351fcf6fb0e",
+      "source_url": "/zcfgk/c100012/c5195197/content.html",
+      "title": "国家税务总局关于优化纳税人延期缴纳税款等税务事项管理方式的公告",
+      "chunk_ids": [
+        "chunk_ver_ct_18ad16e209f9f0243fef9078_v1_0001",
+        "chunk_ver_ct_18ad16e209f9f0243fef9078_v1_0002"
+      ]
+    }
+  ],
+  "document_count": 100,
+  "chunk_count": 167,
+  "newly_imported_document_count": 9,
+  "newly_imported_chunk_count": 16,
+  "eval_case_count": 40,
+  "question_template_sha256": "6ea844443b7e4031d1ab78d3d885307cb09e57a40a1b05fc6155741c2c345b90",
+  "manual_review": "NOT_COMPLETED",
+  "created_at": "2026-10-09T07:11:04.122625+00:00"
+}

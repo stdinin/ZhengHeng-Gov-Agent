@@ -1,0 +1,43 @@
+{
+  "run_id": "public_eval_v1_100docs",
+  "bm25": {
+    "recall_at_1": 0.9666666666666667,
+    "recall_at_5": 1.0,
+    "recall_at_10": 1.0,
+    "mrr": 0.9777777777777777,
+    "p50_latency_ms": 66.63875000958797,
+    "p95_latency_ms": 1099.5001000119373
+  },
+  "dense": {
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "recall_at_10": 1.0,
+    "mrr": 1.0,
+    "p50_latency_ms": 30.91134950045671,
+    "p95_latency_ms": 254.91499999770895
+  },
+  "bm25_dense_rrf": {
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "recall_at_10": 1.0,
+    "mrr": 1.0,
+    "p50_latency_ms": 94.6730750019924,
+    "p95_latency_ms": 1245.176199998241
+  },
+  "bm25_dense_rrf_reranker": {
+    "recall_at_1": 0.9333333333333333,
+    "recall_at_5": 0.9666666666666667,
+    "recall_at_10": 1.0,
+    "mrr": 0.9555555555555556,
+    "p50_latency_ms": 88441.59145149206,
+    "p95_latency_ms": 195599.44329995778
+  },
+  "full_canonical_active_recheck": {
+    "recall_at_1": 0.9333333333333333,
+    "recall_at_5": 0.9666666666666667,
+    "recall_at_10": 1.0,
+    "mrr": 0.9555555555555556,
+    "p50_latency_ms": 88458.69608548674,
+    "p95_latency_ms": 195609.85989996698
+  }
+}
