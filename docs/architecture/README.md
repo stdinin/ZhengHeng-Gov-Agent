@@ -1,29 +1,27 @@
-# 政衡 Agent 系统架构图
+# 系统设计图
 
-## 补充：业务时序图与功能结构图
+## 业务时序图与功能结构图
 
-按后续两张参考图新增：
+图件覆盖政策问答的业务交互和模块组成：
 
 - `zhengheng-sequence.png` / `.svg` / `.drawio`：四阶段、70 条消息的业务时序图。
 - `zhengheng-functions.png` / `.svg` / `.drawio`：六个子系统的黑白树形功能结构图。
 - `zhengheng-business-diagrams.drawio`：上述两图合并为两个可编辑页面。
-- `sequence-phase-1.png` 至 `sequence-phase-4.png`：时序图各阶段局部预览；完整参与者标题见全图。
-- `build_business_diagrams.py`：仅生成本次新增图件，依赖 `resvg-py` 和 Pillow；重新运行覆盖同名输出，手动修改 draw.io 后请先另存。
+- `build_business_diagrams.py`：生成业务时序图与功能结构图，依赖 `resvg-py` 和 Pillow；重新运行覆盖同名输出，手动修改 draw.io 后请先另存。
 
 时序依据：`api/auth.py`、`frontend/src/pages/Login.tsx`、`api/documents.py`、`ingestion/indexer.py`、`agents/chat_service.py`、`agents/memory.py`、`memory/context.py`、`agents/orchestrator.py`、`agents/department_service.py`、`agents/aggregator.py`、`retrieval/hybrid.py`、`evolution/service.py`。后端路径均相对 `backend/app/`。
 
 图采用逻辑参与者：FastAPI、全局编排、入库与反馈服务合并为后端泳道；Python 检索逻辑、BGE 模型、OpenSearch 和 Milvus 合并为检索与索引泳道。三类部门 Agent 用一个泳道表达相同流程，以并行注释注明 fan-out。回放内部流程折叠为自调用。省略部分底层读取返回，不表示无返回值。文档发布展示成功分支，问答补充部分失败与拒答说明。
 
-功能结构图归纳代码能力，不表示全部功能都有前端页面；管理操作当前可由 API / 脚本完成。用户登录实际使用 sessionStorage 保存 JWT，并未照搬参考图中的 Cookie。没有加入图书借还、MySQL 或第三方商业模型等不属于当前项目的内容。
+功能结构图归纳代码能力，不表示全部功能都有前端页面；管理操作当前可由 API / 脚本完成。用户登录使用 sessionStorage 保存 JWT。
 
-按用户参考图的五层布局绘制：客户端、服务层、业务层、公共技术层、基础设施与工具。核对日期：2026-10-13。依据当前工作区代码，包括尚未提交的 V1.1 实现；不是线上运行状态证明。
+系统架构图采用五层布局：客户端、服务层、业务层、公共技术层、基础设施与工具。图件依据 V1.1 源码与配置整理，描述系统设计，不表示线上运行状态。
 
 ## 文件
 
 - `zhengheng-architecture.png`：3280 × 2700 高清图片，适合文档和演示。
 - `zhengheng-architecture.svg`：可缩放矢量图，Logo 内嵌，不依赖外链。
 - `zhengheng-architecture.drawio`：原生可编辑形状、文本、连线和内嵌 Logo。
-- `preview.png`：1640 × 1350 预览。
 - `build_diagram.py`：生成脚本，需要 Python 与 `resvg-py`；首次运行下载素材，后续使用本地缓存。重新运行会覆盖本目录同名导出文件，包括 draw.io 文件，手动编辑后应先另存副本。
 
 ## 架构依据
@@ -50,4 +48,15 @@ V1.1 多 Agent 为可选模式，默认保留 V1.0 单 Agent Harness。Pi Compos
 
 ## Logo 来源
 
-使用已有品牌矢量素材，不由生成模型重画。React、FastAPI、Python、Node.js、MongoDB、Redis、Docker、Prometheus、Kubernetes 来自 [Devicon 素材库](https://github.com/devicons/devicon)；OpenSearch 来自 [官方品牌素材](https://github.com/opensearch-project/project-website/tree/main/assets/brand/SVG/Mark)；Milvus 来自 [官方 Artwork 仓库](https://github.com/milvus-io/artwork)。每个下载地址保存在 `assets/sources.json`。标识商标归各自所有者，保留原形和原色。
+使用各技术项目的品牌矢量素材。React、FastAPI、Python、Node.js、MongoDB、Redis、Docker、Prometheus、Kubernetes 来自 [Devicon 素材库](https://github.com/devicons/devicon)；OpenSearch 来自 [官方品牌素材](https://github.com/opensearch-project/project-website/tree/main/assets/brand/SVG/Mark)；Milvus 来自 [官方 Artwork 仓库](https://github.com/milvus-io/artwork)。每个下载地址保存在 `assets/sources.json`。标识商标归各自所有者，保留原形和原色。
+
+## 重新生成
+
+在项目根目录执行（需要安装 `resvg-py` 和 Pillow）：
+
+```sh
+python docs/architecture/build_diagram.py
+python docs/architecture/build_business_diagrams.py
+```
+
+高清图片、SVG、draw.io 源文件和 Logo 来源记录纳入版本管理；脚本生成的低分辨率预览与分阶段截图仅供本地检查，由 `.gitignore` 排除。

@@ -18,7 +18,7 @@
 
 系统将文档采集、版本发布、混合检索、带引用回答、执行追踪和策略回放连接成完整流程。V1.1 在单 Agent 基础上增加税务、人社、住建三个隔离的部门 Agent，由全局编排器统一路由、并行调度和验证结果。
 
-模型负责意图识别、改写和回答等语义任务；部门边界、版本有效性、引用检查和策略发布由应用代码控制。项目适合用于展示 **RAG 数据链路、Agent 编排、后端服务治理与可复现评测**的工程设计。
+模型负责意图识别、改写和回答等语义任务；部门边界、版本有效性、引用检查和策略发布由应用代码控制。工程实现覆盖 **RAG 数据链路、Agent 编排、后端服务治理与可复现评测**。
 
 ## 核心设计
 
@@ -57,7 +57,7 @@
 
 [查看高清功能图](docs/architecture/zhengheng-functions.png) · [查看矢量图](docs/architecture/zhengheng-functions.svg)
 
-当前 Web 入口包括政策问答、Trace、Agent Network、系统状态和登录。“管理与评测”页面仍有占位内容；文档治理、策略审核等能力主要通过后端 API / 脚本操作，功能图不代表所有能力均已有完整管理界面。
+当前 Web 入口包括政策咨询、办理记录、协同部门、系统状态和账户登录。“评测管理”页面尚未接入评测服务；文档治理、策略审核等能力主要通过后端 API / 脚本操作，功能图不代表所有能力均已有完整管理界面。
 
 ## 业务流程
 
@@ -171,7 +171,7 @@ npm --prefix frontend run dev
 
 | 范围 | 已记录结果与边界 |
 | --- | --- |
-| V1.0 基线 | `v1.0.0` 为冻结基线，真实基础设施验收见 [V1.0 报告](FINAL_VALIDATION_REPORT.md)。 |
+| V1.0 基线 | `v1.0.0` 为冻结基线，真实基础设施验收见 [V1.0 报告](docs/validation/v1.0.md)。 |
 | V1.1 多 Agent | 2026-10-09 报告记录了真实 Compose、部门隔离、并发聚合、故障隔离与根 / 子 Trace 验证；未声明新的稳定发布版本。 |
 | Pi Runtime | 已验证运行时循环、结构化协议与降级；该轮验收未验证外部模型提供方。 |
 | Kubernetes | Helm lint / template 已通过；Kind、实际 Pod / HPA 与集群故障验收仍有保留项。 |
@@ -205,7 +205,7 @@ npm --prefix frontend run build
 uv run python scripts/run_integration_container.py
 ```
 
-Linux 集成测试路径用于规避已记录的 Windows 原生 CrossEncoder 加载问题，仍连接真实数据与检索服务。完整结果与待验证项见 [V1.1 验收报告](FINAL_V1_1_VALIDATION_REPORT.md) 和 [验证保留项](DEFERRED_VALIDATION.md)。
+Linux 集成测试路径用于规避已记录的 Windows 原生 CrossEncoder 加载问题，仍连接真实数据与检索服务。完整结果与待验证项见 [V1.1 验收报告](docs/validation/v1.1.md) 和 [验证保留项](docs/validation/environment-notes.md)。
 
 </details>
 

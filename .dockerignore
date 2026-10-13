@@ -29,3 +29,12 @@ __pycache__
 *.pt
 *.pth
 *.onnx
+.codex
+.claude
+.agents
+.local
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+GOAL*.md
+docs/superpowers

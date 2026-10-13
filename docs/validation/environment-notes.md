@@ -1,4 +1,4 @@
-# Deferred Validation
+# Validation Environment Notes
 
 ## Current Recovery Status (2026-10-09)
 
@@ -39,7 +39,7 @@ run against these services.
 | Phase 2 | `RUN_INTEGRATION=1 uv run pytest backend/tests/integration/test_document_version_e2e.py -q` | IT-02: v1/v2 upload → parse/chunk/index → atomic publish → stale-index canonical filter → citation/trace | `PASS (2026-10-09): 1 passed` | v1 BM25/Milvus entries were retained and final Citation referenced v2 only |
 | Phase 3 | `RUN_INTEGRATION=1 uv run pytest backend/tests/integration/test_retrieval_backends.py -q` | 真实 BM25、Milvus、canonical re-check、RRF + reranker | `PASS (2026-10-09): 4 passed` | Re-run after model/index schema changes |
 | Phase 4 | `RUN_INTEGRATION=1 uv run pytest backend/tests/integration/test_harness_real_retrieval.py -q` | IT-01/IT-03/IT-06: 真实 fixed DAG、canonical re-check、Citation、Trace、chat API | `PASS (2026-10-09): 2 passed` | FakeLLM generated structured responses only; retrieval remained real |
-| Phase 1–6 | `uv run python scripts/run_integration_container.py --skip-build --hf-cache-dir C:/Users/XuWei/.cache/huggingface` | Windows 上统一真实 integration 验收（Linux 进程隔离 CrossEncoder） | `PASS (2026-10-09): foundation/document/evolution 9 + retrieval 4 + harness 2` | Docker Linux 子进程连接同一组真实服务；Windows native PyTorch 本轮曾报 `OSError 1455`，未使用 mock；未再出现 PyMongo async-client finalizer warning |
+| Phase 1–6 | `uv run python scripts/run_integration_container.py --skip-build --hf-cache-dir "${HOME}/.cache/huggingface"` | Windows 上统一真实 integration 验收（Linux 进程隔离 CrossEncoder） | `PASS (2026-10-09): foundation/document/evolution 9 + retrieval 4 + harness 2` | Docker Linux 子进程连接同一组真实服务；Windows native PyTorch 本轮曾报 `OSError 1455`，未使用 mock；未再出现 PyMongo async-client finalizer warning |
 | Phase 5 | `RUN_INTEGRATION=1 uv run pytest backend/tests/integration/test_memory_evolution_persistence.py::test_real_redis_and_mongo_memory_repositories_preserve_memory_boundaries -q` | 五层 Memory 的真实读写、Redis TTL、用户删除与事实隔离 | `PASS (2026-10-09): real Mongo/Redis test passed` | 已通过真实服务；不得将该结果外推为检索或 E2E 验收 |
 | Phase 6 | `RUN_INTEGRATION=1 uv run pytest backend/tests/integration/test_memory_evolution_persistence.py::test_real_mongo_persists_feedback_through_gray_rollback -q` | IT-04/IT-05 持久化子链：真实 Mongo feedback → badcase → strategy → replay gate → gray → rollback | `PASS (2026-10-09): real Mongo test passed` | 已通过真实服务；包含实际双臂 50/50 劣化记录与 ROLLED_BACK 持久化 |
 | Phase 6 | `RUN_INTEGRATION=1 uv run pytest backend/tests/integration/test_evolution_frozen_replay.py -q` | 从真实持久化 Harness Trace 冻结输入，重新执行检索并计算 replay metrics、gray 与 rollback | `PASS (2026-10-09): 1 passed` | improvement 进入 gray；degradation 自动 rollback；experiment/execution/rollback 均写入真实 Mongo |

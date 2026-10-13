@@ -94,3 +94,21 @@ Desktop.ini
 *.pid
 *.lock.local
 docs/superpowers/
+.codex/
+.claude/
+.agents/
+/.local/
+/AGENTS.md
+/CLAUDE.md
+/GEMINI.md
+/GOAL*.md
+
+# Reproducible diagram previews (keep full-size images and editable sources)
+/docs/architecture/preview.png
+/docs/architecture/*-preview.png
+/docs/architecture/sequence-phase-*.png
+
+# Local test and build output
+*.tsbuildinfo
+test-results/
+playwright-report/
