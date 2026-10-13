@@ -1,0 +1,6 @@
+apiVersion: v2
+name: zhengheng
+description: Minimal V1.1 Pi Runtime and static multi-agent deployment topology.
+type: application
+version: 0.1.0
+appVersion: "1.1.0"

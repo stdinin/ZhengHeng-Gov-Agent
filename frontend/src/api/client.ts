@@ -1,4 +1,11 @@
-import type { ApiError, ChatResponse, LoginResponse, ReadinessPayload, TracePayload } from '../types/api'
+import type {
+  AgentNetworkResponse,
+  ApiError,
+  ChatResponse,
+  LoginResponse,
+  ReadinessPayload,
+  TracePayload,
+} from '../types/api'
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000/api/v1'
 
@@ -67,4 +74,15 @@ export async function fetchTrace(traceId: string): Promise<TracePayload> {
     throw new Error((payload as ApiError).error.message)
   }
   return payload as TracePayload
+}
+
+export async function fetchAgentNetwork(): Promise<AgentNetworkResponse> {
+  const response = await fetch(`${apiBaseUrl}/admin/agent-network`, {
+    headers: { Authorization: `Bearer ${accessToken()}` },
+  })
+  const payload = await readJson(response)
+  if (!response.ok) {
+    throw new Error((payload as ApiError).error.message)
+  }
+  return payload as AgentNetworkResponse
 }

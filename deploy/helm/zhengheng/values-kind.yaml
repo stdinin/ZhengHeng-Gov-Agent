@@ -1,0 +1,2 @@
+# Kind loads the locally built V1.1 images; Helm templates use this root value.
+imagePullPolicy: IfNotPresent

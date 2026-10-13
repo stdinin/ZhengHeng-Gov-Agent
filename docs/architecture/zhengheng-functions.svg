@@ -1,0 +1,504 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2740" height="800" viewBox="0 0 2740 800">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#555"/></marker></defs>
+<rect width="2740" height="800" fill="white"/>
+<rect x="1185.0" y="35" width="370" height="56" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1370.0" y="63.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="600" fill="#303030">政衡可信政务问答系统</text>
+<polyline points="1370.0,91 1370.0,126" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="245,126 2495,126" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="245,126 245,166" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="119" y="166" width="252" height="48" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="245.0" y="190.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="400" fill="#303030">认证与访问子系统</text>
+<polyline points="245,214 245,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="133,250 357,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="133,250 133,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="110" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="133.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">身</text>
+<text x="133.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">份</text>
+<text x="133.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">认</text>
+<text x="133.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">证</text>
+<polyline points="133,421 133,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="84.0,461 182.0,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="84.0,461 84.0,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="64.0" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="84.0" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">邮</text>
+<text x="84.0" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">箱</text>
+<text x="84.0" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">密</text>
+<text x="84.0" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">码</text>
+<text x="84.0" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">登</text>
+<text x="84.0" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">录</text>
+<polyline points="133.0,461 133.0,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="113.0" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="133.0" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">令</text>
+<text x="133.0" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">牌</text>
+<text x="133.0" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">签</text>
+<text x="133.0" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">发</text>
+<text x="133.0" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">校</text>
+<text x="133.0" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">验</text>
+<polyline points="182.0,461 182.0,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="162.0" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="182.0" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">当</text>
+<text x="182.0" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">前</text>
+<text x="182.0" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">用</text>
+<text x="182.0" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">户</text>
+<text x="182.0" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">查</text>
+<text x="182.0" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">询</text>
+<polyline points="357,250 357,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="334" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="357.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">访</text>
+<text x="357.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">问</text>
+<text x="357.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">控</text>
+<text x="357.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">制</text>
+<polyline points="357,421 357,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="308.0,461 406.0,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="308.0,461 308.0,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="288.0" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="308.0" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">角</text>
+<text x="308.0" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">色</text>
+<text x="308.0" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">权</text>
+<text x="308.0" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">限</text>
+<text x="308.0" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">控</text>
+<text x="308.0" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">制</text>
+<polyline points="357.0,461 357.0,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="337.0" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="357.0" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">部</text>
+<text x="357.0" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">门</text>
+<text x="357.0" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">检</text>
+<text x="357.0" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">索</text>
+<text x="357.0" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">隔</text>
+<text x="357.0" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">离</text>
+<polyline points="406.0,461 406.0,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="386.0" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="406.0" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">内</text>
+<text x="406.0" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">部</text>
+<text x="406.0" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">服</text>
+<text x="406.0" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">务</text>
+<text x="406.0" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">鉴</text>
+<text x="406.0" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">权</text>
+<polyline points="695,126 695,166" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="569" y="166" width="252" height="48" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="695.0" y="190.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="400" fill="#303030">政策知识子系统</text>
+<polyline points="695,214 695,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="583,250 807,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="583,250 583,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="560" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="583.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">文</text>
+<text x="583.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">档</text>
+<text x="583.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">入</text>
+<text x="583.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">库</text>
+<polyline points="583,421 583,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="509.5,461 656.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="509.5,461 509.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="489.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="509.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">文</text>
+<text x="509.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">件</text>
+<text x="509.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">上</text>
+<text x="509.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">传</text>
+<text x="509.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">解</text>
+<text x="509.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">析</text>
+<polyline points="558.5,461 558.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="538.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="558.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">税</text>
+<text x="558.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">务</text>
+<text x="558.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">数</text>
+<text x="558.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">据</text>
+<text x="558.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">导</text>
+<text x="558.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">入</text>
+<polyline points="607.5,461 607.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="587.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="607.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">文</text>
+<text x="607.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">档</text>
+<text x="607.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">分</text>
+<text x="607.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">块</text>
+<text x="607.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">处</text>
+<text x="607.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">理</text>
+<polyline points="656.5,461 656.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="636.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="656.5" y="552.62" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">双</text>
+<text x="656.5" y="576.56" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">索</text>
+<text x="656.5" y="600.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">引</text>
+<text x="656.5" y="624.44" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">构</text>
+<text x="656.5" y="648.38" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">建</text>
+<polyline points="807,250 807,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="784" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="807.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">版</text>
+<text x="807.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">本</text>
+<text x="807.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">治</text>
+<text x="807.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">理</text>
+<polyline points="807,421 807,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="733.5,461 880.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="733.5,461 733.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="713.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="733.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">版</text>
+<text x="733.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">本</text>
+<text x="733.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">列</text>
+<text x="733.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">表</text>
+<text x="733.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">查</text>
+<text x="733.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">询</text>
+<polyline points="782.5,461 782.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="762.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="782.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">索</text>
+<text x="782.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">引</text>
+<text x="782.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">一</text>
+<text x="782.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">致</text>
+<text x="782.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">校</text>
+<text x="782.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">验</text>
+<polyline points="831.5,461 831.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="811.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="831.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">原</text>
+<text x="831.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">子</text>
+<text x="831.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">发</text>
+<text x="831.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">布</text>
+<text x="831.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">切</text>
+<text x="831.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">换</text>
+<polyline points="880.5,461 880.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="860.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="880.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">政</text>
+<text x="880.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">策</text>
+<text x="880.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">归</text>
+<text x="880.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">档</text>
+<text x="880.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">管</text>
+<text x="880.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">理</text>
+<polyline points="1145,126 1145,166" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1019" y="166" width="252" height="48" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1145.0" y="190.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="400" fill="#303030">可信问答子系统</text>
+<polyline points="1145,214 1145,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1033,250 1257,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1033,250 1033,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1010" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1033.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">检</text>
+<text x="1033.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">索</text>
+<text x="1033.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">生</text>
+<text x="1033.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">成</text>
+<polyline points="1033,421 1033,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="959.5,461 1106.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="959.5,461 959.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="939.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="959.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">意</text>
+<text x="959.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">图</text>
+<text x="959.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">识</text>
+<text x="959.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">别</text>
+<text x="959.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">改</text>
+<text x="959.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">写</text>
+<polyline points="1008.5,461 1008.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="988.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1008.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">部</text>
+<text x="1008.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">门</text>
+<text x="1008.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">路</text>
+<text x="1008.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">由</text>
+<text x="1008.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">选</text>
+<text x="1008.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">择</text>
+<polyline points="1057.5,461 1057.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1037.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1057.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">混</text>
+<text x="1057.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">合</text>
+<text x="1057.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">检</text>
+<text x="1057.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">索</text>
+<text x="1057.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">融</text>
+<text x="1057.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">合</text>
+<polyline points="1106.5,461 1106.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1086.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1106.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">候</text>
+<text x="1106.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">选</text>
+<text x="1106.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">证</text>
+<text x="1106.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">据</text>
+<text x="1106.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">重</text>
+<text x="1106.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">排</text>
+<polyline points="1257,250 1257,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1234" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1257.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">可</text>
+<text x="1257.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">信</text>
+<text x="1257.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">输</text>
+<text x="1257.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">出</text>
+<polyline points="1257,421 1257,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1183.5,461 1330.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1183.5,461 1183.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1163.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1183.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">有</text>
+<text x="1183.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">效</text>
+<text x="1183.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">版</text>
+<text x="1183.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">本</text>
+<text x="1183.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">复</text>
+<text x="1183.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">核</text>
+<polyline points="1232.5,461 1232.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1212.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1232.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">证</text>
+<text x="1232.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">据</text>
+<text x="1232.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">引</text>
+<text x="1232.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">用</text>
+<text x="1232.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">校</text>
+<text x="1232.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">验</text>
+<polyline points="1281.5,461 1281.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1261.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1281.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">证</text>
+<text x="1281.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">据</text>
+<text x="1281.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">不</text>
+<text x="1281.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">足</text>
+<text x="1281.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">拒</text>
+<text x="1281.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">答</text>
+<polyline points="1330.5,461 1330.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1310.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1330.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">引</text>
+<text x="1330.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">用</text>
+<text x="1330.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">来</text>
+<text x="1330.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">源</text>
+<text x="1330.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">展</text>
+<text x="1330.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">示</text>
+<polyline points="1595,126 1595,166" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1469" y="166" width="252" height="48" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1595.0" y="190.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="400" fill="#303030">多部门协同子系统</text>
+<polyline points="1595,214 1595,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1483,250 1707,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1483,250 1483,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1460" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1483.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">部</text>
+<text x="1483.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">门</text>
+<text x="1483.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">调</text>
+<text x="1483.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">度</text>
+<polyline points="1483,421 1483,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1409.5,461 1556.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1409.5,461 1409.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1389.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1409.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">静</text>
+<text x="1409.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">态</text>
+<text x="1409.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">服</text>
+<text x="1409.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">务</text>
+<text x="1409.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">注</text>
+<text x="1409.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">册</text>
+<polyline points="1458.5,461 1458.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1438.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1458.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">税</text>
+<text x="1458.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">务</text>
+<text x="1458.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">部</text>
+<text x="1458.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">门</text>
+<text x="1458.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">代</text>
+<text x="1458.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">理</text>
+<polyline points="1507.5,461 1507.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1487.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1507.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">人</text>
+<text x="1507.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">社</text>
+<text x="1507.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">部</text>
+<text x="1507.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">门</text>
+<text x="1507.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">代</text>
+<text x="1507.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">理</text>
+<polyline points="1556.5,461 1556.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1536.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1556.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">住</text>
+<text x="1556.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">建</text>
+<text x="1556.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">部</text>
+<text x="1556.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">门</text>
+<text x="1556.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">代</text>
+<text x="1556.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">理</text>
+<polyline points="1707,250 1707,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1684" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1707.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">结</text>
+<text x="1707.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">果</text>
+<text x="1707.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">治</text>
+<text x="1707.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">理</text>
+<polyline points="1707,421 1707,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1633.5,461 1780.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1633.5,461 1633.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1613.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1633.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">有</text>
+<text x="1633.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">界</text>
+<text x="1633.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">并</text>
+<text x="1633.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">发</text>
+<text x="1633.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">调</text>
+<text x="1633.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">度</text>
+<polyline points="1682.5,461 1682.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1662.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1682.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">部</text>
+<text x="1682.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">门</text>
+<text x="1682.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">超</text>
+<text x="1682.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">时</text>
+<text x="1682.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">隔</text>
+<text x="1682.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">离</text>
+<polyline points="1731.5,461 1731.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1711.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1731.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">结</text>
+<text x="1731.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">果</text>
+<text x="1731.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">聚</text>
+<text x="1731.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">合</text>
+<text x="1731.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">去</text>
+<text x="1731.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">重</text>
+<polyline points="1780.5,461 1780.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1760.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1780.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">全</text>
+<text x="1780.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">局</text>
+<text x="1780.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">引</text>
+<text x="1780.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">用</text>
+<text x="1780.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">验</text>
+<text x="1780.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">证</text>
+<polyline points="2045,126 2045,166" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1919" y="166" width="252" height="48" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2045.0" y="190.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="400" fill="#303030">记忆与追踪子系统</text>
+<polyline points="2045,214 2045,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1933,250 2157,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1933,250 1933,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1910" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1933.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">分</text>
+<text x="1933.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">层</text>
+<text x="1933.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">记</text>
+<text x="1933.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">忆</text>
+<polyline points="1933,421 1933,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1859.5,461 2006.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="1859.5,461 1859.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1839.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1859.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">会</text>
+<text x="1859.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">话</text>
+<text x="1859.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">工</text>
+<text x="1859.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">作</text>
+<text x="1859.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">记</text>
+<text x="1859.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">忆</text>
+<polyline points="1908.5,461 1908.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1888.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1908.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">用</text>
+<text x="1908.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">户</text>
+<text x="1908.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">语</text>
+<text x="1908.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">义</text>
+<text x="1908.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">记</text>
+<text x="1908.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">忆</text>
+<polyline points="1957.5,461 1957.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1937.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="1957.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">案</text>
+<text x="1957.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">例</text>
+<text x="1957.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">组</text>
+<text x="1957.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">织</text>
+<text x="1957.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">记</text>
+<text x="1957.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">忆</text>
+<polyline points="2006.5,461 2006.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="1986.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2006.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">策</text>
+<text x="2006.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">略</text>
+<text x="2006.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">记</text>
+<text x="2006.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">忆</text>
+<text x="2006.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">管</text>
+<text x="2006.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">理</text>
+<polyline points="2157,250 2157,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2134" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2157.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">执</text>
+<text x="2157.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">行</text>
+<text x="2157.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">追</text>
+<text x="2157.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">踪</text>
+<polyline points="2157,421 2157,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2083.5,461 2230.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2083.5,461 2083.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2063.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2083.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">根</text>
+<text x="2083.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">子</text>
+<text x="2083.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">轨</text>
+<text x="2083.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">迹</text>
+<text x="2083.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">关</text>
+<text x="2083.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">联</text>
+<polyline points="2132.5,461 2132.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2112.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2132.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">节</text>
+<text x="2132.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">点</text>
+<text x="2132.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">耗</text>
+<text x="2132.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">时</text>
+<text x="2132.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">记</text>
+<text x="2132.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">录</text>
+<polyline points="2181.5,461 2181.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2161.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2181.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">检</text>
+<text x="2181.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">索</text>
+<text x="2181.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">阶</text>
+<text x="2181.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">段</text>
+<text x="2181.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">追</text>
+<text x="2181.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">踪</text>
+<polyline points="2230.5,461 2230.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2210.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2230.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">会</text>
+<text x="2230.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">话</text>
+<text x="2230.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">历</text>
+<text x="2230.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">史</text>
+<text x="2230.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">查</text>
+<text x="2230.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">询</text>
+<polyline points="2495,126 2495,166" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2369" y="166" width="252" height="48" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2495.0" y="190.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="400" fill="#303030">反馈评测子系统</text>
+<polyline points="2495,214 2495,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2383,250 2607,250" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2383,250 2383,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2360" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2383.0" y="311.31" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">反</text>
+<text x="2383.0" y="337.77" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">馈</text>
+<text x="2383.0" y="364.23" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">演</text>
+<text x="2383.0" y="390.69" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">化</text>
+<polyline points="2383,421 2383,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2309.5,461 2456.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2309.5,461 2309.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2289.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2309.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">用</text>
+<text x="2309.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">户</text>
+<text x="2309.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">反</text>
+<text x="2309.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">馈</text>
+<text x="2309.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">采</text>
+<text x="2309.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">集</text>
+<polyline points="2358.5,461 2358.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2338.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2358.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">失</text>
+<text x="2358.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">败</text>
+<text x="2358.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">案</text>
+<text x="2358.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">例</text>
+<text x="2358.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">审</text>
+<text x="2358.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">核</text>
+<polyline points="2407.5,461 2407.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2387.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2407.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">策</text>
+<text x="2407.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">略</text>
+<text x="2407.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">候</text>
+<text x="2407.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">选</text>
+<text x="2407.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">生</text>
+<text x="2407.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">成</text>
+<polyline points="2456.5,461 2456.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2436.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2456.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">冻</text>
+<text x="2456.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">结</text>
+<text x="2456.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">轨</text>
+<text x="2456.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">迹</text>
+<text x="2456.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">回</text>
+<text x="2456.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">放</text>
+<polyline points="2607,250 2607,281" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2584" y="281" width="46" height="140" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2607.0" y="298.08" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">发</text>
+<text x="2607.0" y="324.54" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">布</text>
+<text x="2607.0" y="351.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">与</text>
+<text x="2607.0" y="377.46" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">观</text>
+<text x="2607.0" y="403.92" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">测</text>
+<polyline points="2607,421 2607,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2533.5,461 2680.5,461" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="2533.5,461 2533.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2513.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2533.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">回</text>
+<text x="2533.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">放</text>
+<text x="2533.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">门</text>
+<text x="2533.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">禁</text>
+<text x="2533.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">校</text>
+<text x="2533.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">验</text>
+<polyline points="2582.5,461 2582.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2562.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2582.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">人</text>
+<text x="2582.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">工</text>
+<text x="2582.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">批</text>
+<text x="2582.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">准</text>
+<text x="2582.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">灰</text>
+<text x="2582.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">度</text>
+<polyline points="2631.5,461 2631.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2611.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2631.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">策</text>
+<text x="2631.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">略</text>
+<text x="2631.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">晋</text>
+<text x="2631.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">升</text>
+<text x="2631.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">回</text>
+<text x="2631.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">滚</text>
+<polyline points="2680.5,461 2680.5,498" fill="none" stroke="#666" stroke-width="1.5"/>
+<rect x="2660.5" y="498" width="40" height="205" fill="white" stroke="#666" stroke-width="1.5"/>
+<text x="2680.5" y="540.65" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">评</text>
+<text x="2680.5" y="564.59" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">测</text>
+<text x="2680.5" y="588.53" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">指</text>
+<text x="2680.5" y="612.47" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">标</text>
+<text x="2680.5" y="636.41" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">观</text>
+<text x="2680.5" y="660.35" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="400" fill="#303030">测</text>
+<text x="1370.0" y="739.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="27" font-weight="600" fill="#303030">系统功能结构图</text>
+<text x="1370.0" y="776.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#777">按后端、前端与脚本的已实现能力归纳；文档及策略管理部分通过 API / 脚本操作，多部门协同为 V1.1 可选模式。</text>
+</svg>

@@ -15,7 +15,7 @@ from backend.app.domain.documents import (
     PolicyStatus,
     SourceType,
 )
-from backend.app.main import create_app
+from backend.app.main import _close_runtime_resources, create_app
 from backend.app.storage.document_repository import MongoDocumentRepository
 
 _INFRA_SKIP = "SKIPPED: infrastructure unavailable; set RUN_INTEGRATION=1 after Compose is healthy."
@@ -31,6 +31,7 @@ async def test_real_mongo_document_api_uploads_lists_publishes_and_archives() ->
     _require_integration()
     settings = Settings(mongo_uri="mongodb://localhost:27017", mongo_db="zhengheng_integration")
     repository = MongoDocumentRepository(settings)
+    app = None
     try:
         await repository.initialize_indexes()
 
@@ -93,7 +94,13 @@ async def test_real_mongo_document_api_uploads_lists_publishes_and_archives() ->
     except (ConnectionFailure, ServerSelectionTimeoutError):
         pytest.skip(_INFRA_SKIP)
     finally:
-        await repository.close()
+        # httpx.ASGITransport does not drive FastAPI lifespan automatically.
+        # Explicitly close app-owned async Mongo clients before pytest closes
+        # the event loop; this is not warning suppression.
+        if app is not None:
+            await _close_runtime_resources(app)
+        else:
+            await repository.close()
 
     assert uploaded.status_code == 201
     assert uploaded.json()["status"] == DocumentVersionStatus.PARSED

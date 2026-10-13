@@ -43,7 +43,13 @@ class MongoUserStore:
     async def close(self) -> None:
         """Release Mongo monitoring tasks when an API process or script exits."""
 
-        await self._client.close()
+        client = getattr(self, "_client", None)
+        if client is None:
+            return
+        await client.close()
+        for attribute in ("_collection", "_client"):
+            if hasattr(self, attribute):
+                delattr(self, attribute)
 
     @staticmethod
     def _from_document(document: dict[str, Any]) -> User:

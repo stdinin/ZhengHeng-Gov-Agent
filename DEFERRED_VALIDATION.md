@@ -59,3 +59,36 @@ run against these services.
 7. 验证 Phase 5 Redis/Mongo Memory repositories，再运行 Phase 6 feedback → badcase → strategy replay / gray / rollback 测试。
 8. 公开语料导入、完整 Eval Run、ablation、Prometheus scrape 与 10/50 VU k6 已完成并保存真实 artifacts；200 VU 仅在资源保护条件满足时追加执行。
 9. 若要运行可选 Real-LLM profile，先通过当前进程环境提供**已轮换**的 `DEEPSEEK_API_KEY`，先跑 5-case smoke，再跑 frozen generation subset；不得将该 key 写入文件、日志、Trace、artifact 或 Git。
+
+## V1.1 Final-Battle Validation Status (2026-10-09)
+
+V1.1 is layered on the frozen `v1.0.0` baseline. The entries below preserve
+the distinction between real local Compose evidence, static deployment
+rendering, and external-provider or cluster work that has not been run.
+
+| Scope | Command / artifact | Status | Evidence and boundary |
+|---|---|---|---|
+| PI-01–PI-05 | Pi Runtime Node unit/build; Python-to-Node container contract; backend runtime unit tests | `PASS` | `@earendil-works/pi-agent-core@1.1.0` and `@earendil-works/pi-ai@1.1.0` run internally. Adapter, structured result, timeout, controlled fallback, fail-closed handling, trace and metrics paths are exercised; no dangerous tool is exposed. |
+| V1.1 Compose | `docker compose --profile multi-agent config --quiet` and health checks | `PASS` | Pi Runtime, Global Orchestrator and three distinct Department Agent Services are healthy with MongoDB, Redis, OpenSearch, etcd, MinIO and Milvus. |
+| MA-01–MA-10 | `V11_MULTI_AGENT_BASE_URL=http://127.0.0.1:8010 uv run pytest backend/tests/integration/test_multi_agent_compose.py -q` | `PASS` | The test uses the real Compose service chain and real Mongo/OpenSearch/Milvus/Redis. Pi Faux is a controlled semantic fixture only, not an external-LLM claim. |
+| Multi-Agent fixture eval | `runs/v11_multi_agent_eval_20261009T170501Z/` | `PASS` | 12/12 executed and all published fixture metrics equal `1.0`; timeout is exercised by pausing a real department container and client failure by stopping/restarting one. |
+| V1.1 observability | `runs/v11_observability_final/v11_observability_validation.json` | `PASS` | Prometheus actually scraped the Orchestrator (`up=1`), request/runtime/department metrics changed, and trace plus metric-label PII checks passed. |
+| K8S-01 / K8S-02 | Helm lint and template render | `PASS` | Lint returned 0 failures; render contains 5 Deployments, 5 Services, 4 HPAs and 1 ConfigMap. |
+| K8S-03–K8S-05 runtime | Kind smoke, Ready-pod checks, HPA metric read and pod-failure isolation | `DEFERRED: local Kind/Helm CLI and cluster unavailable` | No Kind cluster or metrics-server was created, installed or modified. Static Helm success is not Kubernetes runtime acceptance. |
+| Optional real provider | OpenAI-compatible DeepSeek profile | `DEFERRED: no safe process-scoped key present` | It is non-P0. Run only with a rotated `DEEPSEEK_API_KEY` in the current process; never write it to source, `.env.example`, logs, traces, artifacts or Git. |
+| Fresh V1.0 public-eval clone | `runs/public_eval_v1_100docs_final/` | `PARTIAL / NOT PASS` | The restart reached 7/40 cases and was stopped after the requested five-minute no-output limit. It has no metrics artifact and does not replace the completed `runs/public_eval_v1_100docs/` PASS artifact. |
+
+### V1.1 Recovery Order
+
+1. Keep completed V1.0 artifacts immutable; do not replace them with the
+   partial public-eval clone.
+2. To complete Kubernetes runtime validation, use only an already-approved
+   environment that supplies `kind`, `helm`, `kubectl`, a Kind cluster and
+   metrics-server. Run Kind smoke, readiness, HPA metric and pod-failure
+   isolation checks in that order.
+3. If a fresh public-eval run is explicitly required, resume/restart only after
+   confirming no old `zhengheng-eval-runner` worker exists. A new PASS requires
+   a complete 40-case artifact.
+4. For optional Real-LLM validation, provide only a rotated process environment
+   key, run five smoke cases, then the frozen generation subset. Mark PASS only
+   when actual artifacts exist.

@@ -34,6 +34,9 @@ dev = [
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+# PyMongo's async monitor cleanup runs as event-loop tasks. A session loop lets
+# explicitly closed clients finish those tasks before pytest closes the loop.
+asyncio_default_test_loop_scope = "session"
 testpaths = ["backend/tests"]
 pythonpath = ["."]
 markers = [

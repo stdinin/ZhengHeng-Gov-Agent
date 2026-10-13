@@ -1,0 +1,48 @@
+{{- if .Values.orchestrator.autoscaling.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "zhengheng.fullname" . }}-orchestrator
+  labels:
+    {{- include "zhengheng.labels" . | nindent 4 }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "zhengheng.fullname" . }}-orchestrator
+  minReplicas: {{ .Values.orchestrator.autoscaling.minReplicas }}
+  maxReplicas: {{ .Values.orchestrator.autoscaling.maxReplicas }}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.orchestrator.autoscaling.targetCPUUtilizationPercentage }}
+{{- end }}
+{{- range $agent := .Values.agents }}
+{{- if and $agent.enabled $agent.autoscaling.enabled }}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "zhengheng.agentName" (dict "root" $ "agent" $agent) }}
+  labels:
+    {{- include "zhengheng.labels" $ | nindent 4 }}
+    app.kubernetes.io/component: department-agent
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "zhengheng.agentName" (dict "root" $ "agent" $agent) }}
+  minReplicas: {{ $agent.autoscaling.minReplicas }}
+  maxReplicas: {{ $agent.autoscaling.maxReplicas }}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: {{ $agent.autoscaling.targetCPUUtilizationPercentage }}
+{{- end }}
+{{- end }}

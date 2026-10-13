@@ -1,4 +1,4 @@
-import { Alert, Button, Card, Form, Input, Table, Typography } from 'antd'
+import { Alert, Button, Card, Descriptions, Form, Input, Table, Typography } from 'antd'
 import { useState } from 'react'
 
 import { fetchTrace } from '../api/client'
@@ -30,6 +30,18 @@ export function TraceExplorer() {
       {trace ? (
         <>
           <Typography.Paragraph style={{ marginTop: 20 }}>问题：{trace.query}</Typography.Paragraph>
+          <Descriptions bordered size="small" column={1} style={{ marginBottom: 16 }}>
+            <Descriptions.Item label="Trace 类型">{trace.trace_kind ?? 'root'}</Descriptions.Item>
+            <Descriptions.Item label="执行模式">{trace.execution_mode ?? 'single_agent'}</Descriptions.Item>
+            <Descriptions.Item label="Parent Trace">{trace.parent_trace_id ?? '—'}</Descriptions.Item>
+            <Descriptions.Item label="Agent / Department">
+              {[trace.agent_id, trace.dept_id].filter(Boolean).join(' / ') || '—'}
+            </Descriptions.Item>
+            <Descriptions.Item label="Child Traces">
+              {trace.child_trace_ids?.join(', ') || '—'}
+            </Descriptions.Item>
+            <Descriptions.Item label="Partial">{trace.partial ? '是' : '否'}</Descriptions.Item>
+          </Descriptions>
           <Table
             rowKey="node"
             pagination={false}

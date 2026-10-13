@@ -18,6 +18,8 @@ class TraceStore(Protocol):
         self, user_id: str, *, session_id: str | None = None, limit: int = 50
     ) -> list[TraceRecord]: ...
 
+    async def list_recent(self, *, limit: int = 100) -> list[TraceRecord]: ...
+
 
 class MongoTraceStore:
     """Real MongoDB persistence for append-only execution traces."""
@@ -31,7 +33,13 @@ class MongoTraceStore:
     async def close(self) -> None:
         """Release background Mongo monitoring tasks for scripts and test runs."""
 
-        await self._client.close()
+        client = getattr(self, "_client", None)
+        if client is None:
+            return
+        await client.close()
+        for attribute in ("_collection", "_client"):
+            if hasattr(self, attribute):
+                delattr(self, attribute)
 
     async def save(self, trace: TraceRecord) -> None:
         document = asdict(trace)
@@ -53,12 +61,20 @@ class MongoTraceStore:
         cursor = self._collection.find(query).sort("created_at", -1).limit(limit)
         return [self._from_document(document) async for document in cursor]
 
+    async def list_recent(self, *, limit: int = 100) -> list[TraceRecord]:
+        if not 1 <= limit <= 500:
+            raise ValueError("Recent trace limit must be between 1 and 500.")
+        cursor = self._collection.find({}).sort("created_at", -1).limit(limit)
+        return [self._from_document(document) async for document in cursor]
+
     @staticmethod
     def _from_document(document: dict[str, Any]) -> TraceRecord:
         raw_intent = document.get("intent")
         raw_verification = document.get("verification")
         raw_retrieval_metadata = document.get("retrieval_metadata")
         raw_timings = document.get("timings_ms")
+        raw_route_decision = document.get("route_decision")
+        raw_final_verification = document.get("final_verification")
         return TraceRecord(
             id=str(document["_id"]),
             user_id=document.get("user_id"),
@@ -93,6 +109,33 @@ class MongoTraceStore:
                 {str(key): float(value) for key, value in raw_timings.items()}
                 if isinstance(raw_timings, dict)
                 else {}
+            ),
+            parent_trace_id=(
+                str(document["parent_trace_id"])
+                if document.get("parent_trace_id") is not None
+                else None
+            ),
+            trace_kind=str(document.get("trace_kind", "root")),
+            execution_mode=str(document.get("execution_mode", "single_agent")),
+            agent_id=str(document["agent_id"]) if document.get("agent_id") is not None else None,
+            dept_id=str(document["dept_id"]) if document.get("dept_id") is not None else None,
+            child_trace_ids=_string_list(document.get("child_trace_ids")),
+            aggregation=(
+                dict(document["aggregation"])
+                if isinstance(document.get("aggregation"), dict)
+                else {}
+            ),
+            partial=bool(document.get("partial", False)),
+            failed_departments=_mapping_list(document.get("failed_departments")),
+            runtime_fallbacks=_mapping_list(document.get("runtime_fallbacks")),
+            route_decision=(
+                dict(raw_route_decision) if isinstance(raw_route_decision, dict) else None
+            ),
+            selected_departments=_string_list(document.get("selected_departments")),
+            final_verification=(
+                dict(raw_final_verification)
+                if isinstance(raw_final_verification, dict)
+                else None
             ),
         )
 

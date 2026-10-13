@@ -49,6 +49,14 @@ export type ChatResponse = {
   citations: Citation[]
   attempts: number
   warnings: string[]
+  orchestration?: {
+    mode: 'single' | 'multi' | 'abstain'
+    requested_departments: string[]
+    completed_departments: string[]
+    failed_departments: Array<{ dept_id: string; reason: string }>
+    partial: boolean
+    fanout: number
+  }
 }
 
 export type TracePayload = {
@@ -63,5 +71,28 @@ export type TracePayload = {
     latency_ms: number
     fallback: boolean
     applied_strategy_ids: string[]
+  }>
+  parent_trace_id?: string | null
+  trace_kind?: 'root' | 'child' | string
+  execution_mode?: 'single_agent' | 'multi_agent' | 'department_agent' | string
+  agent_id?: string | null
+  dept_id?: string | null
+  child_trace_ids?: string[]
+  selected_departments?: string[]
+  partial?: boolean
+  failed_departments?: Array<{ dept_id: string; reason: string }>
+}
+
+export type AgentNetworkResponse = {
+  orchestrator_health: string
+  pi_runtime_health: string
+  members: Array<{
+    agent_id: string
+    dept_id: string
+    health: string
+    runtime_backend: string
+    recent_latency_ms: number | null
+    timeout_count: number
+    latest_child_trace_id: string | null
   }>
 }

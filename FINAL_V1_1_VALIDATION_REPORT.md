@@ -1,0 +1,166 @@
+# ZhengHeng V1.1 Final Validation Report
+
+Validation date: 2026-10-09. Scope: V1.1 Pi Runtime, deterministic multi-agent
+orchestration, and minimal Helm/Kubernetes deployment work. V1.0 real
+acceptance remains the frozen baseline.
+
+## 1. Git
+
+- base: `v1.0.0` at `db55ce8d49517aaf55387b66c6e896d17deb7def`.
+- final commit: **not created**; V1.1 changes remain uncommitted because no
+  commit authorization was given.
+- tag: **not created**; `v1.0.0` was not moved or overwritten.
+- `git diff --check` exited 0 during final validation.
+
+## 2. Runtime
+
+| Item | Actual result |
+|---|---|
+| Pi packages | `@earendil-works/pi-agent-core@1.1.0`; `@earendil-works/pi-ai@1.1.0` |
+| Node version | `v22.19.0` in the actual `pi-runtime` container |
+| Backend mode | Python `PiRuntimeAdapter` calls an internal Pi Runtime API; fallback is explicit and fail-closed |
+| Pi verification | Node image tests: 3 passed; Python-to-Node real-container contract: 1 passed; runtime/fallback/audit coverage is part of 146 backend unit passes |
+| Structured output / timeout / fallback | `PASS` through controlled Pi semantic transport and adapter paths |
+| Trace / metrics / tools | `PASS`; runtime audit, invocation/latency metrics and trace metadata are covered; no general-purpose tools are exposed |
+| Real provider verified | `NO` — no safe process-scoped provider key was present |
+| Fallback verified | `YES` — controlled fallback/fail-closed paths have unit and adapter coverage |
+
+Pi Faux is a deterministic semantic fixture for the Pi runtime loop. It is not
+an emulation of retrieval, persistence, citation validity, or external-provider
+acceptance; those remain in the real application chain.
+
+## 3. Multi-Agent
+
+| Item | Actual result |
+|---|---|
+| Registered agents | 3 static isolated services: `tax`, `hrss`, `housing` |
+| Immutable department scope | `PASS`; every service receives a fixed `DEPT_ID` |
+| Compose profile | `PASS`; Orchestrator, Pi Runtime, all departments and stores were healthy together |
+| Single / cross-department requests | `PASS`; real Compose integration test passed |
+| Parallel dispatch / aggregation / global verify | `PASS`; backend unit coverage plus real Compose request |
+| Timeout / partial response | `PASS`; fixture eval pauses actual `hrss` and verifies isolation |
+| Client-failure isolation | `PASS`; fixture eval stops and restores actual `housing` |
+| All-fail abstain | `PASS`; deterministic orchestration tests do not invent a response |
+| Parent/child trace hierarchy | `PASS`; root and department child traces persist and are exposed |
+| Memory / Evolution ownership | `PASS`; root episodic ownership and department attribution have coverage; frozen V1.0 Mongo Evolution remains passed |
+| Citation scope / dedupe | `PASS`; evaluation restricts evidence to requested departments |
+
+### Multi-Agent Fixture Eval
+
+Artifact: `runs/v11_multi_agent_eval_20261009T170501Z/`.
+
+| Metric | Actual value |
+|---|---:|
+| Cases / executed cases | 12 / 12 |
+| Route-set exact match | 1.0 |
+| Cross-department completion rate | 1.0 |
+| Partial-response correctness | 1.0 |
+| Citation department-scope accuracy | 1.0 |
+| Timeout-isolation success rate | 1.0 |
+| Case errors | `[]` |
+
+This is an `INTEGRATION_FIXTURE`: it uses real infrastructure and real service
+faults, but is not presented as public-policy quality or external-LLM eval.
+
+## 4. K8s
+
+| Item | Status | Evidence |
+|---|---|---|
+| K8S-01 Helm lint | `PASS` | `alpine/helm:3.16.3 lint deploy/helm/zhengheng`: 1 chart linted, 0 failures |
+| K8S-02 Helm template | `PASS` | Rendered output: 5 Deployments, 5 Services, 4 HPAs and 1 ConfigMap |
+| K8S-03 Kind smoke | `DEFERRED` | No host `kind`/`helm` CLIs or approved cluster; none was created or changed |
+| K8S-04 Ready pods / HPA metric read | `DEFERRED` | No approved Kind cluster or metrics-server exists |
+| K8S-05 Pod-failure isolation | `DEFERRED` | Requires a real Kubernetes workload; Compose fault isolation is not substituted |
+| Runtime scale-out | `NOT RUN` | Resource guard applies; no scale-out claim is made |
+
+The chart statically renders readiness/liveness probes, internal topology,
+secret references and CPU HPAs. This is static validation only.
+
+## 5. Regression
+
+| Command | Result |
+|---|---|
+| `uv run pytest backend/tests/unit -q` | `PASS` — 146 passed |
+| `uv run ruff check backend scripts` | `PASS` |
+| `uv run mypy backend/app` | `PASS` — 98 source files |
+| `npm --prefix frontend run lint` | `PASS` |
+| `npm --prefix frontend run test -- --run` | `PASS` — 1 test |
+| `npm --prefix frontend run build` | `PASS` |
+| `uv run python scripts/run_integration_container.py --skip-build --hf-cache-dir C:/Users/XuWei/.cache/huggingface` | `PASS` — foundation/document/evolution 9, retrieval 4, harness 2 |
+| V1.1 Compose integration | `PASS` — 1 passed |
+| Pi adapter contract in Docker Linux | `PASS` — 1 passed |
+
+The isolated V1.0 runner executes unchanged real MongoDB, Redis, OpenSearch and
+Milvus paths in separate Linux processes, avoiding the known Windows native
+CrossEncoder second-load issue without mocking retrieval or assertions.
+Explicit shutdown removed the prior PyMongo async-client finalizer warning.
+Only an unsuppressed third-party `jieba/pkg_resources` deprecation remains.
+
+## 6. Multi-Agent Fixture and V1.0 Eval
+
+`runs/public_eval_v1_100docs/` contains 100 public-policy documents, 167
+chunks and 40 frozen cases (30 factual, 10 knowledge-gap).
+
+| Metric | Actual value |
+|---|---:|
+| Recall@1 / Recall@5 / Recall@10 | 0.933333 / 0.966667 / 1.000000 |
+| MRR | 0.955556 |
+| Citation correctness / coverage | 0.125000 / 1.000000 |
+| Abstain / knowledge-gap accuracy | 0.000000 |
+| Answer correctness | `NOT_AVAILABLE_FROM_DATASET` |
+| Routing accuracy | `NOT_AVAILABLE_FROM_DATASET` |
+
+The frozen ablation compares BM25, Dense, BM25 + Dense + RRF, RRF + reranker,
+and full canonical ACTIVE re-check on identical data. V1.0 IT-01 through IT-06
+remain `PASS`; their complete command evidence is retained in
+`FINAL_VALIDATION_REPORT.md` and `DEFERRED_VALIDATION.md`.
+
+## 7. Observability and Local Compose Runtime
+
+Artifact: `runs/v11_observability_final/v11_observability_validation.json`.
+
+- Prometheus scraped the real Orchestrator: `up=1.0` and
+  `zhengheng_orchestrator_requests_total=26.0` at the snapshot.
+- Request, runtime, fanout, department-call and latency metrics exist and
+  changed from actual API activity.
+- Trace redaction and metric-label checks passed; forbidden PII labels are
+  `[]`.
+- Docker Client/Server: `29.6.1 / 29.6.1`. All eleven profile containers were
+  healthy, including MongoDB `7.0.43`, Redis `7.4.11`, OpenSearch `2.18.0`,
+  Milvus `2.6.25`, Pi Runtime, Orchestrator and three Department Agents.
+
+## 8. Known Limitations
+
+- Kubernetes runtime checks remain deferred: this host lacks an approved Kind
+  cluster, `kind` CLI and host Helm CLI. Containerized Helm static checks are
+  not represented as runtime validation.
+- Real external-provider validation is deferred because no safe process key was
+  present; it is non-P0 and distinct from Pi code-path validation.
+- `runs/public_eval_v1_100docs_final/` is partial (7/40) after the requested
+  five-minute no-output stop. It has no final metrics and is not a PASS; the
+  original full artifact remains valid.
+- Native Windows Python can fault on repeated heavy CrossEncoder loads. The
+  unchanged integration tests run in isolated Docker Linux subprocesses. No
+  Windows, WSL, pagefile or system-proxy setting was changed.
+- V1.0 performance is correctly named **Harness / Retrieval Infrastructure
+  Performance (FakeLLM)**: 10 and 50 VU passed; 200 VU is
+  `NOT_RUN_RESOURCE_GUARD`, not an online-LLM benchmark.
+
+## 9. NOT RUN / DEFERRED
+
+1. Kind smoke, Ready-pod checks, HPA metric read and pod-failure isolation.
+2. Optional OpenAI-compatible real-provider smoke and frozen generation subset.
+3. New full public-eval clone (only if needed beyond the complete original artifact).
+4. 200-VU FakeLLM k6 profile.
+
+## 10. Resume-safe Claims
+
+- V1.0.0 is unchanged at `db55ce8`; no V1.1 commit or tag was made.
+- Named Pi packages run in the internal runtime container, and Python calls the
+  container through the internal contract.
+- Multi-agent requests were exercised against actual Compose services, real
+  retrieval stores, persisted traces and real container faults.
+- The V1.1 fixture and observability JSON files are generated artifacts, not
+  dashboard constants.
+- Helm rendering is verified; Kubernetes runtime behaviour is not claimed until
+  it runs on a real approved cluster.

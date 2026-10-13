@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "zhengheng.fullname" . }}-pi-runtime
+  labels:
+    {{- include "zhengheng.labels" . | nindent 4 }}
+    app.kubernetes.io/component: pi-runtime
+spec:
+  replicas: {{ .Values.piRuntime.replicas }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Release.Name }}
+      app.kubernetes.io/component: pi-runtime
+  template:
+    metadata:
+      labels:
+        {{- include "zhengheng.labels" . | nindent 8 }}
+        app.kubernetes.io/component: pi-runtime
+    spec:
+      containers:
+        - name: pi-runtime
+          image: {{ .Values.piRuntime.image }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.piRuntime.port }}
+          env:
+            - name: PI_INTERNAL_SERVICE_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName }}
+                  key: internalServiceToken
+          livenessProbe:
+            exec:
+              command:
+                - node
+                - -e
+                - >-
+                  fetch('http://localhost:8090/internal/health/live',{headers:{'X-Internal-Service-Token':process.env.PI_INTERNAL_SERVICE_TOKEN}}).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))
+          readinessProbe:
+            exec:
+              command:
+                - node
+                - -e
+                - >-
+                  fetch('http://localhost:8090/internal/health/ready',{headers:{'X-Internal-Service-Token':process.env.PI_INTERNAL_SERVICE_TOKEN}}).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))
+          resources:
+            {{- toYaml .Values.piRuntime.resources | nindent 12 }}

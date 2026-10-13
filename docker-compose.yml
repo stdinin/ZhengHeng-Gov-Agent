@@ -122,6 +122,186 @@ services:
       timeout: 10s
       retries: 20
 
+  # V1.1 is opt-in. `docker compose up` keeps the existing V1.0 data-plane
+  # topology unchanged; use `--profile multi-agent` to start these services.
+  pi-runtime:
+    profiles: ["multi-agent"]
+    image: zhengheng-pi-runtime:v1.1
+    build:
+      context: ./services/pi-runtime
+    environment:
+      PI_INTERNAL_SERVICE_TOKEN: ${INTERNAL_SERVICE_TOKEN:?set INTERNAL_SERVICE_TOKEN in .env}
+      PI_RUNTIME_MODE: faux
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"fetch('http://localhost:8090/internal/health/ready',{headers:{'X-Internal-Service-Token':process.env.PI_INTERNAL_SERVICE_TOKEN}}).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\"",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  orchestrator:
+    profiles: ["multi-agent"]
+    image: zhengheng-backend:v1.1
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    environment: &multi_agent_backend_environment
+      APP_SECRET: ${APP_SECRET:?set APP_SECRET in .env}
+      MONGO_URI: mongodb://host.docker.internal:27017/?directConnection=true
+      MONGO_DB: ${MONGO_DB:-zhengheng}
+      REDIS_URL: redis://host.docker.internal:6379/0
+      OPENSEARCH_URL: http://host.docker.internal:9201
+      OPENSEARCH_INDEX: ${OPENSEARCH_INDEX:-policy_chunks}
+      MILVUS_HOST: host.docker.internal
+      MILVUS_PORT: "19530"
+      # Leave this unset by default so MilvusDenseIndex derives the collection
+      # name from the configured embedding model and dimension.  A fixed
+      # policy_chunks name is incompatible with V1.0's versioned BGE-M3
+      # collection and would make a healthy Milvus look empty at runtime.
+      MILVUS_COLLECTION: ${MILVUS_COLLECTION:-}
+      INTERNAL_SERVICE_TOKEN: ${INTERNAL_SERVICE_TOKEN:?set INTERNAL_SERVICE_TOKEN in .env}
+      SERVICE_ROLE: orchestrator
+      AGENT_ID: orchestrator
+      AGENT_EXECUTION_MODE: multi
+      MULTI_AGENT_ENABLED: "true"
+      AGENT_RUNTIME_BACKEND: pi
+      AGENT_RUNTIME_FALLBACK: fake
+      PI_RUNTIME_BASE_URL: http://pi-runtime:8090
+      PI_RUNTIME_TIMEOUT_MS: "20000"
+      PI_RUNTIME_CONNECT_TIMEOUT_MS: "3000"
+      DEPARTMENT_AGENT_TAX_URL: http://department-agent-tax:8000
+      DEPARTMENT_AGENT_HRSS_URL: http://department-agent-hrss:8000
+      DEPARTMENT_AGENT_HOUSING_URL: http://department-agent-housing:8000
+      ORCHESTRATOR_MAX_PARALLEL: ${ORCHESTRATOR_MAX_PARALLEL:-3}
+      MULTI_AGENT_MAX_DEPARTMENTS: ${MULTI_AGENT_MAX_DEPARTMENTS:-3}
+      # A local BGE-M3 retrieval can exceed the library default on CPU-only
+      # hosts.  Keep a bounded 20s per-department deadline for the Compose
+      # profile; callers can tighten it through the environment.
+      DEPARTMENT_AGENT_TIMEOUT_MS: ${DEPARTMENT_AGENT_TIMEOUT_MS:-20000}
+      EMBEDDING_MODE: ${EMBEDDING_MODE:-local}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-BAAI/bge-m3}
+      EMBEDDING_DIMENSION: ${EMBEDDING_DIMENSION:-1024}
+      RERANKER_ENABLED: ${RERANKER_ENABLED:-true}
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ${HF_CACHE_DIR:-./.cache/huggingface}:/root/.cache/huggingface
+    ports:
+      # The V1.0 observability profile may already use host 8000.
+      - "8010:8000"
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+      milvus:
+        condition: service_healthy
+      pi-runtime:
+        condition: service_healthy
+      department-agent-tax:
+        condition: service_healthy
+      department-agent-hrss:
+        condition: service_healthy
+      department-agent-housing:
+        condition: service_healthy
+    healthcheck: &backend_live_healthcheck
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/live')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  department-agent-tax:
+    profiles: ["multi-agent"]
+    image: zhengheng-backend:v1.1
+    environment:
+      <<: *multi_agent_backend_environment
+      SERVICE_ROLE: department_agent
+      AGENT_ID: tax-agent
+      DEPT_ID: tax
+      AGENT_EXECUTION_MODE: single
+      MULTI_AGENT_ENABLED: "false"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ${HF_CACHE_DIR:-./.cache/huggingface}:/root/.cache/huggingface
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+      milvus:
+        condition: service_healthy
+      pi-runtime:
+        condition: service_healthy
+    healthcheck: *backend_live_healthcheck
+
+  department-agent-hrss:
+    profiles: ["multi-agent"]
+    image: zhengheng-backend:v1.1
+    environment:
+      <<: *multi_agent_backend_environment
+      SERVICE_ROLE: department_agent
+      AGENT_ID: hrss-agent
+      DEPT_ID: hrss
+      AGENT_EXECUTION_MODE: single
+      MULTI_AGENT_ENABLED: "false"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ${HF_CACHE_DIR:-./.cache/huggingface}:/root/.cache/huggingface
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+      milvus:
+        condition: service_healthy
+      pi-runtime:
+        condition: service_healthy
+    healthcheck: *backend_live_healthcheck
+
+  department-agent-housing:
+    profiles: ["multi-agent"]
+    image: zhengheng-backend:v1.1
+    environment:
+      <<: *multi_agent_backend_environment
+      SERVICE_ROLE: department_agent
+      AGENT_ID: housing-agent
+      DEPT_ID: housing
+      AGENT_EXECUTION_MODE: single
+      MULTI_AGENT_ENABLED: "false"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ${HF_CACHE_DIR:-./.cache/huggingface}:/root/.cache/huggingface
+    depends_on:
+      mongo-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+      milvus:
+        condition: service_healthy
+      pi-runtime:
+        condition: service_healthy
+    healthcheck: *backend_live_healthcheck
+
 volumes:
   mongo_data:
   redis_data:

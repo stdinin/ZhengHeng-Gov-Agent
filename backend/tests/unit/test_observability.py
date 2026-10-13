@@ -40,3 +40,37 @@ def test_prometheus_rejects_unbounded_or_pii_node_labels() -> None:
 
     with pytest.raises(ValueError, match="fixed DAG node"):
         metrics.record_node(node="user@example.com", latency_seconds=0.01)
+
+
+def test_v11_multi_agent_metrics_use_only_safe_fixed_labels() -> None:
+    metrics = MetricsRegistry()
+
+    metrics.record_runtime_event(
+        trace_node="Aggregate",
+        event={
+            "runtime_backend_requested": "pi",
+            "runtime_backend_used": "fake",
+            "runtime_fallback_reason": "TimeoutError",
+            "runtime_latency_ms": 25,
+        },
+    )
+    metrics.record_orchestration(mode="multi", status="SUCCESS", fanout=2, partial=True)
+    metrics.record_department_agent(
+        dept_id="tax", status="timeout", latency_seconds=0.2, timeout=True
+    )
+
+    payload = metrics.render_prometheus()
+
+    assert (
+        'zhengheng_runtime_invocations_total{backend="fake",node="aggregate",status="fallback"} 1'
+        in payload
+    )
+    assert (
+        'zhengheng_runtime_fallback_total{from_backend="pi",node="aggregate",'
+        'to_backend="fake"} 1' in payload
+    )
+    assert 'zhengheng_orchestrator_requests_total{mode="multi",status="success"} 1' in payload
+    assert "zhengheng_orchestrator_fanout_size 2.000000" in payload
+    assert 'zhengheng_department_agent_timeout_total{dept_id="tax"} 1' in payload
+    assert "query=" not in payload
+    assert "trace_id=" not in payload

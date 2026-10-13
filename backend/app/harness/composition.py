@@ -21,6 +21,7 @@ from backend.app.llm.openai_compatible import OpenAICompatibleLLM
 from backend.app.retrieval.bm25 import OpenSearchBM25
 from backend.app.retrieval.dense import MilvusDenseIndex
 from backend.app.retrieval.hybrid import HybridEvidenceRetriever
+from backend.app.runtime.registry import RuntimeLLMClient, build_agent_runtime
 from backend.app.storage.document_repository import DocumentStore
 from backend.app.storage.trace_repository import TraceStore
 
@@ -44,6 +45,8 @@ def build_chat_service(
     llm: LLMClient
     if llm_client is not None:
         llm = llm_client
+    elif settings.agent_runtime_backend != "legacy":
+        llm = RuntimeLLMClient(build_agent_runtime(settings))
     elif settings.llm_mode == "remote":
         llm = OpenAICompatibleLLM(settings, usage_sink=usage_sink)
     else:

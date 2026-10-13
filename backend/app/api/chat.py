@@ -61,6 +61,15 @@ class VerificationResponse(BaseModel):
     warnings: list[str]
 
 
+class OrchestrationResponse(BaseModel):
+    mode: str
+    requested_departments: list[str]
+    completed_departments: list[str]
+    failed_departments: list[dict[str, str]]
+    partial: bool
+    fanout: int
+
+
 class ChatResponse(BaseModel):
     trace_id: str
     session_id: str
@@ -70,6 +79,7 @@ class ChatResponse(BaseModel):
     verification: VerificationResponse
     attempts: int
     warnings: list[str]
+    orchestration: OrchestrationResponse | None = None
 
 
 class SessionTraceResponse(BaseModel):
@@ -154,6 +164,22 @@ async def _run_chat(payload: ChatRequest, request: Request) -> ChatResponse:
     for node, latency_ms in result.state.timings_ms.items():
         if is_fixed_dag_node(node):
             _metrics(request).record_node(node=node, latency_seconds=latency_ms / 1_000)
+    trace = await _trace_store(request).get(request.state.trace_id)
+    if trace is not None:
+        _metrics(request).record_trace_runtime(trace)
+        if result.orchestration is not None:
+            fanout_value = result.orchestration.get("fanout", 0)
+            _metrics(request).record_orchestration(
+                mode=str(result.orchestration.get("mode", "abstain")),
+                status=result.status.value,
+                fanout=fanout_value if isinstance(fanout_value, int) else 0,
+                partial=bool(result.orchestration.get("partial", False)),
+            )
+            for child_trace_id in trace.child_trace_ids:
+                child_trace = await _trace_store(request).get(child_trace_id)
+                if child_trace is not None:
+                    _metrics(request).record_trace_runtime(child_trace)
+                    _metrics(request).record_department_trace(child_trace)
     return ChatResponse(
         trace_id=request.state.trace_id,
         session_id=session_id,
@@ -167,10 +193,15 @@ async def _run_chat(payload: ChatRequest, request: Request) -> ChatResponse:
         ),
         attempts=result.attempts,
         warnings=result.warnings,
+        orchestration=(
+            OrchestrationResponse.model_validate(result.orchestration)
+            if result.orchestration is not None
+            else None
+        ),
     )
 
 
-@router.post("", response_model=ChatResponse)
+@router.post("", response_model=ChatResponse, response_model_exclude_none=True)
 async def chat(payload: ChatRequest, request: Request) -> ChatResponse:
     return await _run_chat(payload, request)
 

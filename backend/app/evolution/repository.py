@@ -145,7 +145,22 @@ class MongoEvolutionRepository:
         ]
 
     async def close(self) -> None:
-        await self._client.close()
+        client = getattr(self, "_client", None)
+        if client is None:
+            return
+        await client.close()
+        for attribute in (
+            "_experiments",
+            "_executions",
+            "_frozen_replay_inputs",
+            "_replay_reports",
+            "_strategies",
+            "_badcases",
+            "_feedback",
+            "_client",
+        ):
+            if hasattr(self, attribute):
+                delattr(self, attribute)
 
     @staticmethod
     async def _replace_model(

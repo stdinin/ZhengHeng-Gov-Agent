@@ -1,0 +1,23 @@
+{{- range $agent := .Values.agents }}
+{{- if $agent.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "zhengheng.agentName" (dict "root" $ "agent" $agent) }}
+  labels:
+    {{- include "zhengheng.labels" $ | nindent 4 }}
+    app.kubernetes.io/component: department-agent
+    zhengheng.ai/dept-id: {{ $agent.deptId | quote }}
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/instance: {{ $.Release.Name }}
+    app.kubernetes.io/component: department-agent
+    zhengheng.ai/dept-id: {{ $agent.deptId | quote }}
+  ports:
+    - name: http
+      port: {{ $.Values.backend.port }}
+      targetPort: http
+{{- end }}
+{{- end }}

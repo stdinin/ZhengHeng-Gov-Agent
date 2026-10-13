@@ -1,0 +1,12 @@
+{"id":"ma-single-tax-01","kind":"single","query":"税务登记怎么办理？","expected_departments":["tax"],"expected_outcome":"success"}
+{"id":"ma-single-tax-02","kind":"single","query":"增值税申报应遵循什么政策？","expected_departments":["tax"],"expected_outcome":"success"}
+{"id":"ma-single-hrss-01","kind":"single","query":"社会保险参保怎么办理？","expected_departments":["hrss"],"expected_outcome":"success"}
+{"id":"ma-single-housing-01","kind":"single","query":"住房公积金申请怎么办理？","expected_departments":["housing"],"expected_outcome":"success"}
+{"id":"ma-cross-tax-hrss-01","kind":"cross","query":"税务登记和社保参保如何办理？","expected_departments":["tax","hrss"],"expected_outcome":"success"}
+{"id":"ma-cross-tax-housing-01","kind":"cross","query":"税务登记和住房公积金如何办理？","expected_departments":["tax","housing"],"expected_outcome":"success"}
+{"id":"ma-cross-hrss-housing-01","kind":"cross","query":"社保参保和住房公积金如何办理？","expected_departments":["hrss","housing"],"expected_outcome":"success"}
+{"id":"ma-cross-all-01","kind":"cross","query":"税务登记、社保参保和住房公积金如何办理？","expected_departments":["tax","hrss","housing"],"expected_outcome":"success"}
+{"id":"ma-cross-all-02","kind":"cross","query":"个税、就业服务和保障性住房申请分别应遵循什么政策？","expected_departments":["tax","hrss","housing"],"expected_outcome":"success"}
+{"id":"ma-cross-tax-hrss-02","kind":"cross","query":"发票办理和社会保险参保有哪些依据？","expected_departments":["tax","hrss"],"expected_outcome":"success"}
+{"id":"ma-timeout-hrss-01","kind":"fault","fault_mode":"pause","fault_department":"hrss","query":"税务登记和社保参保如何办理？","expected_departments":["tax","hrss"],"expected_outcome":"partial","expected_failure_reason":"timeout"}
+{"id":"ma-failure-housing-01","kind":"fault","fault_mode":"stop","fault_department":"housing","query":"社会保险参保和住房公积金如何办理？","expected_departments":["hrss","housing"],"expected_outcome":"partial","expected_failure_reason":"client_error"}

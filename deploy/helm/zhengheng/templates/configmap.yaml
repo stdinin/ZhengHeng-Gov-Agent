@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "zhengheng.fullname" . }}-config
+  labels:
+    {{- include "zhengheng.labels" . | nindent 4 }}
+data:
+  APP_ENV: "kubernetes"
+  SERVICE_ROLE: "orchestrator"
+  AGENT_ID: "orchestrator"
+  AGENT_EXECUTION_MODE: "multi"
+  MULTI_AGENT_ENABLED: "true"
+  MULTI_AGENT_MAX_DEPARTMENTS: {{ .Values.multiAgent.maxDepartments | quote }}
+  ORCHESTRATOR_MAX_PARALLEL: {{ .Values.multiAgent.maxParallel | quote }}
+  DEPARTMENT_AGENT_TIMEOUT_MS: {{ .Values.multiAgent.departmentAgentTimeoutMs | quote }}
+  AGENT_RUNTIME_BACKEND: "pi"
+  AGENT_RUNTIME_FALLBACK: "fake"
+  LLM_MODE: "fake"
+  PI_RUNTIME_BASE_URL: "http://{{ include "zhengheng.fullname" . }}-pi-runtime:{{ .Values.piRuntime.port }}"
+  PI_RUNTIME_TIMEOUT_MS: "20000"
+  PI_RUNTIME_CONNECT_TIMEOUT_MS: "3000"
+  MONGO_URI: {{ .Values.infrastructure.mongoUri | quote }}
+  MONGO_DB: {{ .Values.infrastructure.mongoDb | quote }}
+  REDIS_URL: {{ .Values.infrastructure.redisUrl | quote }}
+  OPENSEARCH_URL: {{ .Values.infrastructure.opensearchUrl | quote }}
+  OPENSEARCH_INDEX: {{ .Values.infrastructure.opensearchIndex | quote }}
+  MILVUS_HOST: {{ .Values.infrastructure.milvusHost | quote }}
+  MILVUS_PORT: {{ .Values.infrastructure.milvusPort | quote }}
+  MILVUS_COLLECTION: {{ .Values.infrastructure.milvusCollection | quote }}
+  EMBEDDING_MODE: {{ .Values.infrastructure.embeddingMode | quote }}
+  EMBEDDING_MODEL: {{ .Values.infrastructure.embeddingModel | quote }}
+  EMBEDDING_DIMENSION: {{ .Values.infrastructure.embeddingDimension | quote }}
+  RERANKER_ENABLED: {{ .Values.infrastructure.rerankerEnabled | quote }}
+  DEPARTMENT_AGENT_TAX_URL: "http://{{ include "zhengheng.fullname" . }}-tax-agent:{{ .Values.backend.port }}"
+  DEPARTMENT_AGENT_HRSS_URL: "http://{{ include "zhengheng.fullname" . }}-hrss-agent:{{ .Values.backend.port }}"
+  DEPARTMENT_AGENT_HOUSING_URL: "http://{{ include "zhengheng.fullname" . }}-housing-agent:{{ .Values.backend.port }}"

@@ -16,7 +16,7 @@ from backend.app.domain.documents import (
     SourceType,
 )
 from backend.app.ingestion.indexer import DocumentIndexer
-from backend.app.main import create_app
+from backend.app.main import _close_runtime_resources, create_app
 from backend.app.retrieval.bm25 import OpenSearchBM25
 from backend.app.retrieval.dense import MilvusDenseIndex
 from backend.app.storage.document_repository import MongoDocumentRepository
@@ -56,6 +56,7 @@ async def test_real_document_indexer_promotes_parsed_version_to_ready_and_indexe
         dense=dense,
         embedder=FixedIntegrationEmbedder(),
     )
+    app = None
     now = datetime.now(UTC)
     document = Document(
         id=f"doc_indexer_{suffix}",
@@ -106,6 +107,8 @@ async def test_real_document_indexer_promotes_parsed_version_to_ready_and_indexe
             for item in await dense.search([1.0, 0.0, 0.0, 0.0], department_ids=["dept_tax"])
         ] == [chunk.id]
     finally:
+        if app is not None:
+            await _close_runtime_resources(app)
         await dense.drop_collection()
         await sparse.delete_index()
         await sparse.close()
@@ -138,6 +141,7 @@ async def test_real_document_reindex_api_uses_all_three_persistence_planes() -> 
         dense=dense,
         embedder=FixedIntegrationEmbedder(),
     )
+    app = None
     now = datetime.now(UTC)
     document = Document(
         id=f"doc_reindex_api_{suffix}",
@@ -187,6 +191,8 @@ async def test_real_document_reindex_api_uses_all_three_persistence_planes() -> 
         assert await sparse.count_version_records(version.id) == 1
         assert await dense.count_version_records(version.id) == 1
     finally:
+        if app is not None:
+            await _close_runtime_resources(app)
         await dense.drop_collection()
         await sparse.delete_index()
         await sparse.close()

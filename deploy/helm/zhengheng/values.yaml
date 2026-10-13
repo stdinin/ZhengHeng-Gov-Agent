@@ -1,0 +1,86 @@
+imagePullPolicy: IfNotPresent
+
+secretName: zhengheng-secrets
+
+backend:
+  image: zhengheng-backend:v1.1
+  port: 8000
+  resources:
+    requests:
+      cpu: 250m
+      memory: 768Mi
+    limits:
+      cpu: "1"
+      memory: 2Gi
+
+piRuntime:
+  image: zhengheng-pi-runtime:v1.1
+  port: 8090
+  replicas: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+orchestrator:
+  replicas: 1
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 3
+    targetCPUUtilizationPercentage: 70
+
+multiAgent:
+  maxDepartments: 3
+  maxParallel: 3
+  # CPU-only BGE-M3 service calls have a tested bounded 20s deadline in the
+  # local Compose profile. Override per cluster only with measured evidence.
+  departmentAgentTimeoutMs: 20000
+
+agents:
+  - id: tax-agent
+    deptId: tax
+    enabled: true
+    replicas: 1
+    autoscaling:
+      enabled: true
+      minReplicas: 1
+      maxReplicas: 3
+      targetCPUUtilizationPercentage: 70
+  - id: hrss-agent
+    deptId: hrss
+    enabled: true
+    replicas: 1
+    autoscaling:
+      enabled: true
+      minReplicas: 1
+      maxReplicas: 3
+      targetCPUUtilizationPercentage: 70
+  - id: housing-agent
+    deptId: housing
+    enabled: true
+    replicas: 1
+    autoscaling:
+      enabled: true
+      minReplicas: 1
+      maxReplicas: 3
+      targetCPUUtilizationPercentage: 70
+
+infrastructure:
+  mongoUri: mongodb://mongo:27017/?replicaSet=rs0
+  mongoDb: zhengheng
+  redisUrl: redis://redis:6379/0
+  opensearchUrl: http://opensearch:9200
+  opensearchIndex: policy_chunks
+  milvusHost: milvus
+  milvusPort: "19530"
+  # Empty delegates to the application-derived, model/version-bound collection
+  # (for BGE-M3: policy_chunks_dense__baai_bge_m3__d1024).
+  milvusCollection: ""
+  embeddingMode: local
+  embeddingModel: BAAI/bge-m3
+  embeddingDimension: "1024"
+  rerankerEnabled: "true"

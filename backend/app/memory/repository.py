@@ -53,17 +53,16 @@ class MongoMemoryRepository:
         filters: list[dict[str, object]] = [
             {"user_id": user_id, "memory_type": {"$in": user_memory_types}}
         ]
+        organizational_types = [
+            MemoryType.ORGANIZATIONAL.value,
+            MemoryType.PROCEDURAL.value,
+        ]
+        organizational_filter: dict[str, object] = {
+            "memory_type": {"$in": organizational_types},
+        }
         if department_id:
-            organizational_types = [
-                MemoryType.ORGANIZATIONAL.value,
-                MemoryType.PROCEDURAL.value,
-            ]
-            filters.append(
-                {
-                    "department_id": department_id,
-                    "memory_type": {"$in": organizational_types},
-                }
-            )
+            organizational_filter["department_id"] = department_id
+        filters.append(organizational_filter)
         cursor = self._collection.find({"$or": filters}).sort([("updated_at", -1)]).limit(limit)
         return [self._to_model(document) async for document in cursor]
 
@@ -78,7 +77,13 @@ class MongoMemoryRepository:
         return result.deleted_count == 1
 
     async def close(self) -> None:
-        await self._client.close()
+        client = getattr(self, "_client", None)
+        if client is None:
+            return
+        await client.close()
+        for attribute in ("_collection", "_client"):
+            if hasattr(self, attribute):
+                delattr(self, attribute)
 
     @staticmethod
     def _to_model(document: dict[str, Any]) -> MemoryItem:

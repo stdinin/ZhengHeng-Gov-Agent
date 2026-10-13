@@ -1,0 +1,306 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="6730" viewBox="0 0 2100 6730">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#555"/></marker></defs>
+<rect width="2100" height="6730" fill="white"/>
+<text x="1050.0" y="48.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="31" font-weight="600" fill="#303030">政衡可信政务问答系统业务时序图</text>
+<text x="1050.0" y="96.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#777">按真实调用顺序归纳；虚线箭头表示返回，黄色条表示业务阶段，激活条表示处理区间。</text>
+<circle cx="95" cy="141" r="11" fill="#f2da62" stroke="#555" stroke-width="2"/>
+<polyline points="95,152 95,181" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="71,164 119,164" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="95,181 75,204" fill="none" stroke="#666" stroke-width="1.5"/>
+<polyline points="95,181 115,204" fill="none" stroke="#666" stroke-width="1.5"/>
+<text x="95.0" y="218.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">用户 / 管理员</text>
+<rect x="262" y="143" width="206" height="53" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<text x="365.0" y="169.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="400" fill="#303030">Web / API 调用端</text>
+<rect x="557" y="143" width="206" height="53" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<text x="660.0" y="169.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="400" fill="#303030">FastAPI / 全局编排</text>
+<rect x="852" y="143" width="206" height="53" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<text x="955.0" y="169.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="400" fill="#303030">部门 Agent</text>
+<rect x="1127" y="143" width="206" height="53" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<text x="1230.0" y="169.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="400" fill="#303030">检索与索引组件</text>
+<rect x="1397" y="143" width="206" height="53" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<text x="1500.0" y="169.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="400" fill="#303030">MongoDB</text>
+<rect x="1662" y="143" width="206" height="53" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<text x="1765.0" y="169.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="400" fill="#303030">Redis</text>
+<rect x="1887" y="143" width="206" height="53" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<text x="1990.0" y="169.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="400" fill="#303030">语义运行时</text>
+<polyline points="95,237 95,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="365,237 365,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="660,237 660,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="955,237 955,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="1230,237 1230,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="1500,237 1500,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="1765,237 1765,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="1990,237 1990,6624" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="295" y="250" width="1665" height="38" fill="#f5df61" stroke="#666" stroke-width="1.5"/>
+<text x="1127.5" y="269.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">一、登录认证</text>
+<rect x="356" y="305" width="18" height="588" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<rect x="651" y="305" width="18" height="588" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<polyline points="95,330 356,330" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="103" y="303" width="245" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="314.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">1. 输入邮箱和密码</text>
+<polyline points="374,414 651,414" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="387" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="398.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">2. 提交登录请求</text>
+<rect x="1492" y="486" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,498 1492,498" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="471" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="482.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">3. 按邮箱查询用户</text>
+<polyline points="1500,582 669,582" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="677" y="555" width="815" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1084.5" y="566.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">4. 返回用户与密码摘要</text>
+<polyline points="669,666 769,666 769,688 669,688" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="686" y="637" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="886.0" y="651.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">5. 校验密码，签发 JWT</text>
+<polyline points="651,750 374,750" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="701" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="712.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">6. 返回 access_token 与用户信</text>
+<text x="512.5" y="733.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">息</text>
+<polyline points="356,834 95,834" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="103" y="785" width="245" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="796.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">7. 保存到 sessionStorage，提</text>
+<text x="225.5" y="817.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">示登录成功</text>
+<rect x="295" y="918" width="1665" height="38" fill="#f5df61" stroke="#666" stroke-width="1.5"/>
+<text x="1127.5" y="937.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">二、政策文档入库、索引与版本发布（管理员通过 API / 脚本）</text>
+<rect x="356" y="973" width="18" height="1512" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<rect x="651" y="973" width="18" height="1512" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<polyline points="95,998 356,998" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="103" y="971" width="245" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="982.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">8. 提交政策文件与部门元数据</text>
+<polyline points="374,1082 651,1082" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="1055" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="1066.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">9. 上传文件 / 导入税务数据</text>
+<polyline points="669,1166 769,1166 769,1188 669,1188" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="686" y="1137" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="886.0" y="1151.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">10. 解析正文、分块、生成版本</text>
+<rect x="1492" y="1238" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,1250 1492,1250" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="1223" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="1234.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">11. 保存文档、PARSED 版本与分块</text>
+<polyline points="1500,1334 669,1334" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="677" y="1307" width="815" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1084.5" y="1318.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">12. 返回版本记录</text>
+<polyline points="651,1418 374,1418" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="1369" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="1380.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">13. 返回 version_id 与 PARSED</text>
+<text x="512.5" y="1401.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">状态</text>
+<polyline points="374,1502 651,1502" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="1475" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="1486.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">14. 发起 reindex 请求</text>
+<rect x="1492" y="1574" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,1586 1492,1586" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="1559" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="1570.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">15. 读取版本与分块，设置 INDEXING</text>
+<rect x="1222" y="1658" width="16" height="38" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,1670 1222,1670" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="1643" width="537" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="945.5" y="1654.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">16. BGE 向量化，写 OpenSearch / Milvus</text>
+<polyline points="1230,1754 669,1754" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="677" y="1727" width="545" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="949.5" y="1738.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">17. 索引数量与检索探针校验通过</text>
+<rect x="1492" y="1826" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,1838 1492,1838" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="1811" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="1822.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">18. 将版本状态更新为 READY</text>
+<polyline points="651,1922 374,1922" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="1895" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="1906.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">19. 返回 READY，等待显式发布</text>
+<polyline points="95,2006 356,2006" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="103" y="1979" width="245" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="1990.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">20. 确认发布当前政策版本</text>
+<polyline points="374,2090 651,2090" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="2063" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="2074.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">21. 提交 publish 请求</text>
+<rect x="1492" y="2162" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,2174 1492,2174" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="2147" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="2158.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">22. 事务发布 ACTIVE、切换当前版本、归档旧版本</text>
+<polyline points="1500,2258 669,2258" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="677" y="2231" width="815" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1084.5" y="2242.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">23. 返回发布结果</text>
+<polyline points="651,2342 374,2342" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="2315" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="2326.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">24. 返回当前有效版本</text>
+<polyline points="356,2426 95,2426" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="103" y="2399" width="245" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="2410.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">25. 显示发布成功</text>
+<rect x="295" y="2510" width="1665" height="38" fill="#f5df61" stroke="#666" stroke-width="1.5"/>
+<text x="1127.5" y="2529.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">三、多部门可信问答（V1.1 可选路径）</text>
+<rect x="356" y="2565" width="18" height="2512" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<rect x="651" y="2565" width="18" height="2512" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<polyline points="95,2590 356,2590" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="103" y="2563" width="245" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="2574.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">26. 输入政策问题</text>
+<polyline points="374,2674 651,2674" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="2625" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="2636.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">27. 提交 query、session_id 与</text>
+<text x="512.5" y="2657.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">Bearer JWT</text>
+<rect x="1492" y="2746" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,2758 1492,2758" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="2731" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="2742.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">28. 校验令牌对应的用户</text>
+<rect x="1757" y="2830" width="16" height="38" fill="#e1f2eb" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,2842 1757,2842" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="2815" width="1072" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1213.0" y="2826.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">29. 读取工作记忆 / 会话上下文</text>
+<rect x="1492" y="2914" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,2926 1492,2926" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="2899" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="2910.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">30. 读取长期记忆，供根节点构建只读快照</text>
+<rect x="1982" y="2998" width="16" height="38" fill="#fff5c7" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,3010 1982,3010" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="2983" width="1297" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1325.5" y="2994.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">31. 调用意图识别、改写与路由语义节点</text>
+<polyline points="1990,3094 669,3094" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="677" y="3067" width="1305" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1329.5" y="3078.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">32. 返回结构化语义结果</text>
+<polyline points="669,3178 769,3178 769,3200 669,3200" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="686" y="3149" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="886.0" y="3163.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">33. 静态注册表校验，确定目标部门</text>
+<rect x="740" y="3237" width="1300" height="40" fill="#fff9db" stroke="#666" stroke-width="1.5"/>
+<text x="1390.0" y="3257.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">par：对选中的税务 / 人社 / 住建 Agent 有界并行调用；以下展示单个部门的执行过程</text>
+<rect x="947" y="3330" width="16" height="38" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,3342 947,3342" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="3293" width="262" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="808.0" y="3304.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">34. 发送部门任务与裁剪后的只读</text>
+<text x="808.0" y="3325.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">快照</text>
+<polyline points="964,3426 1064,3426 1064,3448 964,3448" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="981" y="3397" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1181.0" y="3411.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">35. 固定 DEPT_ID，构建检索过滤条件</text>
+<rect x="1222" y="3498" width="16" height="38" fill="#e8e6fa" stroke="#666" stroke-width="1.5"/>
+<polyline points="955,3510 1222,3510" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="963" y="3461" width="251" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1088.5" y="3472.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">36. 查询向量化；并行 BM25 +</text>
+<text x="1088.5" y="3493.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">Dense；RRF 融合</text>
+<rect x="1492" y="3582" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="1230,3594 1492,3594" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="1238" y="3545" width="246" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1361.0" y="3556.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">37. 读取候选对应的规范证据文</text>
+<text x="1361.0" y="3577.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">本</text>
+<polyline points="1500,3678 1230,3678" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="1238" y="3651" width="254" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1365.0" y="3662.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">38. 返回候选证据</text>
+<polyline points="1239,3762 1339,3762 1339,3784 1239,3784" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="1256" y="3733" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1456.0" y="3747.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">39. 执行 BGE Reranker 重排</text>
+<rect x="1492" y="3834" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="1230,3846 1492,3846" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="1238" y="3797" width="246" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1361.0" y="3808.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">40. 复核 canonical ACTIVE 与</text>
+<text x="1361.0" y="3829.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">当前版本指针</text>
+<polyline points="1500,3930 1230,3930" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="1238" y="3903" width="254" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1365.0" y="3914.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">41. 返回当前有效证据</text>
+<polyline points="1230,4014 955,4014" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="963" y="3987" width="259" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1092.5" y="3998.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">42. 返回最终证据及检索阶段统计</text>
+<rect x="1982" y="4086" width="16" height="38" fill="#fff5c7" stroke="#666" stroke-width="1.5"/>
+<polyline points="955,4098 1982,4098" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="963" y="4071" width="1011" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1468.5" y="4082.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">43. 仅依据证据执行回答与验证语义节点</text>
+<polyline points="1990,4182 955,4182" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="963" y="4155" width="1019" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1472.5" y="4166.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">44. 返回结构化回答 / 验证结果</text>
+<polyline points="964,4266 1064,4266 1064,4288 964,4288" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="981" y="4237" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1181.0" y="4251.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">45. 本地引用与声明校验</text>
+<rect x="1492" y="4338" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="955,4350 1492,4350" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="963" y="4323" width="521" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1223.5" y="4334.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">46. 写入子 Trace 与检索、验证记录</text>
+<polyline points="955,4434 669,4434" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="677" y="4385" width="270" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="812.0" y="4396.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">47. 返回部门状态、答案、引用与</text>
+<text x="812.0" y="4417.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">child_trace_id</text>
+<rect x="740" y="4493" width="1300" height="40" fill="#fff9db" stroke="#666" stroke-width="1.5"/>
+<text x="1390.0" y="4513.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">alt：单部门超时 / 验证失败 → 隔离该结果；无成功结果或全局验证失败 → 拒答</text>
+<rect x="1982" y="4586" width="16" height="38" fill="#fff5c7" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,4598 1982,4598" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="4571" width="1297" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1325.5" y="4582.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">48. 多个有效部门结果时，仅请求展示顺序</text>
+<polyline points="1990,4682 669,4682" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="677" y="4655" width="1305" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1329.5" y="4666.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">49. 返回部门排序；失败则使用确定性顺序</text>
+<polyline points="669,4766 769,4766 769,4788 669,4788" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="686" y="4737" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="886.0" y="4751.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">50. 聚合已验证段落、引用去重、全局验证</text>
+<rect x="1492" y="4838" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,4850 1492,4850" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="4823" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="4834.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">51. 保存根 Trace；根节点写一次案例记忆</text>
+<polyline points="651,4934 374,4934" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="4885" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="4896.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">52. 返回答案 / 拒答、引用、验证</text>
+<text x="512.5" y="4917.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">与编排状态</text>
+<polyline points="356,5018 95,5018" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="103" y="4969" width="245" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="4980.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">53. 展示回答、来源与部分失败</text>
+<text x="225.5" y="5001.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">提示</text>
+<rect x="295" y="5102" width="1665" height="38" fill="#f5df61" stroke="#666" stroke-width="1.5"/>
+<text x="1127.5" y="5121.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="400" fill="#303030">四、用户反馈、冻结回放与策略审核（管理步骤通过 API / 脚本）</text>
+<rect x="356" y="5157" width="18" height="1428" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<rect x="651" y="5157" width="18" height="1428" fill="#f0f4f4" stroke="#666" stroke-width="1.5"/>
+<polyline points="95,5182 356,5182" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="103" y="5155" width="245" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="5166.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">54. 提交反馈 / 纠错</text>
+<polyline points="374,5266 651,5266" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="5217" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="5228.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">55. 提交反馈类型、内容与</text>
+<text x="512.5" y="5249.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">trace_id</text>
+<rect x="1492" y="5338" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,5350 1492,5350" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="5323" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="5334.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">56. 保存反馈，按规则关联失败案例</text>
+<polyline points="651,5434 374,5434" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="5407" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="5418.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">57. 返回反馈记录</text>
+<polyline points="95,5518 356,5518" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="103" y="5469" width="245" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="5480.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">58. 管理员审核案例并提交策略</text>
+<text x="225.5" y="5501.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">候选</text>
+<polyline points="374,5602 651,5602" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="5575" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="5586.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">59. 提交审核 / propose 请求</text>
+<rect x="1492" y="5674" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,5686 1492,5686" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="5659" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="5670.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">60. 保存审核状态与受约束的策略 DSL</text>
+<polyline points="374,5770 651,5770" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="5721" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="5732.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">61. 提交源 Trace ID，发起冻结</text>
+<text x="512.5" y="5753.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">回放</text>
+<rect x="1492" y="5842" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,5854 1492,5854" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="5827" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="5838.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">62. 读取源 Trace，冻结输入与证据</text>
+<polyline points="669,5938 769,5938 769,5960 669,5960" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="686" y="5909" width="400" height="29" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="886.0" y="5923.5" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#303030">63. 执行候选回放，对比基线，计算 Replay Gate</text>
+<rect x="1492" y="6010" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,6022 1492,6022" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="5995" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="6006.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">64. 保存回放报告与通过 / 拒绝状态</text>
+<polyline points="651,6106 374,6106" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="6079" width="261" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="6090.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">65. 返回回放结果，等待人工决策</text>
+<polyline points="95,6190 356,6190" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="103" y="6141" width="245" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="6152.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">66. 人工批准通过回放的候选进</text>
+<text x="225.5" y="6173.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">入灰度</text>
+<polyline points="374,6274 651,6274" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="382" y="6225" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="6236.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">67. 提交 approve-gray 与灰度比</text>
+<text x="512.5" y="6257.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">例</text>
+<rect x="1492" y="6346" width="16" height="38" fill="#f9dddd" stroke="#666" stroke-width="1.5"/>
+<polyline points="669,6358 1492,6358" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="677" y="6331" width="807" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="1080.5" y="6342.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">68. 校验 REPLAY_PASSED，记录 GRAY 与审批人</text>
+<polyline points="651,6442 374,6442" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="382" y="6393" width="261" height="44" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="512.5" y="6404.29" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">69. 返回灰度状态；后续可晋升或</text>
+<text x="512.5" y="6425.71" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">回滚</text>
+<polyline points="356,6526 95,6526" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#a)" stroke-dasharray="7 5"/>
+<rect x="103" y="6499" width="245" height="22" fill="white" stroke="none" stroke-width="1.5"/>
+<text x="225.5" y="6510.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="400" fill="#303030">70. 展示策略审核与发布结果</text>
+<text x="1050.0" y="6656.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#777">说明：检索与索引组件合并表示 Python 检索逻辑、BGE、OpenSearch 和 Milvus；不代表额外独立部署的服务。</text>
+<text x="1050.0" y="6692.0" text-anchor="middle" dominant-baseline="central" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="400" fill="#777">语义运行时可选 Pi / 兼容 LLM 接口；Compose 默认 Faux。回放内部调用已折叠，不表示无检索或无模型执行。</text>
+</svg>

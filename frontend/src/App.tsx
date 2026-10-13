@@ -6,6 +6,7 @@ const SystemStatus = lazy(async () => ({ default: (await import('./pages/SystemS
 const Chat = lazy(async () => ({ default: (await import('./pages/Chat')).Chat }))
 const TraceExplorer = lazy(async () => ({ default: (await import('./pages/TraceExplorer')).TraceExplorer }))
 const AdminWorkspace = lazy(async () => ({ default: (await import('./pages/AdminWorkspace')).AdminWorkspace }))
+const AgentNetwork = lazy(async () => ({ default: (await import('./pages/AgentNetwork')).AgentNetwork }))
 
 export function App() {
   return (
@@ -21,6 +22,7 @@ export function App() {
               { key: 'chat', label: '政策问答', children: <Chat /> },
               { key: 'trace', label: 'Trace', children: <TraceExplorer /> },
               { key: 'admin', label: '管理与评测', children: <AdminWorkspace /> },
+              { key: 'agents', label: 'Agent Network', children: <AgentNetwork /> },
               { key: 'status', label: '系统状态', children: <SystemStatus /> },
               { key: 'login', label: '登录', children: <Login /> },
             ]}

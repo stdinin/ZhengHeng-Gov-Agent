@@ -27,6 +27,7 @@ class TraceNode:
     fallback: bool = False
     token_usage: int | None = None
     applied_strategy_ids: list[str] = field(default_factory=list)
+    runtime_events: list[dict[str, str | float | None]] = field(default_factory=list)
 
 
 @dataclass(frozen=True, slots=True)
@@ -53,6 +54,19 @@ class TraceRecord:
     retry_count: int = 0
     errors: list[str] = field(default_factory=list)
     timings_ms: dict[str, float] = field(default_factory=dict)
+    parent_trace_id: str | None = None
+    trace_kind: str = "root"
+    execution_mode: str = "single_agent"
+    agent_id: str | None = None
+    dept_id: str | None = None
+    child_trace_ids: list[str] = field(default_factory=list)
+    aggregation: dict[str, Any] = field(default_factory=dict)
+    partial: bool = False
+    failed_departments: list[dict[str, str]] = field(default_factory=list)
+    runtime_fallbacks: list[dict[str, str | float | None]] = field(default_factory=list)
+    route_decision: dict[str, Any] | None = None
+    selected_departments: list[str] = field(default_factory=list)
+    final_verification: dict[str, Any] | None = None
 
 
 class TraceRecorder:
@@ -84,6 +98,7 @@ class TraceRecorder:
         fallback: bool = False,
         token_usage: int | None = None,
         applied_strategy_ids: list[str] | None = None,
+        runtime_events: list[dict[str, str | float | None]] | None = None,
     ) -> None:
         if latency_ms < 0:
             raise ValueError("Node latency cannot be negative.")
@@ -96,6 +111,7 @@ class TraceRecorder:
                 fallback=fallback,
                 token_usage=token_usage,
                 applied_strategy_ids=applied_strategy_ids or [],
+                runtime_events=runtime_events or [],
             )
         )
 

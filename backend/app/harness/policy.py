@@ -17,6 +17,7 @@ from backend.app.harness.state import (
     VerificationResult,
 )
 from backend.app.observability.tracing import TraceRecorder
+from backend.app.runtime.context import RuntimeInvocationAudit, runtime_request_scope
 from backend.app.storage.trace_repository import TraceStore
 
 NodeValue = TypeVar("NodeValue")
@@ -36,6 +37,7 @@ class PolicyHarnessResult:
     attempts: int
     warnings: list[str]
     state: AgentState
+    orchestration: dict[str, object] | None = None
 
 
 class PolicyHarnessNodes(Protocol):
@@ -79,6 +81,30 @@ class PolicyHarness:
         self._trace_store = trace_store
 
     async def run(
+        self,
+        *,
+        query: str,
+        trace_id: str,
+        session_id: str,
+        user_id: str | None,
+        now: datetime,
+        strategy: StrategyCandidate | None = None,
+    ) -> PolicyHarnessResult:
+        with runtime_request_scope(
+            trace_id=trace_id,
+            agent_id="orchestrator",
+            dept_id=None,
+        ):
+            return await self._run_scoped(
+                query=query,
+                trace_id=trace_id,
+                session_id=session_id,
+                user_id=user_id,
+                now=now,
+                strategy=strategy,
+            )
+
+    async def _run_scoped(
         self,
         *,
         query: str,
@@ -247,14 +273,26 @@ class PolicyHarness:
     ) -> NodeValue:
         started = time.perf_counter()
         result = await operation
+        runtime_events = self._drain_runtime_audits()
         recorder.record_node(
             node=node,
             input_summary=input_summary[:500],
             output_summary=self._summarize(result),
             latency_ms=round((time.perf_counter() - started) * 1_000, 2),
             fallback=bool(getattr(result, "used_fallback", False)),
+            runtime_events=runtime_events,
         )
         return result
+
+    def _drain_runtime_audits(self) -> list[dict[str, str | float | None]]:
+        drain = getattr(self._nodes, "drain_runtime_audits", None)
+        if not callable(drain):
+            return []
+        return [
+            audit.as_trace_metadata()
+            for audit in drain()
+            if isinstance(audit, RuntimeInvocationAudit)
+        ]
 
     async def _verify(
         self, draft: AnswerDraft, evidence: list[Evidence]

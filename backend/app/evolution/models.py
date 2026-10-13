@@ -18,6 +18,10 @@ class ObservationReason(StrEnum):
     MEMORY_CONTAMINATION = "MEMORY_CONTAMINATION"
     TIMEOUT = "TIMEOUT"
     SAFETY_BLOCK = "SAFETY_BLOCK"
+    AGENT_TIMEOUT = "AGENT_TIMEOUT"
+    AGENT_PARTIAL_FAILURE = "AGENT_PARTIAL_FAILURE"
+    AGGREGATION_ERROR = "AGGREGATION_ERROR"
+    CROSS_DEPARTMENT_CONFLICT = "CROSS_DEPARTMENT_CONFLICT"
     UNKNOWN = "UNKNOWN"
 
 
@@ -59,6 +63,9 @@ class BadCase(BaseModel):
     source: str = Field(min_length=1, max_length=64)
     status: BadCaseStatus = BadCaseStatus.OPEN
     feedback_id: str | None = Field(default=None, max_length=128)
+    agent_id: str | None = Field(default=None, max_length=128)
+    dept_id: str | None = Field(default=None, max_length=128)
+    orchestration_stage: str | None = Field(default=None, max_length=128)
     created_at: datetime
     updated_at: datetime
 
@@ -164,8 +171,18 @@ class StrategyType(StrEnum):
 
 
 class StrategyScope(BaseModel):
+    mode: Literal["global", "orchestrator", "department"] = "global"
+    dept_id: str | None = Field(default=None, max_length=128)
     department_ids: list[str] = Field(default_factory=list, max_length=32)
     intent_types: list[str] = Field(default_factory=list, max_length=32)
+
+    @model_validator(mode="after")
+    def validate_multi_agent_scope(self) -> StrategyScope:
+        if self.mode == "department" and not (self.dept_id or self.department_ids):
+            raise ValueError("Department strategy scope requires dept_id or department_ids.")
+        if self.mode != "department" and self.dept_id is not None:
+            raise ValueError("dept_id is valid only for department strategy scope.")
+        return self
 
 
 class StrategyTrigger(BaseModel):

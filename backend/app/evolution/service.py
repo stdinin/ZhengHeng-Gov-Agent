@@ -21,6 +21,8 @@ from backend.app.evolution.models import (
 )
 from backend.app.evolution.replay import ReplayMetrics, evaluate_replay_gate
 from backend.app.evolution.repository import EvolutionRepository
+from backend.app.observability.tracing import TraceRecord
+from backend.app.storage.trace_repository import TraceStore
 
 
 class EvolutionStateError(ValueError):
@@ -30,12 +32,15 @@ class EvolutionStateError(ValueError):
 class FeedbackService:
     """Persist feedback and create a constrained, reviewable bad-case observation."""
 
-    def __init__(self, repository: EvolutionRepository) -> None:
+    def __init__(
+        self, repository: EvolutionRepository, *, trace_store: TraceStore | None = None
+    ) -> None:
         self._repository = repository
+        self._trace_store = trace_store
 
     async def record(self, feedback: Feedback) -> BadCase | None:
         await self._repository.save_feedback(feedback)
-        reason = self._reason_for(feedback)
+        reason, trace, stage = await self._reason_for_trace(feedback)
         if reason is None:
             return None
         now = datetime.now(UTC)
@@ -48,6 +53,9 @@ class FeedbackService:
             source="AUTO",
             status=BadCaseStatus.OPEN,
             feedback_id=feedback.id,
+            agent_id=trace.agent_id if trace is not None else None,
+            dept_id=trace.dept_id if trace is not None else None,
+            orchestration_stage=stage,
             created_at=now,
             updated_at=now,
         )
@@ -63,6 +71,31 @@ class FeedbackService:
         if feedback.feedback_type is FeedbackType.REPORT:
             return ObservationReason.SAFETY_BLOCK
         return None
+
+    async def _reason_for_trace(
+        self, feedback: Feedback
+    ) -> tuple[ObservationReason | None, TraceRecord | None, str | None]:
+        trace = (
+            await self._trace_store.get(feedback.trace_id)
+            if self._trace_store is not None
+            else None
+        )
+        if trace is None:
+            return self._reason_for(feedback), None, None
+        if trace.trace_kind == "child" and "timeout" in trace.errors:
+            return ObservationReason.AGENT_TIMEOUT, trace, "department_dispatch"
+        if trace.execution_mode == "multi_agent":
+            failure_reasons = {item.get("reason") for item in trace.failed_departments}
+            if "timeout" in failure_reasons:
+                return ObservationReason.AGENT_TIMEOUT, trace, "department_dispatch"
+            if trace.partial:
+                return ObservationReason.AGENT_PARTIAL_FAILURE, trace, "department_dispatch"
+            verification = trace.final_verification or trace.verification or {}
+            if not verification.get("passed", False):
+                return ObservationReason.AGGREGATION_ERROR, trace, "aggregate_verify"
+            if not trace.selected_departments:
+                return ObservationReason.ROUTING_ERROR, trace, "route"
+        return self._reason_for(feedback), trace, None
 
 
 class EvolutionService:

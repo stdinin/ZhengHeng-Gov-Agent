@@ -173,7 +173,15 @@ class MongoDocumentRepository:
         self._chunks: AsyncCollection[dict[str, Any]] = self._database["chunks"]
 
     async def close(self) -> None:
-        await self._client.close()
+        client = getattr(self, "_client", None)
+        if client is None:
+            return
+        await client.close()
+        # Closing is terminal for a repository. Clearing its Mongo object graph
+        # releases PyMongo monitor finalizers before an asyncio test loop ends.
+        for attribute in ("_chunks", "_versions", "_documents", "_database", "_client"):
+            if hasattr(self, attribute):
+                delattr(self, attribute)
 
     async def initialize_indexes(self) -> None:
         collections: dict[str, AsyncCollection[dict[str, Any]]] = {

@@ -69,6 +69,8 @@ def chunk_text(
     for section in _sections(text):
         for offset in range(0, len(section.text), max_chars):
             value = section.text[offset : offset + max_chars]
+            if not value.strip():
+                continue
             ordinal = len(chunks) + 1
             chunks.append(
                 ChunkDraft(

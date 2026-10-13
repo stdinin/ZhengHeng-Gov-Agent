@@ -20,3 +20,13 @@ def test_chunker_splits_long_policy_text_without_losing_or_reordering_characters
     assert len(chunks) >= 3
     assert "".join(chunk.text for chunk in chunks) == text
     assert [chunk.ordinal for chunk in chunks] == list(range(1, len(chunks) + 1))
+
+
+def test_chunker_omits_whitespace_only_windows_but_preserves_source_offsets() -> None:
+    text = "正文" + " " * 10 + "内容"
+
+    chunks = chunk_text(document_id="doc_1", version_id="ver_1", text=text, max_chars=5)
+
+    assert [chunk.text for chunk in chunks] == ["正文   ", "  内容"]
+    assert [chunk.ordinal for chunk in chunks] == [1, 2]
+    assert [(chunk.char_start, chunk.char_end) for chunk in chunks] == [(0, 5), (10, 14)]

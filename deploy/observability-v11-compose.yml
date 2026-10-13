@@ -1,0 +1,18 @@
+name: zhengheng-v11-observability
+
+services:
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ./prometheus/prometheus-v11.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_v11_data:/prometheus
+    ports:
+      - "9092:9090"
+
+volumes:
+  prometheus_v11_data:

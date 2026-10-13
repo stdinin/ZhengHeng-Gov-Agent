@@ -30,6 +30,28 @@ class Settings(BaseSettings):
     llm_timeout_seconds: int = 60
     llm_max_retries: int = 2
 
+    # V1.1 is opt-in: ``legacy`` keeps the V1.0 fixed-DAG composition unchanged.
+    agent_runtime_backend: Literal["legacy", "fake", "openai_compatible", "pi"] = "legacy"
+    agent_runtime_fallback: Literal["none", "fake", "openai_compatible"] = "none"
+    pi_runtime_base_url: str = "http://pi-runtime:8090"
+    pi_runtime_timeout_ms: int = 20_000
+    pi_runtime_connect_timeout_ms: int = 3_000
+    internal_service_token: str | None = None
+
+    # V1.1 reuses one backend image in two least-privilege deployment roles.
+    service_role: Literal["orchestrator", "department_agent"] = "orchestrator"
+    dept_id: str | None = None
+    agent_id: str = "orchestrator"
+    multi_agent_max_departments: int = 3
+    orchestrator_max_parallel: int = 4
+    department_agent_timeout_ms: int = 12_000
+    department_agents_json: str | None = None
+    multi_agent_enabled: bool = False
+    agent_execution_mode: Literal["single", "multi"] = "single"
+    department_agent_tax_url: str = "http://localhost:8101"
+    department_agent_hrss_url: str = "http://localhost:8102"
+    department_agent_housing_url: str = "http://localhost:8103"
+
     # Retrieval infrastructure is deliberately independent from answer generation:
     # a local/remote embedding model may be available while LLM_MODE remains fake.
     embedding_mode: Literal["local", "remote"] = "local"
@@ -80,6 +102,17 @@ class Settings(BaseSettings):
                 raise ValueError(
                     "EMBEDDING_MODE=remote requires " + ", ".join(missing_embedding)
                 )
+        if self.agent_runtime_backend == "pi" and not self.internal_service_token:
+            raise ValueError("AGENT_RUNTIME_BACKEND=pi requires INTERNAL_SERVICE_TOKEN")
+        if self.agent_runtime_fallback == "openai_compatible" and self.llm_mode != "remote":
+            raise ValueError(
+                "AGENT_RUNTIME_FALLBACK=openai_compatible requires LLM_MODE=remote"
+            )
+        if self.service_role == "department_agent":
+            if not self.dept_id:
+                raise ValueError("SERVICE_ROLE=department_agent requires DEPT_ID")
+            if self.agent_id == "orchestrator":
+                raise ValueError("SERVICE_ROLE=department_agent requires a department AGENT_ID")
         positive_values = {
             "EMBEDDING_DIMENSION": self.embedding_dimension,
             "EMBEDDING_TIMEOUT_SECONDS": self.embedding_timeout_seconds,
@@ -89,6 +122,11 @@ class Settings(BaseSettings):
             "FUSED_TOP_K": self.fused_top_k,
             "RERANK_TOP_N": self.rerank_top_n,
             "FINAL_CONTEXT_TOP_K": self.final_context_top_k,
+            "PI_RUNTIME_TIMEOUT_MS": self.pi_runtime_timeout_ms,
+            "PI_RUNTIME_CONNECT_TIMEOUT_MS": self.pi_runtime_connect_timeout_ms,
+            "MULTI_AGENT_MAX_DEPARTMENTS": self.multi_agent_max_departments,
+            "ORCHESTRATOR_MAX_PARALLEL": self.orchestrator_max_parallel,
+            "DEPARTMENT_AGENT_TIMEOUT_MS": self.department_agent_timeout_ms,
         }
         invalid = [name for name, value in positive_values.items() if value <= 0]
         if invalid:
