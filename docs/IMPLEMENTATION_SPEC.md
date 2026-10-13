@@ -283,7 +283,7 @@
 
 ## 3.5 项目自己的 Frozen Eval Set
 
-建立 `evalsets/policy_eval_v1.jsonl`。
+建立 `evaluation/evalsets/policy_eval_v1.jsonl`。
 
 构建流程：
 
@@ -517,21 +517,18 @@ zhengheng-agent/
 │   │   ├── api/
 │   │   └── types/
 │   └── tests/
-├── data/
-│   ├── demo/
-│   └── cache/.gitkeep
-├── evalsets/
-│   ├── fixtures/
+├── evaluation/
+│   ├── evalsets/
+│   ├── manifests/
+│   ├── k6/
 │   └── README.md
 ├── scripts/
 │   ├── bootstrap_data.py
 │   ├── seed_users.py
 │   ├── create_evalset.py
 │   └── run_eval.py
-├── k6/
-│   ├── chat.js
-│   └── README.md
 ├── deploy/
+│   ├── docker/
 │   ├── prometheus/
 │   └── helm/                 # P1
 └── docs/

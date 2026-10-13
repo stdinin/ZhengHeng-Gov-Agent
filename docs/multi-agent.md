@@ -65,7 +65,7 @@ Compose services and actual MongoDB, OpenSearch, Milvus, Redis, and persisted
 traces. Pi Faux may supply semantic fixtures, but it never replaces retrieval
 or persistence.
 
-The frozen `eval/multi_agent_eval.jsonl` contains four single-department, six
+The frozen `evaluation/evalsets/multi_agent_eval.jsonl` contains four single-department, six
 cross-department, and two fault cases. The runner creates a timestamped
 `runs/v11_multi_agent_eval_*/` artifact with a manifest hash, raw results,
 metrics, and Markdown report. Its fault cases pause and stop real Department

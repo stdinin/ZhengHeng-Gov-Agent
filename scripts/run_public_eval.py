@@ -608,8 +608,8 @@ def parse_args() -> argparse.Namespace:
         choices=("all", "embed", "evaluate", "resume-evaluate"),
         default="all",
     )
-    parser.add_argument("--evalset", default="evalsets/policy_eval_v1.jsonl")
-    parser.add_argument("--manifest", default="data/manifests/chinatax_policy_v1.json")
+    parser.add_argument("--evalset", default="evaluation/evalsets/policy_eval_v1.jsonl")
+    parser.add_argument("--manifest", default="evaluation/manifests/chinatax_policy_v1.json")
     parser.add_argument("--output", default="runs")
     parser.add_argument("--run-id")
     parser.add_argument("--run-dir", default="")

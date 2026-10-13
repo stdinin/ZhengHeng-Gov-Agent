@@ -72,7 +72,7 @@ def main() -> int:
                 "--tag",
                 args.image,
                 "--file",
-                str(workspace / "docker" / "integration-runner.Dockerfile"),
+                str(workspace / "deploy" / "docker" / "integration-runner.Dockerfile"),
                 str(workspace),
             ],
             check=False,

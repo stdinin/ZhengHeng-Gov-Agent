@@ -40,7 +40,7 @@ integration:
 	uv run python scripts/run_integration_container.py
 
 run-eval:
-	uv run python scripts/run_eval.py --evalset evalsets/policy_eval_v1.jsonl
+	uv run python scripts/run_eval.py --evalset evaluation/evalsets/policy_eval_v1.jsonl
 
 clean:
 	docker compose down -v --remove-orphans

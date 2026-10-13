@@ -77,7 +77,7 @@ def _load_cases(path: Path) -> list[EvalCase]:
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--evalset", default="evalsets/policy_eval_v1.jsonl")
+    parser.add_argument("--evalset", default="evaluation/evalsets/policy_eval_v1.jsonl")
     parser.add_argument("--output", default="runs")
     parser.add_argument("--run-id")
     parser.add_argument("--pricing-period", choices=tuple(_PRICING), required=True)

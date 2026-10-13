@@ -1,6 +1,6 @@
 # k6 Chat Validation
 
-`k6/chat.js` sends real HTTP traffic only. A request is successful only when the
+`evaluation/k6/chat.js` sends real HTTP traffic only. A request is successful only when the
 chat API returns HTTP 200; `503` is an error and causes k6 thresholds to fail.
 The validation profile uses the real MongoDB, Redis, OpenSearch, Milvus, local
 embedding, and reranking path with FakeLLM answer generation. Its results must

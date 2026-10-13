@@ -225,8 +225,8 @@ backend/app/
 └── observability/   Trace、指标与日志
 frontend/            React 交互界面
 services/pi-runtime/ TypeScript 语义运行时
-deploy/              Prometheus、Helm 与 Kind 配置
-eval/ · evalsets/     多 Agent 用例与冻结评测集
+deploy/              Docker 构建、Prometheus、Helm 与 Kind 配置
+evaluation/          冻结评测集、数据清单与 k6 压测脚本
 scripts/             初始化、评测与集成验收脚本
 docs/architecture/   架构图、功能图、时序图及可编辑源文件
 ```

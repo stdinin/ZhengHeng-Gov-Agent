@@ -25,7 +25,7 @@ from uuid import uuid4
 import httpx
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_FIXTURE = ROOT / "eval" / "multi_agent_eval.jsonl"
+DEFAULT_FIXTURE = ROOT / "evaluation" / "evalsets" / "multi_agent_eval.jsonl"
 
 FaultMode = Literal["pause", "stop"]
 

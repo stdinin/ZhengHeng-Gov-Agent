@@ -56,10 +56,8 @@ models/
 *.pth
 *.onnx
 
-# Runtime data. The compact public manifest is versioned for reproducibility.
-data/*
-!data/manifests/
-!data/manifests/*.json
+# Local runtime data. Public manifests live under evaluation/manifests/.
+/data/
 datasets/
 uploads/
 tmp/

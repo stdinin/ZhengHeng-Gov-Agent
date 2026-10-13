@@ -99,7 +99,7 @@ services:
     image: zhengheng-milvus:2.6.25-healthfix
     build:
       context: .
-      dockerfile: docker/milvus/Dockerfile
+      dockerfile: deploy/docker/milvus/Dockerfile
     command: ["milvus", "run", "standalone"]
     environment:
       ETCD_ENDPOINTS: etcd:2379
@@ -147,7 +147,7 @@ services:
     image: zhengheng-backend:v1.1
     build:
       context: .
-      dockerfile: docker/backend.Dockerfile
+      dockerfile: deploy/docker/backend.Dockerfile
     environment: &multi_agent_backend_environment
       APP_SECRET: ${APP_SECRET:?set APP_SECRET in .env}
       MONGO_URI: mongodb://host.docker.internal:27017/?directConnection=true

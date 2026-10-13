@@ -312,8 +312,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--mongo-db", default="zhengheng_public_eval_v1")
     parser.add_argument("--opensearch-index", default="policy_chunks_public_eval_v1")
     parser.add_argument("--milvus-collection", default="policy_chunks_public_eval_v1")
-    parser.add_argument("--manifest", default="data/manifests/chinatax_policy_v1.json")
-    parser.add_argument("--evalset", default="evalsets/policy_eval_v1.jsonl")
+    parser.add_argument("--manifest", default="evaluation/manifests/chinatax_policy_v1.json")
+    parser.add_argument("--evalset", default="evaluation/evalsets/policy_eval_v1.jsonl")
     return parser.parse_args()
 
 

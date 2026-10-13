@@ -40,7 +40,7 @@
 | Pi Agent Core、受控语义节点 | `services/pi-runtime/package.json`、`docs/pi-runtime.md` |
 | BGE-M3、BGE Reranker、可配置 LLM 接口 | `backend/app/config.py`、`backend/app/runtime/` |
 | MongoDB / Redis / OpenSearch / Milvus / MinIO / etcd | `docker-compose.yml`、`backend/app/storage/` |
-| Prometheus、Kubernetes / Helm、评测工具 | `deploy/`、`k6/`、`backend/app/evaluation/` |
+| Prometheus、Kubernetes / Helm、评测工具 | `deploy/`、`evaluation/k6/`、`backend/app/evaluation/` |
 
 图中 Hybrid RAG 是三个部门 Agent 各自执行的共同链路，不是额外部署的共享 Agent。数据平面为共享基础设施，通过服务端固定部门身份限制检索范围。MinIO 和 etcd 是 Milvus 的基础依赖，不表示文档上传直接接入 MinIO。
 
